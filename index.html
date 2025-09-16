@@ -12,14 +12,14 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #f5f8fa 0%, #e1e8ed 100%);
         }
         .nav-hover::after {
             content: '';
             display: block;
             width: 0;
             height: 2px;
-            background: #64ffda;
+            background: #002244;
             transition: width .3s;
         }
         .nav-hover:hover::after {
@@ -29,13 +29,14 @@
             transition: all 0.5s ease;
         }
         .btn-primary {
-            background-color: transparent;
-            color: #64ffda;
-            border: 1px solid #64ffda;
+            background-color: #001833;
+            color: white;
+            border: 1px solid #003366;
             transition: all 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: rgba(100, 255, 218, 0.1);
+            background-color: #002244;
+            border-color: #002244;
         }
         .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -43,6 +44,19 @@
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #002244;
         }
     </style>
 </head>
@@ -52,14 +66,22 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="/" class="text-2xl font-bold">
-                    <img src="sequoia_lodges_logo_medium_website.png" alt="Sequoia Lodges Logo" class="h-10">
+                    <div class="flex items-center">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#002244"/>
+                            <path d="M24 12L12 24H24V36L36 24H24V12Z" fill="#0066CC"/>
+                            <path d="M24 12L12 24L24 36L36 24L24 12Z" stroke="#002244" stroke-width="2"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-800">SEQUOIA LODGES</span>
+                    </div>
                 </a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="nav-hover text-gray-600 hover:text-green-700 font-medium">Services</a>
-                    <a href="#designs" class="nav-hover text-gray-600 hover:text-green-700 font-medium">ADU Designs</a>
-                    <a href="#projects" class="nav-hover text-gray-600 hover:text-green-700 font-medium">Gallery</a>
-                    <a href="#about" class="nav-hover text-gray-600 hover:text-green-700 font-medium">About</a>
-                    <a href="#contact" class="nav-hover text-gray-600 hover:text-green-700 font-medium">Contact</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="nav-hover text-gray-600 hover:text-blue-800 font-medium">Services</a>
+                    <a href="#designs" class="nav-hover text-gray-600 hover:text-blue-800 font-medium">ADU Designs</a>
+                    <a href="#projects" class="nav-hover text-gray-600 hover:text-blue-800 font-medium">Gallery</a>
+                    <a href="#about" class="nav-hover text-gray-600 hover:text-blue-800 font-medium">About</a>
+                    <a href="#contact" class="nav-hover text-gray-600 hover:text-blue-800 font-medium">Contact</a>
+                    <a href="#contact" class="bg-blue-800 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-900 transition-colors">Get Started</a>
                 </div>
                 <button class="md:hidden focus:outline-none">
                     <i data-feather="menu" class="text-gray-700"></i>
@@ -73,12 +95,15 @@
         <div class="container mx-auto px-6 py-20">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-gray-800" data-aos="fade-right">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Premium ADU Design Solutions</h1>
-                    <p class="text-xl md:text-2xl mb-10">Custom accessory dwelling unit designs tailored to your property and needs.</p>
-                    <a href="#contact" class="bg-green-700 text-white px-8 py-4 rounded-md font-medium inline-block hover:bg-green-800 transition-colors">Get Started</a>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" style="color: #1a3e72;">Premium ADU Design Solutions</h1>
+                    <p class="text-xl md:text-2xl mb-10 text-gray-600">Custom accessory dwelling unit designs tailored to your property and needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-900 text-white px-8 py-4 rounded-md font-medium inline-block hover:bg-blue-800 transition-colors">Get Started</a>
+                        <a href="#designs" class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-md font-medium inline-block hover:bg-blue-50 transition-colors">View Designs</a>
+                    </div>
                 </div>
                 <div class="md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
-                    <img src="http://static.photos/construction/1200x630/42" alt="ADU Construction" class="rounded-lg shadow-xl">
+                    <img src="https://zookcabins.b-cdn.net/wp-content/uploads/Choose-Your-Cabin-Style/ADU/Sonoma/Sonoma-ADU-625/Sonoma-ADU-with-Smart-Lap-White-Siding-1400x933.png" alt="ADU Construction" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
@@ -88,30 +113,29 @@
     <section id="services" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-                <div class="w-20 h-1 bg-green-800 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">Our Services</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-8 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-green-700 mb-4">
+                    <div class="text-blue-900 mb-4">
                         <i data-feather="home" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Custom ADU Design</h3>
-                    <p class="text-gray-600">Bespoke designs tailored to your property's unique characteristics and local zoning requirements.</p>
+                    <p class="text-gray-600">Bespoke designs tailored to your property's unique characteristics and Massachusetts zoning requirements (max 50% of principal dwelling or 900 sq.ft).</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-green-800 mb-4">
+                    <div class="text-blue-800 mb-4">
                         <i data-feather="layers" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Pre-Designed ADU Plans</h3>
-                    <p class="text-gray-600">Our signature collection of ADU designs that can be customized to your specifications.</p>
+                    <p class="text-gray-600">Our signature collection of ADU designs (under 900 sq.ft) that can be customized to your specifications while meeting Massachusetts zoning laws.</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-green-800 mb-4">
+                    <div class="text-blue-700 mb-4">
                         <i data-feather="file-text" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4">Permit-Ready Plans</h3>
-                    <p class="text-gray-600">Complete architectural drawings and documentation for streamlined permitting.</p>
+                    <p class="text-gray-600">Complete architectural drawings and documentation for streamlined permitting in Massachusetts.</p>
                 </div>
             </div>
         </div>
@@ -122,21 +146,21 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Our ADU Design Collections</h2>
-                <div class="w-20 h-1 bg-green-800 mx-auto"></div>
+                <div class="w-20 h-1 bg-blue-700 mx-auto"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto mt-4">Choose from our signature ADU designs or customize them to your needs.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="100">
-                    <img src="http://static.photos/indoor/640x360/20" alt="Modern Studio ADU" class="w-full h-64 object-cover">
+                    <img src="https://images.squarespace-cdn.com/content/v1/57992160b3db2b82573da7b4/1699997684421-6TOC42SNAATN83ZJH6QT/ModernADUPlans-ShopAllADUs-CoverImage-2023-TheWedge.png?format=1500w" alt="Modern Studio ADU" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Modern Studio</h3>
                         <p class="text-gray-600 mb-4">400-600 sq.ft | 1 Bath</p>
                         <p class="text-gray-700">Sleek, contemporary design perfect for urban settings.</p>
-                        <a href="#" class="inline-block mt-4 text-green-800 font-medium hover:text-green-700">View Details →</a>
+                        <a href="#" class="inline-block mt-4 text-blue-700 font-medium hover:text-blue-600">View Details →</a>
                     </div>
                 </div>
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="200">
-                    <img src="http://static.photos/indoor/640x360/21" alt="Craftsman Cottage ADU" class="w-full h-64 object-cover">
+                    <img src="https://assets.architecturaldesigns.com/cdn-cgi/image/width=1920,quality=75,format=auto,slow-connection-quality=50/plan_assets/363037050/original/623370D_Render001_1715097695.jpg" alt="Craftsman Cottage ADU" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Craftsman Cottage</h3>
                         <p class="text-gray-600 mb-4">600-800 sq.ft | 1 Bed, 1 Bath</p>
@@ -145,17 +169,17 @@
                     </div>
                 </div>
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="300">
-                    <img src="http://static.photos/indoor/640x360/22" alt="Two-Story ADU" class="w-full h-64 object-cover">
+                    <img src="https://a084b90c.delivery.rocketcdn.me/wp-content/uploads/2025/04/Chestnut-600-SQ-FT-3-Bedroom-2-Bath-Exterior-2.jpg" alt="Compact Cottage" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Two-Story Retreat</h3>
-                        <p class="text-gray-600 mb-4">800-1000 sq.ft | 2 Bed, 1.5 Bath</p>
-                        <p class="text-gray-700">Spacious design ideal for multi-generational living.</p>
+                        <h3 class="text-xl font-bold mb-2">Compact Cottage</h3>
+                        <p class="text-gray-600 mb-4">700-900 sq.ft | 1 Bed, 1 Bath</p>
+                        <p class="text-gray-700">Efficient single-story design that maximizes space.</p>
                         <a href="#" class="inline-block mt-4 text-green-800 font-medium hover:text-green-700">View Details →</a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-green-800 text-green-800 px-6 py-3 rounded-md font-bold hover:bg-green-800 hover:text-white transition-slow">View All Design Options</a>
+                <a href="#" class="inline-block border-2 border-blue-700 text-blue-700 px-6 py-3 rounded-md font-bold hover:bg-blue-700 hover:text-white transition-slow">View All Design Options</a>
             </div>
         </div>
     </section>
@@ -186,7 +210,7 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-green-800 text-green-800 px-6 py-3 rounded-md font-bold hover:bg-green-800 hover:text-white transition-slow">View All Projects</a>
+                <a href="#" class="inline-block border-2 border-blue-800 text-blue-800 px-6 py-3 rounded-md font-bold hover:bg-blue-800 hover:text-white transition-slow">View All Projects</a>
             </div>
         </div>
     </section>
@@ -196,13 +220,13 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <img src="http://static.photos/office/1200x630/8" alt="Sequoia Lodges Team" class="rounded-lg shadow-xl">
+                    <img src="https://images.pexels.com/photos/17214545/pexels-photo-17214545.jpeg" alt="Sequoia Lodges Team" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2 md:pl-16" data-aos="fade-left">
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">About Sequoia Lodges</h2>
-                    <p class="text-gray-600 mb-6">Founded in Boston in 2015, Sequoia Lodges specializes in premium accessory dwelling unit designs that enhance property value while providing flexible living solutions.</p>
-                    <p class="text-gray-600 mb-6">Our team of architects and designers combine innovative concepts with practical functionality to create spaces that feel like home.</p>
-                    <div class="flex items-center mt-8">
+                    <p class="text-gray-600 mb-6">Sequoia Lodges LLC is a Boston-based company specializing in the design, development, and marketing of pre-approved accessory dwelling unit (ADU) architectural plans for residential use. We offer a range of off-the-shelf modular designs that are code-compliant, permit-ready, and tailored to meet the unique zoning and construction requirements across Massachusetts.</p>
+                    <p class="text-gray-600 mb-6">Our goal is to help homeowners maximize the utility and value of their properties with beautifully designed, easy-to-execute ADU plans—whether for guest houses, in-law suites, income-generating rentals, or flexible living spaces. Each plan is crafted to blend aesthetic appeal with practical functionality, allowing for quick permitting, simplified construction, and long-term livability.</p>
+                    <p class="text-gray-600 mb-6">Inspired by the strength and longevity of the Sequoia tree, we deliver architecturally resilient and sustainable solutions that align with modern residential needs. With a deep understanding of local building codes and a commitment to streamlined project execution, Sequoia Lodges is redefining how Massachusetts builds backyard housing—one modular plan at a time.</p>                    <div class="flex items-center mt-8">
                         <div class="flex -space-x-2">
                             <img src="http://static.photos/people/200x200/1" class="w-12 h-12 rounded-full border-2 border-white" alt="Team member">
                             <img src="http://static.photos/people/200x200/2" class="w-12 h-12 rounded-full border-2 border-white" alt="Team member">
@@ -211,7 +235,7 @@
                         </div>
                         <div class="ml-4">
                             <p class="text-gray-800 font-medium">Our Team</p>
-                            <p class="text-gray-600 text-sm">12 professionals dedicated to your project</p>
+                            <p class="text-gray-600 text-sm">2 professionals dedicated to your project</p>
                         </div>
                     </div>
                 </div>
@@ -231,8 +255,8 @@
                     <div class="flex items-center mb-4">
                         <img src="http://static.photos/people/200x200/5" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-green-200 text-sm">Brookline, MA</p>
+                            <h4 class="font-bold">Customer 1</h4>
+                            <p class="text-gray-400 font-bold text-sm">Brookline, MA</p>
                         </div>
                     </div>
                     <p class="italic">"Sequoia Lodges transformed our unused backyard into a beautiful guest house that now generates rental income."</p>
@@ -241,8 +265,8 @@
                     <div class="flex items-center mb-4">
                         <img src="http://static.photos/people/200x200/6" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">Michael Chen</h4>
-                            <p class="text-green-200 text-sm">Cambridge, MA</p>
+                            <h4 class="font-bold">Customer 2</h4>
+                            <p class="text-gray-400 font-bold text-sm">Cambridge, MA</p>
                         </div>
                     </div>
                     <p class="italic">"The attention to detail and quality of construction exceeded our expectations at every step."</p>
@@ -251,8 +275,8 @@
                     <div class="flex items-center mb-4">
                         <img src="http://static.photos/people/200x200/7" alt="Client" class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <h4 class="font-bold">The Williams Family</h4>
-                            <p class="text-green-200 text-sm">Newton, MA</p>
+                            <h4 class="font-bold">Customer 3</h4>
+                            <p class="text-gray-400 font-bold text-sm">Newton, MA</p>
                         </div>
                     </div>
                     <p class="italic">"Our ADU provides the perfect space for aging parents to live independently while staying close to family."</p>
@@ -277,7 +301,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold mb-1">Office</h4>
-                            <p class="text-gray-600">123 Design Street, Boston, MA 02108</p>
+                            <p class="text-gray-600">Boston, MA</p>
                         </div>
                     </div>
                     <div class="mb-6 flex items-start">
@@ -286,7 +310,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold mb-1">Phone</h4>
-                            <p class="text-gray-600">(617) 555-1234</p>
+                            <p class="text-gray-600">(617) 851-2996</p>
                         </div>
                     </div>
                     <div class="mb-6 flex items-start">
@@ -299,13 +323,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-4 mt-8">
-                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-green-800 hover:text-white transition-slow">
-                            <i data-feather="facebook"></i>
-                        </a>
-                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-green-800 hover:text-white transition-slow">
-                            <i data-feather="instagram"></i>
-                        </a>
-                        <a href="#" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-green-800 hover:text-white transition-slow">
+                        <a href="https://linkedin.com/company/sequoialodges" class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-blue-700 hover:text-white transition-slow">
                             <i data-feather="linkedin"></i>
                         </a>
                     </div>
@@ -334,7 +352,7 @@
                             <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
                             <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"></textarea>
                         </div>
-                        <button type="submit" class="bg-green-800 text-white px-8 py-3 rounded-md font-bold hover:bg-green-900 transition-slow">Send Message</button>
+                        <button type="submit" class="bg-blue-900 text-white px-8 py-3 rounded-md font-bold hover:bg-blue-800 transition-slow">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -346,18 +364,25 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
-                    <img src="sequoia_lodges_logo_design.png" alt="Sequoia Lodges Logo" class="h-12 mb-4">
-                    <p class="text-gray-600">Premium ADU Design & Construction</p>
-                    <p class="text-gray-600 mt-4">© 2023 Sequoia Lodges. All rights reserved.</p>
+                    <div class="flex items-center">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="8" fill="#002244"/>
+                            <path d="M24 12L12 24H24V36L36 24H24V12Z" fill="#0066CC"/>
+                            <path d="M24 12L12 24L24 36L36 24L24 12Z" stroke="#002244" stroke-width="2"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-800">SEQUOIA LODGES</span>
+                    </div>
+                    <p class="text-gray-600">Pre-Approved ADU Architectural Plans & Design Services</p>
+                    <p class="text-gray-600 mt-4">© 2025 Sequoia Lodges LLC. All rights reserved.</p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
                         <h4 class="text-lg font-bold mb-4">Company</h4>
                         <ul class="space-y-2">
-                            <li><a href="#about" class="text-gray-600 hover:text-green-700 transition-slow">About</a></li>
-                            <li><a href="#services" class="text-gray-600 hover:text-green-700 transition-slow">Services</a></li>
-                            <li><a href="#projects" class="text-gray-600 hover:text-green-700 transition-slow">Projects</a></li>
-                            <li><a href="#contact" class="text-gray-600 hover:text-green-700 transition-slow">Contact</a></li>
+                            <li><a href="#about" class="text-gray-600 hover:text-blue-700 transition-slow">About</a></li>
+                            <li><a href="#services" class="text-gray-600 hover:text-blue-700 transition-slow">Services</a></li>
+                            <li><a href="#projects" class="text-gray-600 hover:text-blue-700 transition-slow">Projects</a></li>
+                            <li><a href="#contact" class="text-gray-600 hover:text-blue-700 transition-slow">Contact</a></li>
                         </ul>
                     </div>
                     <div>
@@ -382,17 +407,8 @@
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 mb-4 md:mb-0">Sequoia Lodges is a registered trademark.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-green-700 transition-slow">
-                        <i data-feather="facebook"></i>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-slow">
-                        <i data-feather="instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-slow">
+                    <a href="https://linkedin.com/company/sequoialodges" class="text-gray-500 hover:text-blue-700 transition-slow">
                         <i data-feather="linkedin"></i>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-slow">
-                        <i data-feather="twitter"></i>
                     </a>
                 </div>
             </div>
@@ -408,7 +424,7 @@
         
         // Mobile menu toggle
         const mobileMenuButton = document.querySelector('button[class*="md:hidden"]');
-        const mobileMenu = document.querySelector('.hidden.md\:flex.space-x-8');
+        const mobileMenu = document.querySelector('.hidden.md\\:flex.space-x-8');
         
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
