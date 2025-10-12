@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADU Planning Quiz | Sequoia Lodges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- Quiz Header -->
+            <div class="bg-blue-800 p-6 text-white">
+                <h1 class="text-3xl font-bold">ADU Planning Wizard</h1>
+                <p class="mt-2 opacity-90">Answer 5 quick questions to find your perfect ADU solution</p>
+                <div class="w-full bg-blue-900 rounded-full h-2.5 mt-4">
+                    <div id="progress-bar" class="bg-blue-300 h-2.5 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Quiz Steps -->
+            <div class="p-8">
+                <form id="adu-quiz">
+                    <!-- Step 1 -->
+                    <div class="quiz-step active" data-step="1">
+                        <h2 class="text-2xl font-bold mb-6">What's your primary goal for building an ADU?</h2>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="goal" value="rental" class="mr-3" required>
+                                <div>
+                                    <h3 class="font-bold">Rental Income</h3>
+                                    <p class="text-sm text-gray-600">Generate monthly cash flow from a long-term tenant</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="goal" value="family" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">Family Housing</h3>
+                                    <p class="text-sm text-gray-600">Aging parents, adult children, or multigenerational living</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="goal" value="homeoffice" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">Home Office/Studio</h3>
+                                    <p class="text-sm text-gray-600">Dedicated workspace separate from main house</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="quiz-step hidden" data-step="2">
+                        <h2 class="text-2xl font-bold mb-6">What type of ADU are you considering?</h2>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <label class="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50 text-center">
+                                <input type="radio" name="type" value="detached" class="mb-3" required>
+                                <i data-feather="home" class="w-8 h-8 text-blue-700 mb-2"></i>
+                                <h3 class="font-bold">Detached</h3>
+                                <p class="text-xs text-gray-600">Standalone structure in yard</p>
+                                <span class="mt-2 text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">900 sq.ft max</span>
+                            </label>
+                            <label class="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50 text-center">
+                                <input type="radio" name="type" value="attached" class="mb-3">
+                                <i data-feather="plus-square" class="w-8 h-8 text-green-700 mb-2"></i>
+                                <h3 class="font-bold">Attached</h3>
+                                <p class="text-xs text-gray-600">Addition to main house</p>
+                                <span class="mt-2 text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">50% of main house</span>
+                            </label>
+                            <label class="flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50 text-center">
+                                <input type="radio" name="type" value="conversion" class="mb-3">
+                                <i data-feather="refresh-ccw" class="w-8 h-8 text-purple-700 mb-2"></i>
+                                <h3 class="font-bold">Conversion</h3>
+                                <p class="text-xs text-gray-600">Basement/garage conversion</p>
+                                <span class="mt-2 text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded-full">No expansion</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="quiz-step hidden" data-step="3">
+                        <h2 class="text-2xl font-bold mb-6">What's your estimated budget?</h2>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="budget" value="100k" class="mr-3" required>
+                                <div>
+                                    <h3 class="font-bold">Under $100,000</h3>
+                                    <p class="text-sm text-gray-600">Interior conversion or small prefab unit</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="budget" value="250k" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">$100,000 - $250,000</h3>
+                                    <p class="text-sm text-gray-600">Mid-range detached ADU or major addition</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="budget" value="250k+" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">Over $250,000</h3>
+                                    <p class="text-sm text-gray-600">High-end custom design with premium finishes</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="quiz-step hidden" data-step="4">
+                        <h2 class="text-2xl font-bold mb-6">What's your property's lot size?</h2>
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="lotsize" value="small" class="mr-3" required>
+                                <div>
+                                    <h3 class="font-bold">Small (< 5,000 sq.ft)</h3>
+                                    <p class="text-sm text-gray-600">Typical Boston lot with limited yard space</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="lotsize" value="medium" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">Medium (5,000-10,000 sq.ft)</h3>
+                                    <p class="text-sm text-gray-600">Space for detached ADU with some yard remaining</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-blue-50">
+                                <input type="radio" name="lotsize" value="large" class="mr-3">
+                                <div>
+                                    <h3 class="font-bold">Large (> 10,000 sq.ft)</h3>
+                                    <p class="text-sm text-gray-600">Suburban property with ample buildable area</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="quiz-step hidden" data-step="5">
+                        <h2 class="text-2xl font-bold mb-6">Any special requirements?</h2>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap gap-3">
+                                <label class="flex items-center px-4 py-2 border rounded-full cursor-pointer hover:bg-blue-50">
+                                    <input type="checkbox" name="requirements" value="accessible" class="mr-2">
+                                    <span>ADA Accessibility</span>
+                                </label>
+                                <label class="flex items-center px-4 py-2 border rounded-full cursor-pointer hover:bg-blue-50">
+                                    <input type="checkbox" name="requirements" value="sprinkler" class="mr-2">
+                                    <span>Fire Sprinklers</span>
+                                </label>
+                                <label class="flex items-center px-4 py-2 border rounded-full cursor-pointer hover:bg-blue-50">
+                                    <input type="checkbox" name="requirements" value="parking" class="mr-2">
+                                    <span>Parking Space</span>
+                                </label>
+                                <label class="flex items-center px-4 py-2 border rounded-full cursor-pointer hover:bg-blue-50">
+                                    <input type="checkbox" name="requirements" value="solar" class="mr-2">
+                                    <span>Solar Ready</span>
+                                </label>
+                            </div>
+                            <div class="mt-6">
+                                <label class="block text-gray-700 font-medium mb-2">Any other notes?</label>
+                                <textarea name="notes" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 h-24"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-between mt-8 pt-6 border-t">
+                        <button type="button" id="prev-btn" class="bg-gray-200 text-gray-800 px-6 py-2 rounded-md font-medium hover:bg-gray-300 hidden">Back</button>
+                        <button type="button" id="next-btn" class="ml-auto bg-blue-700 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800">Next Question</button>
+                        <button type="submit" id="submit-btn" class="ml-auto bg-green-600 text-white px-6 py-2 rounded-md font-medium hover:bg-green-700 hidden">Get My ADU Plan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Results Modal -->
+        <div id="results-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white rounded-xl max-w-2xl w-full p-8 mx-4">
+                <h2 class="text-3xl font-bold mb-6">Your Recommended ADU Solution</h2>
+                <div id="quiz-results" class="space-y-4">
+                    <!-- Results will be inserted here -->
+                </div>
+                <div class="mt-8">
+                    <h3 class="font-bold text-xl mb-4">Ready to get started?</h3>
+                    <p class="mb-4">We'll email you these recommendations along with next steps.</p>
+                    <form id="results-form" class="space-y-4">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        <input type="tel" name="phone" placeholder="Phone (optional)" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        <input type="hidden" name="quiz_results" id="quiz-results-data">
+                        <button type="submit" class="w-full bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800">Get My Custom ADU Plan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+            
+            const quizSteps = document.querySelectorAll('.quiz-step');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            const progressBar = document.getElementById('progress-bar');
+            let currentStep = 1;
+
+            // Update progress bar
+            function updateProgress() {
+                const progress = (currentStep / quizSteps.length) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+
+            // Navigation handlers
+            nextBtn.addEventListener('click', function() {
+                const currentStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+                const inputs = currentStepEl.querySelectorAll('input[required]');
+                let isValid = true;
+
+                // Validate required inputs
+                inputs.forEach(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        const name = input.name;
+                        const checked = currentStepEl.querySelector(`input[name="${name}"]:checked`);
+                        if (!checked) isValid = false;
+                    } else if (!input.value) {
+                        isValid = false;
+                    }
+                });
+
+                if (isValid) {
+                    currentStepEl.classList.add('hidden');
+                    currentStepEl.classList.remove('active');
+                    currentStep++;
+                    
+                    if (currentStep <= quizSteps.length) {
+                        const nextStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+                        nextStepEl.classList.remove('hidden');
+                        nextStepEl.classList.add('active');
+                        
+                        updateProgress();
+                        
+                        // Show/hide nav buttons
+                        prevBtn.classList.remove('hidden');
+                        if (currentStep === quizSteps.length) {
+                            nextBtn.classList.add('hidden');
+                            submitBtn.classList.remove('hidden');
+                        }
+                    }
+                } else {
+                    alert('Please answer the current question before proceeding.');
+                }
+            });
+
+            prevBtn.addEventListener('click', function() {
+                const currentStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+                currentStepEl.classList.add('hidden');
+                currentStepEl.classList.remove('active');
+                currentStep--;
+                
+                const prevStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+                prevStepEl.classList.remove('hidden');
+                prevStepEl.classList.add('active');
+                
+                updateProgress();
+                
+                // Show/hide nav buttons
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+                if (currentStep === 1) {
+                    prevBtn.classList.add('hidden');
+                }
+            });
+
+            // Form submission
+            document.getElementById('adu-quiz').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = new FormData(this);
+                const results = {};
+                for (let [key, value] of formData.entries()) {
+                    if (results[key]) {
+                        if (Array.isArray(results[key])) {
+                            results[key].push(value);
+                        } else {
+                            results[key] = [results[key], value];
+                        }
+                    } else {
+                        results[key] = value;
+                    }
+                }
+                
+                // Generate results display
+                const resultsContainer = document.getElementById('quiz-results');
+                resultsContainer.innerHTML = `
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl mb-3">Based on your answers, we recommend:</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-bold mb-1">ADU Type</h4>
+                                <p>${results.type === 'detached' ? 'Detached Cottage' : 
+                                   results.type === 'attached' ? 'Attached Addition' : 'Interior Conversion'}</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Estimated Size</h4>
+                                <p>${results.lotsize === 'small' ? '400-600 sq.ft' : 
+                                   results.lotsize === 'medium' ? '600-800 sq.ft' : '800-900 sq.ft'}</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Estimated Cost</h4>
+                                <p>${results.budget === '100k' ? '$80,000 - $120,000' : 
+                                   results.budget === '250k' ? '$150,000 - $250,000' : '$250,000+'}</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Special Features</h4>
+                                <p>${results.requirements ? (Array.isArray(results.requirements) ? 
+                                    results.requirements.join(', ') : results.requirements) : 'None specified'}</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-bold mb-1">Perfect For:</h4>
+                            <p>${results.goal === 'rental' ? 'Long-term rental income with efficient layout' : 
+                               results.goal === 'family' ? 'Multigenerational living with accessibility options' : 
+                               'Professional workspace with separate entrance'}</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border rounded-lg">
+                        <h3 class="font-bold text-xl mb-3">Next Steps</h3>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Schedule a free consultation with our ADU specialist</li>
+                            <li>Receive 3 conceptual designs based on your property</li>
+                            <li>Get a detailed cost estimate and timeline</li>
+                            <li>Begin the permitting process with our guidance</li>
+                        </ol>
+                    </div>
+                `;
+                
+                // Store results in hidden field
+                document.getElementById('quiz-results-data').value = JSON.stringify(results);
+                
+                // Show modal
+                document.getElementById('results-modal').classList.remove('hidden');
+            });
+            
+            // Close modal handler would go here
+        });
+    </script>
+</body>
+</html>
