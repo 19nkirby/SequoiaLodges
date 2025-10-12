@@ -88,20 +88,31 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        // Initialize map
+        // Initialize map with geocoding
         const map = L.map('map').setView([42.3601, -71.0589], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Mock zoning data lookup
-        document.getElementById('search-btn').addEventListener('click', function() {
-            const address = document.getElementById('address-input').value;
-            if (address) {
-                // Simulate API call
-                setTimeout(() => {
-                    const randomZone = ['R1', 'R2', 'R3', 'R4'][Math.floor(Math.random() * 4)];
-                    document.getElementById('zoning-results').innerHTML = `
+        // Add geocoding control
+        const geocoder = L.Control.geocoder({
+            defaultMarkGeocode: false,
+            position: 'topright'
+        }).addTo(map);
+
+        geocoder.on('markgeocode', function(e) {
+            const { center, name } = e.geocode;
+            map.setView(center, 16);
+            L.marker(center).addTo(map)
+                .bindPopup(name)
+                .openPopup();
+
+            const addressInput = document.getElementById('address-input');
+            addressInput.value = name;
+
+            // Simulate zoning lookup
+            const randomZone = ['R1', 'R2', 'R3', 'R4'][Math.floor(Math.random() * 4)];
+document.getElementById('zoning-results').innerHTML = `
                         <div class="zone-${randomZone} p-4 rounded-lg border">
                             <h4 class="font-bold text-lg">${randomZone} Zoning</h4>
                             <p class="mt-2">Residential District</p>
@@ -123,13 +134,7 @@
                     }
                     document.getElementById('adu-restrictions').classList.remove('hidden');
 document.getElementById('adu-eligibility').innerHTML = eligibilityHTML;
-
-                    // Add mock marker
-                    map.setView([42.3601 + (Math.random() * 0.02 - 0.01), -71.0589 + (Math.random() * 0.02 - 0.01)], 15);
-                    L.marker(map.getCenter()).addTo(map)
-                        .bindPopup(`<b>${address}</b><br>Zoning: ${randomZone}`)
-                        .openPopup();
-                }, 800);
+}, 800);
             }
         });
 
