@@ -40,14 +40,24 @@
                     <p class="text-gray-500">Enter address to see zoning details</p>
                 </div>
             </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">3. ADU Eligibility</h3>
-                <div id="adu-eligibility" class="text-center py-8">
-                    <p class="text-gray-500">We'll show your ADU options here</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">3. ADU Eligibility</h3>
+                    <div id="adu-eligibility" class="text-center py-8">
+                        <p class="text-gray-500">We'll show your ADU options here</p>
+                    </div>
+                    <div id="adu-restrictions" class="hidden mt-4 text-sm text-left border-t pt-4">
+                        <h4 class="font-bold mb-2">Boston ADU Requirements:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Maximum 900 sq.ft (detached) or 50% of primary dwelling (attached)</li>
+                            <li>Owner-occupancy required for 3 years</li>
+                            <li>No short-term rentals (minimum 30-day leases)</li>
+                            <li>1 parking space required if zoning requires parking</li>
+                            <li>Must maintain 15% open space on lot</li>
+                            <li>Detached ADUs require 6' rear/side setbacks</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
+</div>
 
         <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
             <div id="map"></div>
@@ -58,17 +68,17 @@
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="zone-R1 p-4 rounded-lg border">
                     <h3 class="font-bold mb-2">R1 Districts</h3>
-                    <p>Single-family only. ADUs allowed as internal conversions or detached under 650 sq.ft.</p>
+                    <p>Single-family only. ADUs allowed as internal conversions (no size limit) or detached (max 650 sq.ft). Must maintain principal residence character.</p>
                 </div>
                 <div class="zone-R2 p-4 rounded-lg border">
                     <h3 class="font-bold mb-2">R2-R3 Districts</h3>
-                    <p>Two-family allowed. Detached ADUs up to 900 sq.ft permitted with rear yard setbacks.</p>
+                    <p>Two-family allowed. Detached ADUs up to 900 sq.ft permitted with 6' rear/side setbacks. Internal conversions in existing structures allowed.</p>
                 </div>
                 <div class="zone-R3 p-4 rounded-lg border">
                     <h3 class="font-bold mb-2">R4 Districts</h3>
-                    <p>Multi-family zoning. Attached and detached ADUs allowed with parking requirements.</p>
+                    <p>Multi-family zoning. Attached and detached ADUs allowed with parking requirements (1 space per ADU if normally required).</p>
                 </div>
-                <div class="bg-gray-100 p-4 rounded-lg border">
+<div class="bg-gray-100 p-4 rounded-lg border">
                     <h3 class="font-bold mb-2">All Zones</h3>
                     <p>Must maintain 15% open space. No short-term rentals. Owner occupancy required for 3 years.</p>
                 </div>
@@ -97,22 +107,22 @@
                             <p class="mt-2">Residential District</p>
                         </div>
                     `;
-
                     let eligibilityHTML = '';
                     if (randomZone === 'R1') {
                         eligibilityHTML = `<div class="bg-green-50 p-4 rounded-lg border border-green-200">
                             <h4 class="font-bold text-green-800">ADU Eligible</h4>
-                            <p class="mt-2 text-sm">Internal conversions or detached under 650 sq.ft permitted</p>
+                            <p class="mt-2 text-sm">Internal conversions (no size limit) or detached under 650 sq.ft permitted per Article 53</p>
                             <a href="quiz.html" class="inline-block mt-3 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700">Plan My ADU</a>
                         </div>`;
                     } else {
                         eligibilityHTML = `<div class="bg-green-50 p-4 rounded-lg border border-green-200">
                             <h4 class="font-bold text-green-800">ADU Eligible</h4>
-                            <p class="mt-2 text-sm">Detached ADUs up to 900 sq.ft permitted</p>
+                            <p class="mt-2 text-sm">Detached ADUs up to 900 sq.ft permitted with 6' setbacks per BPDA guidelines</p>
                             <a href="quiz.html" class="inline-block mt-3 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700">Plan My ADU</a>
                         </div>`;
                     }
-                    document.getElementById('adu-eligibility').innerHTML = eligibilityHTML;
+                    document.getElementById('adu-restrictions').classList.remove('hidden');
+document.getElementById('adu-eligibility').innerHTML = eligibilityHTML;
 
                     // Add mock marker
                     map.setView([42.3601 + (Math.random() * 0.02 - 0.01), -71.0589 + (Math.random() * 0.02 - 0.01)], 15);
