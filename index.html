@@ -66,10 +66,18 @@
       "url": "https://sequoialodges.com",
       "logo": "https://sequoialodges.com/logo.png",
       "foundingDate": "2024",
-      "founder": {
-        "@type": "Person",
-        "name": "Nicholas Kirby"
-      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Nicholas Kirby",
+          "jobTitle": "Co-Founder & Strategy Lead"
+        },
+        {
+          "@type": "Person",
+          "name": "Christopher Kirby",
+          "jobTitle": "Co-Founder & Principal Engineer"
+        }
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-617-872-5553",
@@ -410,37 +418,63 @@
     }
     </script>
     
-    <!-- Person Schema for Principal Architect -->
+    <!-- Person Schema for Co-Founders -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nicholas Kirby",
-      "jobTitle": "Principal Architect",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sequoia Lodges"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicholas Kirby",
+        "jobTitle": "Co-Founder & Strategy Lead",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sequoia Lodges"
+        },
+        "email": "NicholasKirby@sequoialodges.com",
+        "telephone": "+1-617-872-5553",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boston",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "knowsAbout": [
+          "Architecture",
+          "ADU Design",
+          "BPDA Compliance",
+          "Boston Zoning",
+          "Permit Processing",
+          "Business Strategy"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Licensed Massachusetts Architect"
+        }
       },
-      "email": "NicholasKirby@sequoialodges.com",
-      "telephone": "+1-617-872-5553",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Boston",
-        "addressRegion": "MA",
-        "addressCountry": "US"
-      },
-      "knowsAbout": [
-        "Architecture",
-        "ADU Design",
-        "BPDA Compliance",
-        "Boston Zoning",
-        "Permit Processing"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Licensed Massachusetts Architect"
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Christopher Kirby",
+        "jobTitle": "Co-Founder & Principal Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sequoia Lodges"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boston",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "knowsAbout": [
+          "Structural Engineering",
+          "Building Systems",
+          "Building Codes",
+          "Technical Design",
+          "ADU Engineering"
+        ]
       }
-    }
+    ]
     </script>
     
     <!-- ItemList Schema for Services -->
@@ -702,7 +736,7 @@
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button inline-block">Get Free Consultation</a>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural blueprints and ADU plans for Boston Massachusetts" class="rounded-lg shadow-2xl w-full">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural blueprints and ADU plans for Boston Massachusetts" class="rounded-lg shadow-2xl w-full">
                     </div>
                 </div>
             </div>
@@ -879,7 +913,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-12">
                     <div class="professional-card p-8">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Studio ADU design floor plan" class="rounded-lg mb-6 w-full">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Studio ADU design floor plan showing compact efficient layout" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Studio ADU Plans</h3>
                         <p class="text-gray-600 mb-4">Perfect for small lots, our studio designs maximize every square foot while maintaining full BPDA compliance.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -890,7 +924,7 @@
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block">View Details</a>
                     </div>
                     <div class="professional-card p-8">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="1-bedroom ADU design floor plan" class="rounded-lg mb-6 w-full">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="1-bedroom ADU design floor plan with separate bedroom and living area" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">1-Bedroom ADU Plans</h3>
                         <p class="text-gray-600 mb-4">Spacious one-bedroom designs ideal for long-term rentals or family members. Efficient layouts with separate bedroom.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -904,7 +938,7 @@
                         <div class="mb-4">
                             <span class="inline-block text-white px-3 py-1 text-xs font-semibold uppercase rounded" style="background-color: #E31837;">Includes Preliminary Plans</span>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2-bedroom ADU design floor plan" class="rounded-lg mb-6 w-full">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2-bedroom ADU design floor plan with two bedrooms and full living space" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">2-Bedroom ADU Plans</h3>
                         <p class="text-gray-600 mb-4">Larger family-friendly designs with two bedrooms, perfect for growing families or higher rental income.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -916,7 +950,7 @@
                         <a href="#" onclick="showTab('designs'); return false;" class="corporate-button-secondary inline-block">View Details</a>
                     </div>
                     <div class="professional-card p-8">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Modern ADU architectural rendering" class="rounded-lg mb-6 w-full">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Custom ADU architectural design and modification services" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Custom Design Options</h3>
                         <p class="text-gray-600 mb-4">Need something unique? We can modify any of our plans or create a custom design tailored to your property.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-6">
@@ -961,37 +995,29 @@
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button inline-block">Get Your Free Consultation</a>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural team working on ADU plans" class="rounded-lg shadow-xl w-full">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural team working on ADU plans and blueprints" class="rounded-lg shadow-xl w-full">
                     </div>
                 </div>
                 
                 <!-- Team Section -->
                 <div class="mt-16">
                     <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Team</h3>
-                    <div class="grid md:grid-cols-3 gap-8">
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <div class="professional-card p-8 text-center">
                             <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
                                 <i data-feather="user" class="w-12 h-12" style="color: #004B87;"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Nicholas Kirby</h4>
-                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Principal Architect</p>
-                            <p class="text-gray-600 text-sm">Licensed Massachusetts architect with extensive experience in residential design and ADU planning. Specializes in BPDA compliance and permit expediting.</p>
+                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Co-Founder & Strategy Lead</p>
+                            <p class="text-gray-600 text-sm">Licensed Massachusetts architect with extensive experience in residential design and ADU planning. Specializes in BPDA compliance, permit expediting, and strategic business development.</p>
                         </div>
                         <div class="professional-card p-8 text-center">
                             <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
-                                <i data-feather="users" class="w-12 h-12" style="color: #004B87;"></i>
+                                <i data-feather="tool" class="w-12 h-12" style="color: #004B87;"></i>
                             </div>
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">Design Team</h4>
-                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Architectural Designers</p>
-                            <p class="text-gray-600 text-sm">Our experienced design team works collaboratively to create efficient, compliant ADU plans that maximize space and meet all Boston zoning requirements.</p>
-                        </div>
-                        <div class="professional-card p-8 text-center">
-                            <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
-                                <i data-feather="file-check" class="w-12 h-12" style="color: #004B87;"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-gray-900 mb-2">Permit Specialists</h4>
-                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">BPDA Experts</p>
-                            <p class="text-gray-600 text-sm">Dedicated permit specialists who understand the intricacies of Boston's Article 53 and ensure smooth permit submissions and approvals.</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Christopher Kirby</h4>
+                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Co-Founder & Principal Engineer</p>
+                            <p class="text-gray-600 text-sm">Principal engineer with deep expertise in structural engineering, building systems, and technical design. Ensures all ADU plans meet structural requirements and building codes.</p>
                         </div>
                     </div>
                 </div>
