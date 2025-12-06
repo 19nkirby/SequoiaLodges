@@ -29,7 +29,7 @@
       "description": "Pre-designed ADU plans for Boston, MA. BPDA compliant architectural designs for accessory dwelling units.",
       "url": "https://sequoialodges.com",
       "telephone": "+16178725553",
-      "email": "info@sequoialodges.com",
+      "email": "NicholasKirby@sequoialodges.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Boston",
@@ -81,7 +81,14 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: #f8fafc;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         .corporate-blue {
             background-color: #1e3a8a;
@@ -124,10 +131,11 @@
         .corporate-button {
             background-color: #1e3a8a;
             color: white;
-            font-weight: 700;
+            font-weight: 600;
             padding: 0.875rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.25rem;
             font-size: 1rem;
+            border: none;
         }
         .corporate-button:hover {
             background-color: #1e40af;
@@ -135,10 +143,10 @@
         .corporate-button-secondary {
             background-color: white;
             color: #1e3a8a;
-            border: 2px solid #1e3a8a;
-            font-weight: 700;
+            border: 1px solid #1e3a8a;
+            font-weight: 600;
             padding: 0.875rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.25rem;
             font-size: 1rem;
         }
         .corporate-button-secondary:hover {
@@ -217,7 +225,7 @@
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md border-b-2 border-blue-900 z-50">
+    <nav class="fixed w-full bg-white shadow-sm border-b border-gray-200 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="/" class="text-2xl font-bold">
@@ -240,9 +248,8 @@
                 <a href="#services" class="nav-hover text-gray-700 hover:text-blue-900 font-semibold">Services</a>
                 <a href="#pricing" class="nav-hover text-gray-700 hover:text-blue-900 font-semibold">Pricing</a>
                 <a href="#designs" class="nav-hover text-gray-700 hover:text-blue-900 font-semibold">Designs</a>
-                <a href="#projects" class="nav-hover text-gray-700 hover:text-blue-900 font-semibold">Portfolio</a>
                 <a href="#about" class="nav-hover text-gray-700 hover:text-blue-900 font-semibold">About</a>
-                <a href="#contact" class="corporate-button px-4 py-2 text-sm">Contact</a>
+                <a href="#contact" class="bg-blue-900 text-white px-6 py-2.5 rounded text-sm font-semibold hover:bg-blue-800">Contact</a>
 </div>
                 <button class="md:hidden focus:outline-none">
                     <i data-feather="menu" class="text-gray-700"></i>
@@ -250,33 +257,97 @@
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-24 pb-16">
-        <div class="container mx-auto px-6 py-12">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 text-gray-800">
+    <!-- Hero Section with Integrated Contact -->
+    <section class="hero-gradient pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto">
+                <!-- Hero Content -->
+                <div class="text-center mb-16">
                     <div class="mb-6">
-                        <span class="inline-block bg-gradient-to-r from-blue-50 to-blue-100 text-blue-900 px-5 py-2.5 rounded-full text-sm font-semibold border border-blue-200 shadow-sm">BPDA Compliant Designs</span>
+                        <span class="inline-block bg-blue-900 text-white px-6 py-2 text-sm font-semibold uppercase tracking-wide">BPDA Compliant Designs</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl professional-heading mb-6 leading-tight text-gray-900">Pre-Designed ADU Plans for Massachusetts Homeowners</h1>
-                    <p class="text-lg md:text-xl mb-8 professional-text">Skip the design headaches. Get BPDA-compliant architectural plans that are ready to submit for permits in Boston and surrounding areas. Massachusetts ADU plans for studio, 1-bedroom, and 2-bedroom accessory dwelling units.</p>
-                    <div class="mb-8 p-4 bg-blue-50 border-l-4 border-blue-900 rounded">
-                        <p class="text-gray-700 font-semibold"><span class="text-blue-900">✓ Free Consultation</span> • <span class="text-blue-900">✓ BPDA Compliance Guarantee</span> • <span class="text-blue-900">✓ Licensed Architects</span></p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">Pre-Designed ADU Plans for Massachusetts</h1>
+                    <p class="text-xl md:text-2xl mb-10 text-gray-700 max-w-4xl mx-auto">BPDA-compliant architectural plans ready to submit for permits. Serving Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
+                    <div class="flex justify-center gap-4 mb-12 text-gray-600">
+                        <span class="font-semibold">✓ Free Consultation</span>
+                        <span>•</span>
+                        <span class="font-semibold">✓ BPDA Compliance Guarantee</span>
+                        <span>•</span>
+                        <span class="font-semibold">✓ Licensed Architects</span>
                     </div>
-<div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="corporate-button inline-block text-center shadow-lg">Get Free Consultation</a>
-                        <a href="#pricing" class="corporate-button-secondary inline-block text-center">View Plans & Pricing</a>
+                </div>
+                
+                <!-- Contact Form Integrated -->
+                <div class="bg-white rounded-lg shadow-xl border-t-4 border-blue-900 p-8 md:p-12 max-w-5xl mx-auto">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Get Your Free ADU Consultation</h2>
+                        <p class="text-gray-600 text-lg">Complete the form below or call us at <a href="tel:+16178725553" class="text-blue-900 font-semibold hover:underline">(617) 872-5553</a></p>
                     </div>
-</div>
-                <div class="md:w-1/2 mt-10 md:mt-0">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="BPDA compliant ADU architectural plans and blueprints for Boston Massachusetts properties" class="rounded-lg shadow-xl w-full">
-                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg border border-gray-100">
-                            <div class="text-center">
-                                <p class="text-xs text-gray-500 uppercase tracking-wide">Featured Project</p>
-                                <p class="font-bold text-gray-900">Brookline ADU</p>
-                                <p class="text-sm text-gray-600">800 sq.ft | Detached</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6 text-gray-900">Contact Information</h3>
+                            <div class="space-y-5">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-blue-900 rounded flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i data-feather="phone" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">Phone</h4>
+                                        <p class="text-gray-700"><a href="tel:+16178725553" class="text-blue-900 hover:underline">(617) 872-5553</a></p>
+                                        <p class="text-sm text-gray-500 mt-1">Mon-Fri: 9:00 AM - 6:00 PM EST</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-blue-900 rounded flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i data-feather="mail" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">Email</h4>
+                                        <p class="text-gray-700"><a href="mailto:NicholasKirby@sequoialodges.com" class="text-blue-900 hover:underline">NicholasKirby@sequoialodges.com</a></p>
+                                        <p class="text-sm text-gray-500 mt-1">Response within 24 hours</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 bg-blue-900 rounded flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i data-feather="map-pin" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 mb-1">Office</h4>
+                                        <p class="text-gray-700">Boston, Massachusetts</p>
+                                        <p class="text-sm text-gray-500 mt-1">Serving Greater Boston Area</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            <form class="space-y-4" id="contactForm" action="https://formspree.io/f/xovkpqvn" method="POST">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="first-name" class="block text-gray-700 font-semibold mb-2 text-sm">First Name *</label>
+                                        <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    </div>
+                                    <div>
+                                        <label for="last-name" class="block text-gray-700 font-semibold mb-2 text-sm">Last Name *</label>
+                                        <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-semibold mb-2 text-sm">Email *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-semibold mb-2 text-sm">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-gray-700 font-semibold mb-2 text-sm">Tell Us About Your Project *</label>
+                                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900"></textarea>
+                                </div>
+                                <button type="submit" class="w-full corporate-button text-lg py-4">Get Free Consultation</button>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
+                                <p class="text-xs text-gray-500 text-center">By submitting, you agree to be contacted by Sequoia Lodges.</p>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -284,8 +355,8 @@
         </div>
     </section>
 
-    <!-- Contact Section - Moved to Top for Lead Generation -->
-    <section id="contact" class="py-16 corporate-section-alt border-t-4 border-blue-900">
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 corporate-section-alt border-t-4 border-blue-900 hidden">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -312,7 +383,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Email</h4>
-                                    <p class="text-gray-700 text-lg"><a href="mailto:info@sequoialodges.com" class="text-blue-900 hover:underline">info@sequoialodges.com</a></p>
+                                    <p class="text-gray-700 text-lg"><a href="mailto:NicholasKirby@sequoialodges.com" class="text-blue-900 hover:underline">NicholasKirby@sequoialodges.com</a></p>
                                     <p class="text-sm text-gray-500 mt-1">Response within 24 hours</p>
                                 </div>
                             </div>
@@ -777,118 +848,6 @@
             </div>
         </div>
     </section>
-    <!-- Portfolio Section -->
-    <section id="projects" class="py-20 corporate-section-alt">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-green-100 text-green-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">Portfolio</span>
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Successfully Permitted ADU Projects - Boston Massachusetts</h2>
-                <div class="w-20 h-1 bg-green-800 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Real projects, real permits, real results. See how our pre-approved plans perform in the field across Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Newton Studio ADU - Boston Massachusetts ADU Project" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-blue-600 font-semibold">Newton, MA</span>
-                            <span class="text-sm text-green-600 font-semibold">✓ Permitted</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Small Lot Studio ADU</h3>
-                        <p class="text-gray-600 mb-4">450 sq.ft | Studio | 3,200 sq.ft lot</p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Permit Timeline:</span>
-                                <span class="font-semibold">3 weeks</span>
-                    </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Construction:</span>
-                                <span class="font-semibold">3 months</span>
-                </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Rental Income:</span>
-                                <span class="font-semibold text-green-600">$2,200/month</span>
-                        </div>
-                    </div>
-                        <p class="text-gray-700 text-sm">"The permit process was incredibly smooth. Sequoia Lodges' plans sailed through BPDA without any revisions needed." - Sarah M.</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cambridge 1BR ADU" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-blue-600 font-semibold">Cambridge, MA</span>
-                            <span class="text-sm text-green-600 font-semibold">✓ Permitted</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Medium Lot 1-Bedroom ADU</h3>
-                        <p class="text-gray-600 mb-4">750 sq.ft | 1 Bed, 1 Bath | 5,500 sq.ft lot</p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Permit Timeline:</span>
-                                <span class="font-semibold">2 weeks</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Construction:</span>
-                                <span class="font-semibold">4 months</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Rental Income:</span>
-                                <span class="font-semibold text-green-600">$2,800/month</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 text-sm">"Perfect for our aging parents. The separate bedroom gives them privacy while keeping them close to family." - David R.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional Case Studies -->
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
-                            <i data-feather="home" class="w-6 h-6 text-blue-600"></i>
-                        </div>
-                        <h4 class="font-bold">Brookline Studio</h4>
-                        <p class="text-sm text-gray-600">400 sq.ft | 2.5 weeks permit</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-green-600 mb-1">$1,950</div>
-                        <div class="text-sm text-gray-600">Monthly Rental</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
-                            <i data-feather="users" class="w-6 h-6 text-green-600"></i>
-                        </div>
-                        <h4 class="font-bold">Newton 1BR</h4>
-                        <p class="text-sm text-gray-600">650 sq.ft | 3 weeks permit</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-green-600 mb-1">$2,400</div>
-                        <div class="text-sm text-gray-600">Monthly Rental</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
-                            <i data-feather="star" class="w-6 h-6 text-purple-600"></i>
-                        </div>
-                        <h4 class="font-bold">Cambridge 2BR</h4>
-                        <p class="text-sm text-gray-600">850 sq.ft | 2 weeks permit</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-green-600 mb-1">$3,200</div>
-                        <div class="text-sm text-gray-600">Monthly Rental</div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#contact" class="corporate-button inline-block">Request Portfolio Details</a>
-                <p class="text-sm text-gray-500 mt-4">See detailed case studies and project timelines</p>
-            </div>
-        </div>
-    </section>
 <!-- About Section -->
     <section id="about" class="py-20 corporate-section">
         <div class="container mx-auto px-6">
@@ -934,90 +893,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 corporate-section-alt">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">What Our Clients Say - Boston ADU Success Stories</h2>
-                <div class="w-20 h-1 bg-white mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Real feedback from real clients who've successfully built ADUs with our plans in Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
-                            <span class="text-blue-900 font-bold text-sm">SM</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Sarah M.</h4>
-                            <p class="text-gray-400 font-bold text-sm">Brookline, MA</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                    </div>
-                    <p class="italic text-gray-700 mb-4">"The permit process was a nightmare until we found Sequoia Lodges. Their pre-approved plans sailed through BPDA in just 3 weeks. We're now renting our ADU for $2,800/month."</p>
-                    <div class="mt-4 text-sm text-gray-600">
-                        <span class="font-semibold">Project:</span> 800 sq.ft detached ADU
-                </div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
-                            <span class="text-green-900 font-bold text-sm">DR</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">David R.</h4>
-                            <p class="text-gray-400 font-bold text-sm">Cambridge, MA</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                    </div>
-                    <p class="italic text-gray-700 mb-4">"As a contractor, I've seen too many ADU projects fail at permitting. Sequoia Lodges' plans are bulletproof. Every detail is accounted for, and the city reviewers love them."</p>
-                    <div class="mt-4 text-sm text-gray-600">
-                        <span class="font-semibold">Project:</span> 650 sq.ft internal conversion
-                </div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
-                            <span class="text-purple-900 font-bold text-sm">JL</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Jennifer L.</h4>
-                            <p class="text-gray-400 font-bold text-sm">Newton, MA</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center mb-3">
-                        <div class="flex text-yellow-400">
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                            <i data-feather="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                    </div>
-                    <p class="italic text-gray-700 mb-4">"The Professional Package was worth every penny. They handled everything from site assessment to permit submission. My mother-in-law loves her new space, and we love the extra income."</p>
-                    <div class="mt-4 text-sm text-gray-600">
-                        <span class="font-semibold">Project:</span> 900 sq.ft custom ADU
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Trust Signals Section -->
     <section class="py-16 corporate-section border-t-2 border-gray-200">
@@ -1059,100 +934,6 @@
         </div>
     </section>
 
-    <!-- Contractor Partnerships Section -->
-    <section class="py-20 corporate-section-alt">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">Trusted Contractor Network - Boston Massachusetts</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We work with vetted contractors who know our plans inside and out. Licensed contractors serving Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="users" class="w-8 h-8 text-blue-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Vetted Professionals</h3>
-                    <p class="text-gray-600 mb-4">All contractors in our network are licensed, insured, and have successfully built our ADU plans in Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Licensed & Insured</li>
-                        <li>• ADU Experience</li>
-                        <li>• Quality Guaranteed</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="map-pin" class="w-8 h-8 text-green-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Local Expertise</h3>
-                    <p class="text-gray-600 mb-4">Contractors familiar with Boston's building codes, permit processes, and local suppliers. Serving Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Boston Area Coverage</li>
-                        <li>• Local Permits</li>
-                        <li>• Supplier Relationships</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="handshake" class="w-8 h-8 text-purple-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Seamless Integration</h3>
-                    <p class="text-gray-600 mb-4">Direct communication between our team and contractors ensures smooth project execution for Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts ADU projects.</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Direct Coordination</li>
-                        <li>• Plan Modifications</li>
-                        <li>• Ongoing Support</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#contact" class="corporate-button inline-block">Get Contractor Recommendations</a>
-                <p class="text-sm text-gray-500 mt-4">Connect with vetted contractors in your area</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="py-20 corporate-section">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">ADU Insights & Updates - Boston Massachusetts</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Stay informed about Boston ADU regulations, design trends, and construction tips for Cambridge, Newton, Brookline, and surrounding Massachusetts communities</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Boston ADU Regulations - Massachusetts Accessory Dwelling Units" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-blue-600 font-semibold mb-2">Regulations</div>
-                        <h3 class="text-xl font-bold mb-3">Boston ADU Regulations: What Changed in 2024</h3>
-                        <p class="text-gray-600 mb-4">Key updates to Article 53 and how they affect your ADU project planning and permitting process.</p>
-                        <a href="#contact" class="text-blue-700 font-medium hover:text-blue-600">Contact Us to Learn More →</a>
-                    </div>
-                </article>
-                <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ADU Design Trends" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-green-600 font-semibold mb-2">Design</div>
-                        <h3 class="text-xl font-bold mb-3">Maximizing Small Spaces: ADU Design Strategies</h3>
-                        <p class="text-gray-600 mb-4">Smart design techniques to make the most of your ADU's square footage while maintaining comfort and functionality.</p>
-                        <a href="#contact" class="text-blue-700 font-medium hover:text-blue-600">Contact Us to Learn More →</a>
-                    </div>
-                </article>
-                <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ADU Construction" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-purple-600 font-semibold mb-2">Construction</div>
-                        <h3 class="text-xl font-bold mb-3">ADU Construction Timeline: What to Expect</h3>
-                        <p class="text-gray-600 mb-4">A realistic timeline for ADU construction from permit approval to final inspection, including common delays to avoid.</p>
-                        <a href="#contact" class="text-blue-700 font-medium hover:text-blue-600">Contact Us to Learn More →</a>
-                    </div>
-                </article>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#contact" class="corporate-button inline-block">Get Free Consultation</a>
-                <p class="text-sm text-gray-500 mt-4">Learn more about ADU regulations and design strategies</p>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 corporate-section-alt">
@@ -1224,7 +1005,6 @@
                             <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
                 <li><a href="#why-adu" class="text-gray-400 hover:text-white">Why ADU?</a></li>
                 <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-<li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
                             <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
                         </ul>
                     </div>
