@@ -82,7 +82,12 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+        }
+        @media (min-width: 768px) {
+            .hero-gradient {
+                background: linear-gradient(135deg, #ffffff 0%, #f8fafc 30%, #f1f5f9 100%);
+            }
         }
         .nav-hover::after {
             content: '';
@@ -116,35 +121,41 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
         .section-title {
             position: relative;
             display: inline-block;
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.03em;
         }
         .section-title:after {
             content: '';
             position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #1e40af;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%);
             border-radius: 2px;
         }
         .professional-card {
             background: #ffffff;
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .professional-card:hover {
-            border-color: #d1d5db;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
         }
         .text-primary {
             color: #1e40af;
@@ -157,12 +168,13 @@
         }
         .professional-heading {
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.03em;
             line-height: 1.2;
         }
         .professional-text {
-            line-height: 1.6;
-            color: #4b5563;
+            line-height: 1.7;
+            color: #475569;
+            font-size: 1rem;
         }
         .stat-number {
             font-weight: 800;
@@ -188,7 +200,7 @@
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50 transition-slow">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 z-50 transition-slow">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="/" class="text-2xl font-bold">
@@ -227,22 +239,22 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-gray-800" data-aos="fade-right">
                     <div class="mb-6">
-                        <span class="inline-block bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold">BPDA Compliant Designs</span>
+                        <span class="inline-block bg-gradient-to-r from-blue-50 to-blue-100 text-blue-900 px-5 py-2.5 rounded-full text-sm font-semibold border border-blue-200 shadow-sm">BPDA Compliant Designs</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl professional-heading mb-6 leading-tight text-gray-900">Pre-Designed ADU Plans for MA Homeowners</h1>
                     <p class="text-lg md:text-xl mb-10 professional-text">Skip the design headaches. Get BPDA-compliant architectural plans that are ready to submit for permits in Boston and surrounding areas. Massachusetts ADU plans for studio, 1-bedroom, and 2-bedroom accessory dwelling units.</p>
 <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#pricing" class="bg-blue-900 text-white px-8 py-4 rounded-md font-medium text-center hover:bg-blue-800 transition-colors shadow-lg hover:shadow-xl">View Plans & Pricing</a>
-                        <a href="#contact" class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-md font-medium text-center hover:bg-blue-50 transition-colors">Contact Us</a>
+                        <a href="#pricing" class="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">View Plans & Pricing</a>
+                        <a href="#contact" class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-50 transition-all hover:border-blue-800">Contact Us</a>
                     </div>
 </div>
                 <div class="md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="BPDA compliant ADU architectural plans and blueprints for Boston Massachusetts properties" class="rounded-lg shadow-xl w-full">
-                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="BPDA compliant ADU architectural plans and blueprints for Boston Massachusetts properties" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg border border-gray-100">
                             <div class="text-center">
-                                <p class="text-xs text-gray-500">Featured Project</p>
-                                <p class="font-bold">Brookline ADU</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-wide">Featured Project</p>
+                                <p class="font-bold text-gray-900">Brookline ADU</p>
                                 <p class="text-sm text-gray-600">800 sq.ft | Detached</p>
                             </div>
                         </div>
@@ -261,7 +273,7 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="professional-card p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                         <i data-feather="clock" class="w-8 h-8 text-primary"></i>
                     </div>
                     <h3 class="text-2xl professional-heading mb-4 text-gray-900">Save 6 Months</h3>
@@ -271,7 +283,7 @@
                     </div>
                 </div>
                 <div class="professional-card p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                         <i data-feather="shield-check" class="w-8 h-8 text-green-600"></i>
                     </div>
                     <h3 class="text-2xl professional-heading mb-4 text-gray-900">100% Guaranteed</h3>
@@ -281,7 +293,7 @@
                     </div>
                 </div>
                 <div class="professional-card p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                         <i data-feather="dollar-sign" class="w-8 h-8 text-purple-600"></i>
                     </div>
                     <h3 class="text-2xl professional-heading mb-4 text-gray-900">Save $15,000+</h3>
@@ -367,9 +379,11 @@
                 <h2 class="text-4xl font-bold text-gray-900 mb-4 section-title">Our Services</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-blue-900 mb-4">
-                        <i data-feather="home" class="w-10 h-10"></i>
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center inline-flex shadow-sm">
+                            <i data-feather="home" class="w-6 h-6"></i>
+                        </div>
                     </div>
                                     <h3 class="text-xl font-bold mb-4">BPDA-Compliant ADU Design</h3>
                                     <p class="text-gray-600">Custom designs meeting all requirements of Boston's ADU Ordinance (Article 53) including dimensional standards, parking reductions, and owner-occupancy rules.</p>
@@ -379,9 +393,11 @@
                                         <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded-full">ISD Approved</span>
                                     </div>
 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-blue-800 mb-4">
-                        <i data-feather="layers" class="w-10 h-10"></i>
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center inline-flex shadow-sm">
+                            <i data-feather="layers" class="w-6 h-6"></i>
+                        </div>
                     </div>
                                     <h3 class="text-xl font-bold mb-4">By-Right ADU Packages</h3>
                                     <p class="text-gray-600">Pre-approved plans that qualify for by-right approval under Boston's zoning code, including all required documents for BPDA and ISD submission.</p>
@@ -391,9 +407,11 @@
                                         <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded-full">Included: Affidavit</span>
                                     </div>
 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-slow border border-gray-100" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-blue-700 mb-4">
-                        <i data-feather="file-text" class="w-10 h-10"></i>
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center inline-flex shadow-sm">
+                            <i data-feather="file-text" class="w-6 h-6"></i>
+                        </div>
                     </div>
                                     <h3 class="text-xl font-bold mb-4">Legalization Services</h3>
                                     <p class="text-gray-600">Complete packages to legalize existing unauthorized units through Boston's Article 80 Small Project Review process.</p>
@@ -445,7 +463,7 @@
                             <span>Email support (30 days)</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="w-full bg-gray-900 text-white py-3 rounded-md font-medium text-center hover:bg-gray-800 transition-colors block">Get Started</a>
+                    <a href="#contact" class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center hover:bg-gray-800 transition-all shadow-md hover:shadow-lg block">Get Started</a>
                 </div>
 
                 <!-- Professional Plan -->
@@ -485,7 +503,7 @@
                             <span>Priority support (90 days)</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="w-full bg-blue-900 text-white py-3 rounded-md font-medium text-center hover:bg-blue-800 transition-colors block">Get Started</a>
+                    <a href="#contact" class="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold text-center hover:bg-blue-800 transition-all shadow-md hover:shadow-lg block">Get Started</a>
                 </div>
 
                 <!-- Premium Plan -->
@@ -522,7 +540,7 @@
                             <span>Unlimited support (6 months)</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="w-full bg-gray-900 text-white py-3 rounded-md font-medium text-center hover:bg-gray-800 transition-colors block">Get Started</a>
+                    <a href="#contact" class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center hover:bg-gray-800 transition-all shadow-md hover:shadow-lg block">Get Started</a>
                 </div>
             </div>
             <div class="text-center mt-12">
@@ -583,8 +601,8 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-slow relative" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Small lot studio ADU design for properties under 4,000 sq.ft in Boston Massachusetts" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs">Small Lot</div>
+                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Small lot studio ADU design for properties under 4,000 sq.ft in Boston Massachusetts" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm">Small Lot</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Small Lot Studio Collection</h3>
@@ -603,8 +621,8 @@
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-slow relative" data-aos="fade-up" data-aos-delay="200">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Medium lot one-bedroom ADU design for 4,000-6,000 sq.ft properties in Boston Massachusetts" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs">Medium Lot</div>
+                        <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Medium lot one-bedroom ADU design for 4,000-6,000 sq.ft properties in Boston Massachusetts" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm">Medium Lot</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Medium Lot 1-Bedroom Collection</h3>
@@ -623,8 +641,8 @@
                 </div>
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-slow relative" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Large lot two-bedroom ADU design for properties over 6,000 sq.ft in Boston Massachusetts" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs">Large Lot</div>
+                        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Large lot two-bedroom ADU design for properties over 6,000 sq.ft in Boston Massachusetts" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-white text-blue-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm">Large Lot</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Large Lot 2-Bedroom Collection</h3>
@@ -660,8 +678,8 @@
                 <p class="text-gray-600 max-w-2xl mx-auto mt-4">Real projects, real permits, real results. See how our pre-approved plans perform in the field across Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Newton Studio ADU - Boston Massachusetts ADU Project" class="w-full h-64 object-cover">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all" data-aos="fade-right">
+                    <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Newton Studio ADU - Boston Massachusetts ADU Project" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-sm text-blue-600 font-semibold">Newton, MA</span>
@@ -686,8 +704,8 @@
                         <p class="text-gray-700 text-sm">"The permit process was incredibly smooth. Sequoia Lodges' plans sailed through BPDA without any revisions needed." - Sarah M.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Cambridge 1BR ADU" class="w-full h-64 object-cover">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all" data-aos="fade-left">
+                    <img src="https://images.pexels.com/photos/1648771/pexels-photo-1648771.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Cambridge 1BR ADU" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-sm text-blue-600 font-semibold">Cambridge, MA</span>
@@ -716,9 +734,9 @@
             
             <!-- Additional Case Studies -->
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
                     <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
                             <i data-feather="home" class="w-6 h-6 text-blue-600"></i>
                         </div>
                         <h4 class="font-bold">Brookline Studio</h4>
@@ -729,9 +747,9 @@
                         <div class="text-sm text-gray-600">Monthly Rental</div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
                             <i data-feather="users" class="w-6 h-6 text-green-600"></i>
                         </div>
                         <h4 class="font-bold">Newton 1BR</h4>
@@ -742,9 +760,9 @@
                         <div class="text-sm text-gray-600">Monthly Rental</div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
                             <i data-feather="star" class="w-6 h-6 text-purple-600"></i>
                         </div>
                         <h4 class="font-bold">Cambridge 2BR</h4>
@@ -769,7 +787,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sequoia Lodges licensed architectural team specializing in BPDA compliant ADU plans for Boston Massachusetts" class="rounded-lg shadow-xl">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Sequoia Lodges licensed architectural team specializing in BPDA compliant ADU plans for Boston Massachusetts" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2 md:pl-16" data-aos="fade-left">
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">About Sequoia Lodges - Boston ADU Architects</h2>
@@ -818,9 +836,9 @@
                 <p class="text-gray-600 max-w-2xl mx-auto mt-4">Real feedback from real clients who've successfully built ADUs with our plans in Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
                             <span class="text-blue-900 font-bold text-sm">SM</span>
                         </div>
                         <div>
@@ -842,9 +860,9 @@
                         <span class="font-semibold">Project:</span> 800 sq.ft detached ADU
                 </div>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
                             <span class="text-green-900 font-bold text-sm">DR</span>
                         </div>
                         <div>
@@ -866,9 +884,9 @@
                         <span class="font-semibold">Project:</span> 650 sq.ft internal conversion
                 </div>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mr-4 shadow-sm">
                             <span class="text-purple-900 font-bold text-sm">JL</span>
                         </div>
                         <div>
@@ -997,7 +1015,7 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Boston ADU Regulations - Massachusetts Accessory Dwelling Units" class="w-full h-48 object-cover">
+                    <img src="https://images.pexels.com/photos-3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Boston ADU Regulations - Massachusetts Accessory Dwelling Units" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-blue-600 font-semibold mb-2">Regulations</div>
                         <h3 class="text-xl font-bold mb-3">Boston ADU Regulations: What Changed in 2024</h3>
@@ -1006,7 +1024,7 @@
                     </div>
                 </article>
                 <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="ADU Design Trends" class="w-full h-48 object-cover">
+                    <img src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="ADU Design Trends" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-green-600 font-semibold mb-2">Design</div>
                         <h3 class="text-xl font-bold mb-3">Maximizing Small Spaces: ADU Design Strategies</h3>
@@ -1015,7 +1033,7 @@
                     </div>
                 </article>
                 <article class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-slow" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="ADU Construction" class="w-full h-48 object-cover">
+                    <img src="https://images.pexels.com/photos-1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="ADU Construction" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-purple-600 font-semibold mb-2">Construction</div>
                         <h3 class="text-xl font-bold mb-3">ADU Construction Timeline: What to Expect</h3>
@@ -1153,7 +1171,7 @@
                             <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
                             <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"></textarea>
 </div>
-                        <button type="submit" class="bg-blue-900 text-white px-8 py-3 rounded-md font-bold hover:bg-blue-800 transition-slow">Request Consultation</button>
+                        <button type="submit" class="bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Request Consultation</button>
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
 </form>
