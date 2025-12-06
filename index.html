@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://sequoialodges.com">
     <meta property="og:title" content="Sequoia Lodges | Pre-Designed ADU Plans Boston MA | BPDA Compliant">
     <meta property="og:description" content="Get BPDA compliant pre-designed ADU plans for Boston. Studio, 1BR, 2BR designs. Fast permits, guaranteed compliance. Start earning rental income today.">
-    <meta property="og:image" content="https://sequoialodges.com/og-image.jpg">
+    <meta property="og:image" content="https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Sequoia Lodges - Pre-Designed ADU Plans for Boston Massachusetts">
@@ -32,7 +32,7 @@
     <meta name="twitter:url" content="https://sequoialodges.com">
     <meta name="twitter:title" content="Sequoia Lodges | Pre-Designed ADU Plans Boston MA">
     <meta name="twitter:description" content="BPDA compliant pre-designed ADU plans for Boston. Fast permits, guaranteed compliance.">
-    <meta name="twitter:image" content="https://sequoialodges.com/og-image.jpg">
+    <meta name="twitter:image" content="https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png">
     <meta name="twitter:image:alt" content="Sequoia Lodges ADU Plans">
     <meta name="twitter:site" content="@sequoialodges">
     <meta name="twitter:creator" content="@sequoialodges">
@@ -55,8 +55,10 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Favicon & App Icons: prefer brand PNG, fall back to inline SVG -->
+    <link rel="icon" type="image/png" href="SequoiaLodges Logo Design.png">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K">
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDUyIDUyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgcng9IjEyIiBmaWxsPSIjMDA0QjhCNyIvPjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pjwvc3ZnPg==">
+    <link rel="apple-touch-icon" sizes="180x180" href="SequoiaLodges Logo Design.png">
     <!-- Organization Schema -->
     <script type="application/ld+json">
     {
@@ -65,7 +67,7 @@
       "name": "Sequoia Lodges",
       "legalName": "Sequoia Lodges LLC",
       "url": "https://sequoialodges.com",
-      "logo": "https://sequoialodges.com/Sequoia Lodges Logo Design.pdf",
+      "logo": "https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png",
       "foundingDate": "2024",
       "founder": [
         {
@@ -519,70 +521,70 @@
             font-weight: 700;
             letter-spacing: -0.02em;
         }
-        .corporate-blue {
-            background-color: #004B87;
+        :root {
+            --primary: #002f6c;
+            --primary-dark: #001f47;
+            --accent: #d4001a;
+            --bg: #f5f6fa;
+            --text: #0b1f33;
         }
-        .corporate-blue-light {
-            background-color: #0066CC;
-        }
-        .corporate-red {
-            background-color: #E31837;
-        }
-        .corporate-gray {
-            background-color: #1f2937;
-        }
-        .corporate-section {
+        body {
+            color: var(--text);
             background-color: #ffffff;
         }
-        .corporate-section-alt {
-            background-color: #f9fafb;
-        }
+        .corporate-blue { background-color: var(--primary); }
+        .corporate-blue-light { background-color: #0f4fa3; }
+        .corporate-red { background-color: var(--accent); }
+        .corporate-gray { background-color: #1f2937; }
+        .corporate-section { background-color: #ffffff; }
+        .corporate-section-alt { background-color: var(--bg); }
         .nav-hover::after {
             content: '';
             display: block;
             width: 0;
             height: 2px;
-            background: #004B87;
+            background: var(--primary);
             transition: width .3s;
         }
-        .nav-hover:hover::after {
-            width: 100%;
-        }
+        .nav-hover:hover::after { width: 100%; }
         .btn-primary {
-            background-color: #004B87;
+            background-color: var(--primary);
             color: white;
-            border: 1px solid #004B87;
+            border: 1px solid var(--primary);
             font-weight: 700;
-            letter-spacing: 0.025em;
+            letter-spacing: 0.015em;
             font-size: 1rem;
+            border-radius: 6px;
         }
         .btn-primary:hover {
-            background-color: #003366;
-            border-color: #003366;
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
         .corporate-button {
-            background-color: #004B87;
+            background-color: var(--primary);
             color: white;
-            font-weight: 600;
-            padding: 0.875rem 2rem;
-            border-radius: 0.25rem;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
             font-size: 1rem;
-            border: none;
+            border: 1px solid var(--primary);
+            box-shadow: 0 8px 20px rgba(0,47,108,0.12);
         }
         .corporate-button:hover {
-            background-color: #003366;
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
         .corporate-button-secondary {
             background-color: white;
-            color: #004B87;
-            border: 1px solid #004B87;
-            font-weight: 600;
-            padding: 0.875rem 2rem;
-            border-radius: 0.25rem;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
             font-size: 1rem;
         }
         .corporate-button-secondary:hover {
-            background-color: #f8fafc;
+            background-color: #eef2f7;
         }
         .card-hover:hover {
             box-shadow: 0 12px 32px rgba(0,0,0,0.12);
@@ -687,9 +689,7 @@
             <div class="flex justify-between items-center">
                 <a href="#" onclick="showTab('home'); return false;" class="text-2xl font-bold">
                     <div class="flex items-center">
-                        <object data="Sequoia Lodges Logo Design.pdf" type="application/pdf" class="h-12 w-auto pointer-events-none">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K" alt="Sequoia Lodges Logo" class="h-12 w-auto">
-                        </object>
+                        <img src="SequoiaLodges Logo Design.png" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K';">
                     </div>
                 </a>
                 <div class="hidden md:flex space-x-1 items-center border-l border-gray-300 pl-6">
@@ -909,19 +909,19 @@
                 <div class="max-w-3xl mx-auto">
                     <div class="professional-card p-8 border-2" style="border-color: #004B87;">
                         <div class="mb-4">
-                            <span class="inline-block text-white px-3 py-1 text-xs font-semibold uppercase rounded" style="background-color: #E31837;">Includes Preliminary Plans</span>
+                            <span class="inline-block text-white px-3 py-1 text-xs font-semibold uppercase rounded" style="background-color: var(--accent);">Includes Preliminary Plans</span>
                         </div>
                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2-bedroom ADU design floor plan with two bedrooms and full living space" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">2-Bedroom ADU Plans</h3>
                         <p class="text-gray-600 mb-4">Larger family-friendly designs with two bedrooms, perfect for growing families or higher rental income.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-6">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> 800-1000 sq ft</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Two bedrooms</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Full kitchen & living</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #E31837;"></i> <strong>Preliminary plan set included</strong></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> 800-1000 sq ft</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Two bedrooms</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Full kitchen & living</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--accent);"></i> <strong>Preliminary plan set included</strong></li>
                         </ul>
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block mr-4">Get Started</a>
-                        <a href="2Br Preliminary Plan.pdf" download class="corporate-button inline-block">Download Preliminary Plans PDF</a>
+                        <a href="Preliminary-ADU-Plan.pdf" target="_blank" class="corporate-button inline-block">View Preliminary Plans PDF</a>
                     </div>
                 </div>
             </div>
@@ -993,9 +993,9 @@
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
-                    <div class="inline-block mb-4">
-                        <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase rounded" style="background-color: #E31837;">Included with 2BR Plans</span>
-                    </div>
+                        <div class="inline-block mb-4">
+                            <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase rounded" style="background-color: var(--accent);">Included with 2BR Plans</span>
+                        </div>
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">2-Bedroom Preliminary Plan Set</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get a head start on your project with our comprehensive preliminary plan set included with every 2-bedroom ADU purchase.</p>
                 </div>
@@ -1004,8 +1004,8 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
-                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Site Plan & Survey</h4>
@@ -1013,8 +1013,8 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
-                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Floor Plans</h4>
@@ -1022,8 +1022,8 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
-                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Elevations</h4>
@@ -1031,8 +1031,8 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
-                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Building Sections</h4>
@@ -1040,8 +1040,8 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
-                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">BPDA Compliance Notes</h4>
@@ -1049,16 +1049,16 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="p-6 rounded-lg border-2" style="background-color: #E6F2FF; border-color: #004B87;">
+                        <div class="p-6 rounded-lg border-2" style="background-color: #eef2f7; border-color: #d7e3f3;">
                             <p class="text-sm text-gray-700 mb-4"><strong>Ready to View?</strong></p>
-                            <p class="text-sm text-gray-600 mb-4">Download our comprehensive 2-bedroom preliminary plan set to get started on your ADU project.</p>
-                            <a href="2Br Preliminary Plan.pdf" download class="corporate-button inline-block w-full text-center">Download Preliminary Plans PDF</a>
+                            <p class="text-sm text-gray-600 mb-4">Preview our 2-bedroom preliminary plan set to see the level of detail we provide.</p>
+                            <a href="Preliminary-ADU-Plan.pdf" target="_blank" class="corporate-button inline-block w-full text-center">Open Preliminary Plans PDF</a>
                         </div>
                     </div>
                     <div>
                         <div class="professional-card p-8 text-center">
-                            <div class="w-32 h-32 rounded-lg mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
-                                <i data-feather="file-text" class="w-16 h-16" style="color: #004B87;"></i>
+                            <div class="w-32 h-32 rounded-lg mx-auto mb-6 flex items-center justify-center" style="background-color: #eef2f7;">
+                                <i data-feather="file-text" class="w-16 h-16" style="color: var(--primary);"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-4">2BR Preliminary Plan Set</h4>
                             <p class="text-gray-600 mb-6">Comprehensive preliminary drawings included with your 2-bedroom ADU purchase. Perfect for early contractor discussions and site planning.</p>
@@ -1197,9 +1197,7 @@
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center">
-                        <object data="Sequoia Lodges Logo Design.pdf" type="application/pdf" class="h-12 w-auto pointer-events-none">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K" alt="Sequoia Lodges Logo" class="h-12 w-auto">
-                        </object>
+                        <img src="SequoiaLodges Logo Design.png" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K';">
                     </div>
                     <p class="text-gray-400 mt-4">Pre-Designed ADU Architectural Plans & Design Services for Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities</p>
                     <div class="mt-6">
