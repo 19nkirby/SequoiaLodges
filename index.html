@@ -19,8 +19,8 @@
     <meta name="twitter:title" content="Sequoia Lodges | Pre-Designed ADU Plans Boston MA">
     <meta name="twitter:description" content="BPDA compliant pre-designed ADU plans for Boston. Fast permits, guaranteed compliance.">
     <link rel="canonical" href="https://sequoialodges.com">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='6' fill='%23004B87'/%3E%3Cpath d='M48 12L48 52' stroke='%23155D27' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M45 18L48 12L51 18' stroke='%23155D27' stroke-width='2' fill='none'/%3E%3Cpath d='M44 24L48 18L52 24' stroke='%23155D27' stroke-width='2' fill='none'/%3E%3Cpath d='M43 30L48 24L53 30' stroke='%23155D27' stroke-width='2' fill='none'/%3E%3Cpath d='M42 36L48 30L54 36' stroke='%23155D27' stroke-width='2' fill='none'/%3E%3Cpath d='M41 42L48 36L55 42' stroke='%23155D27' stroke-width='2' fill='none'/%3E%3Crect x='8' y='32' width='24' height='24' rx='2' fill='%23D4A574' stroke='%23B8860B' stroke-width='1.5'/%3E%3Cpath d='M8 32L20 18L32 32' fill='%23B8860B'/%3E%3Crect x='14' y='38' width='3' height='5' fill='%23004B87'/%3E%3Crect x='23' y='38' width='3' height='5' fill='%23004B87'/%3E%3Crect x='16' y='46' width='8' height='10' fill='%23B8860B'/%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='180' height='180' rx='40' fill='%23004B87'/%3E%3Cpath d='M135 34L135 150' stroke='%23155D27' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M127 50L135 34L143 50' stroke='%23155D27' stroke-width='5' fill='none'/%3E%3Cpath d='M124 66L135 50L146 66' stroke='%23155D27' stroke-width='5' fill='none'/%3E%3Cpath d='M121 82L135 66L149 82' stroke='%23155D27' stroke-width='5' fill='none'/%3E%3Cpath d='M118 98L135 82L152 98' stroke='%23155D27' stroke-width='5' fill='none'/%3E%3Cpath d='M115 114L135 98L155 114' stroke='%23155D27' stroke-width='5' fill='none'/%3E%3Crect x='22' y='90' width='60' height='60' rx='5' fill='%23D4A574' stroke='%23B8860B' stroke-width='4'/%3E%3Cpath d='M22 90L52 45L82 90' fill='%23B8860B'/%3E%3Crect x='35' y='105' width='8' height='12' fill='%23004B87'/%3E%3Crect x='57' y='105' width='8' height='12' fill='%23004B87'/%3E%3Crect x='40' y='130' width='20' height='20' fill='%23B8860B'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='4' fill='%23004B87'/%3E%3Cpath d='M32 16L40 28L36 28L36 48L28 48L28 28L24 28L32 16Z' fill='white'/%3E%3Crect x='20' y='40' width='24' height='16' rx='2' fill='white'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='180' height='180' rx='40' fill='%23004B87'/%3E%3Cpath d='M90 45L112.5 67.5L101.25 67.5L101.25 135L78.75 135L78.75 67.5L67.5 67.5L90 45Z' fill='white'/%3E%3Crect x='56.25' y='112.5' width='67.5' height='45' rx='5' fill='white'/%3E%3C/svg%3E">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -236,6 +236,19 @@
             border-color: #004B87 !important;
             box-shadow: 0 0 0 2px rgba(0, 75, 135, 0.2);
         }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-button {
+            cursor: pointer;
+        }
+        .tab-button.active {
+            color: #004B87;
+            border-bottom: 2px solid #004B87;
+        }
     </style>
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
@@ -243,26 +256,12 @@
     <nav class="fixed w-full bg-white shadow-sm border-b border-gray-200 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold">
+                <a href="#" onclick="showTab('home'); return false;" class="text-2xl font-bold">
                     <div class="flex items-center">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background -->
-                            <rect width="64" height="64" rx="6" fill="#004B87"/>
-                            
-                            <!-- Sequoia Tree (right side) - more detailed and professional -->
-                            <path d="M48 12L48 52" stroke="#155D27" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M45 18L48 12L51 18" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M44 24L48 18L52 24" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M43 30L48 24L53 30" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M42 36L48 30L54 36" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M41 42L48 36L55 42" stroke="#155D27" stroke-width="2" fill="none"/>
-                            
-                            <!-- Lodge/ADU Structure (left side) - more refined -->
-                            <rect x="8" y="32" width="24" height="24" rx="2" fill="#D4A574" stroke="#B8860B" stroke-width="1.5"/>
-                            <path d="M8 32L20 18L32 32" fill="#B8860B"/>
-                            <rect x="14" y="38" width="3" height="5" fill="#004B87"/>
-                            <rect x="23" y="38" width="3" height="5" fill="#004B87"/>
-                            <rect x="16" y="46" width="8" height="10" fill="#B8860B"/>
+                        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="64" height="64" rx="4" fill="#004B87"/>
+                            <path d="M32 16L40 28L36 28L36 48L28 48L28 28L24 28L32 16Z" fill="white"/>
+                            <rect x="20" y="40" width="24" height="16" rx="2" fill="white"/>
                         </svg>
                         <div class="ml-3">
                             <div class="text-xl font-bold text-gray-900 leading-tight tracking-tight">SEQUOIA</div>
@@ -271,12 +270,12 @@
                     </div>
                 </a>
                 <div class="hidden md:flex space-x-1 items-center border-l border-gray-300 pl-6">
-                    <a href="#home" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold active" style="color: #004B87; border-bottom: 2px solid #004B87;">Home</a>
-                    <a href="#services" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Services</a>
-                    <a href="#pricing" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Pricing</a>
-                    <a href="#designs" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Designs</a>
-                    <a href="#about" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">About</a>
-                    <a href="#contact" class="nav-link px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Contact</a>
+                    <a href="#" onclick="showTab('home'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold active" style="color: #004B87; border-bottom: 2px solid #004B87;">Home</a>
+                    <a href="#" onclick="showTab('services'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Services</a>
+                    <a href="#" onclick="showTab('pricing'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Pricing</a>
+                    <a href="#" onclick="showTab('designs'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Designs</a>
+                    <a href="#" onclick="showTab('about'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">About</a>
+                    <a href="#" onclick="showTab('contact'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Contact</a>
                 </div>
                 <button class="md:hidden focus:outline-none">
                     <i data-feather="menu" class="text-gray-700"></i>
@@ -284,8 +283,12 @@
             </div>
         </div>
     </nav>
+    <!-- Tab Content Container -->
+    <div class="pt-24">
+        <!-- Home Tab Content -->
+        <div id="home-tab" class="tab-content active">
     <!-- Homepage Hero Section -->
-    <section id="home" class="hero-gradient pt-32 pb-16">
+    <section class="hero-gradient pt-8 pb-16">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -302,7 +305,7 @@
                             <span>•</span>
                             <span class="font-semibold">✓ Licensed Architects</span>
                         </div>
-                        <a href="#contact" class="corporate-button inline-block">Get Free Consultation</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button inline-block">Get Free Consultation</a>
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural blueprints and ADU plans for Boston Massachusetts" class="rounded-lg shadow-2xl w-full">
@@ -344,7 +347,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <a href="#services" class="corporate-button-secondary inline-block">Learn More About Our Services</a>
+                    <a href="#" onclick="showTab('services'); return false;" class="corporate-button-secondary inline-block">Learn More About Our Services</a>
                 </div>
             </div>
         </div>
@@ -352,8 +355,12 @@
 
 
 
+        </div>
+        
+        <!-- Services Tab Content -->
+        <div id="services-tab" class="tab-content">
     <!-- Services Section -->
-    <section id="services" class="py-20 corporate-section">
+    <section class="py-20 corporate-section">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -402,8 +409,12 @@
         </div>
     </section>
 
+        </div>
+        
+        <!-- Pricing Tab Content -->
+        <div id="pricing-tab" class="tab-content">
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 corporate-section-alt">
+    <section class="py-20 corporate-section-alt">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -422,7 +433,7 @@
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Permit-ready drawings</li>
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
                         </ul>
-                        <a href="#contact" class="corporate-button w-full inline-block text-center">Get Started</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
                     <div class="professional-card p-8 text-center border-2" style="border-color: #004B87;">
                         <div class="mb-4">
@@ -439,7 +450,7 @@
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> MEP coordination</li>
                         </ul>
-                        <a href="#contact" class="corporate-button w-full inline-block text-center">Get Started</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
                     <div class="professional-card p-8 text-center">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">2-Bedroom ADU</h3>
@@ -453,15 +464,19 @@
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
                             <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Full MEP design</li>
                         </ul>
-                        <a href="#contact" class="corporate-button w-full inline-block text-center">Get Started</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+        </div>
+        
+        <!-- Designs Tab Content -->
+        <div id="designs-tab" class="tab-content">
     <!-- Designs Section -->
-    <section id="designs" class="py-20 corporate-section">
+    <section class="py-20 corporate-section">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -478,7 +493,7 @@
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Open floor plan</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Full kitchen & bath</li>
                         </ul>
-                        <a href="#contact" class="corporate-button-secondary inline-block">View Details</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block">View Details</a>
                     </div>
                     <div class="professional-card p-8">
                         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="1-bedroom ADU design floor plan" class="rounded-lg mb-6 w-full">
@@ -489,9 +504,12 @@
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Separate bedroom</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Living & dining area</li>
                         </ul>
-                        <a href="#contact" class="corporate-button-secondary inline-block">View Details</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block">View Details</a>
                     </div>
-                    <div class="professional-card p-8">
+                    <div class="professional-card p-8 border-2" style="border-color: #004B87;">
+                        <div class="mb-4">
+                            <span class="inline-block text-white px-3 py-1 text-xs font-semibold uppercase rounded" style="background-color: #E31837;">Includes Preliminary Plans</span>
+                        </div>
                         <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="2-bedroom ADU design floor plan" class="rounded-lg mb-6 w-full">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">2-Bedroom ADU Plans</h3>
                         <p class="text-gray-600 mb-4">Larger family-friendly designs with two bedrooms, perfect for growing families or higher rental income.</p>
@@ -499,8 +517,9 @@
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> 800-1000 sq ft</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Two bedrooms</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Full kitchen & living</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #E31837;"></i> <strong>Preliminary plan set included</strong></li>
                         </ul>
-                        <a href="#contact" class="corporate-button-secondary inline-block">View Details</a>
+                        <a href="#" onclick="showTab('designs'); return false;" class="corporate-button-secondary inline-block">View Details</a>
                     </div>
                     <div class="professional-card p-8">
                         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Modern ADU architectural rendering" class="rounded-lg mb-6 w-full">
@@ -511,20 +530,27 @@
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Layout customization</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Material selections</li>
                         </ul>
-                        <a href="#contact" class="corporate-button-secondary inline-block">Get Quote</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block">Get Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+        </div>
+        
+        <!-- About Tab Content -->
+        <div id="about-tab" class="tab-content">
     <!-- About Section -->
-    <section id="about" class="py-20 corporate-section-alt">
+    <section class="py-20 corporate-section-alt">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">About Sequoia Lodges</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">A Massachusetts-based architectural firm specializing in pre-designed ADU plans for Boston and surrounding communities.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                     <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">About Sequoia Lodges</h2>
                         <p class="text-lg text-gray-600 mb-4">Sequoia Lodges is a Massachusetts-based architectural firm specializing in pre-designed ADU plans for Boston and surrounding communities.</p>
                         <p class="text-lg text-gray-600 mb-4">Our team of licensed architects understands the complexities of Boston's Article 53 ADU regulations and BPDA requirements. We've created a library of compliant designs that save homeowners time and money.</p>
                         <p class="text-lg text-gray-600 mb-6">With years of experience navigating Boston's permit process, we guarantee our plans meet all regulatory requirements or we'll fix them at no additional cost.</p>
@@ -538,18 +564,156 @@
                                 <div class="stat-label">Months Saved</div>
                             </div>
                         </div>
-                        <a href="#contact" class="corporate-button inline-block">Get Your Free Consultation</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button inline-block">Get Your Free Consultation</a>
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural team working on ADU plans" class="rounded-lg shadow-xl w-full">
                     </div>
                 </div>
+                
+                <!-- Team Section -->
+                <div class="mt-16">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Team</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="professional-card p-8 text-center">
+                            <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
+                                <i data-feather="user" class="w-12 h-12" style="color: #004B87;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Nicholas Kirby</h4>
+                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Principal Architect</p>
+                            <p class="text-gray-600 text-sm">Licensed Massachusetts architect with extensive experience in residential design and ADU planning. Specializes in BPDA compliance and permit expediting.</p>
+                        </div>
+                        <div class="professional-card p-8 text-center">
+                            <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
+                                <i data-feather="users" class="w-12 h-12" style="color: #004B87;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Design Team</h4>
+                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Architectural Designers</p>
+                            <p class="text-gray-600 text-sm">Our experienced design team works collaboratively to create efficient, compliant ADU plans that maximize space and meet all Boston zoning requirements.</p>
+                        </div>
+                        <div class="professional-card p-8 text-center">
+                            <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
+                                <i data-feather="file-check" class="w-12 h-12" style="color: #004B87;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Permit Specialists</h4>
+                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">BPDA Experts</p>
+                            <p class="text-gray-600 text-sm">Dedicated permit specialists who understand the intricacies of Boston's Article 53 and ensure smooth permit submissions and approvals.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+    <!-- 2BR Preliminary Plan Set Section -->
+    <section class="py-20 corporate-section border-t-4" style="border-color: #004B87;">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="inline-block mb-4">
+                        <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase rounded" style="background-color: #E31837;">Included with 2BR Plans</span>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">2-Bedroom Preliminary Plan Set</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get a head start on your project with our comprehensive preliminary plan set included with every 2-bedroom ADU purchase.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-1">Site Plan & Survey</h4>
+                                    <p class="text-gray-600 text-sm">Preliminary site layout and property survey integration</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-1">Floor Plans</h4>
+                                    <p class="text-gray-600 text-sm">Detailed floor plans for both levels with dimensions</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-1">Elevations</h4>
+                                    <p class="text-gray-600 text-sm">All four exterior elevations showing design details</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-1">Building Sections</h4>
+                                    <p class="text-gray-600 text-sm">Cross-sections showing structural details and heights</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #E6F2FF;">
+                                    <i data-feather="check" class="w-5 h-5" style="color: #004B87;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 mb-1">BPDA Compliance Notes</h4>
+                                    <p class="text-gray-600 text-sm">Detailed notes on Article 53 compliance and requirements</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="p-6 rounded-lg border-2" style="background-color: #E6F2FF; border-color: #004B87;">
+                            <p class="text-sm text-gray-700 mb-2"><strong>Ready to View?</strong></p>
+                            <p class="text-sm text-gray-600">The preliminary plan set is available for download upon purchase of our 2-bedroom ADU plan package. Contact us to learn more.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="professional-card p-8 text-center">
+                            <div class="w-32 h-32 rounded-lg mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
+                                <i data-feather="file-text" class="w-16 h-16" style="color: #004B87;"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">2BR Preliminary Plan Set</h4>
+                            <p class="text-gray-600 mb-6">Comprehensive preliminary drawings included with your 2-bedroom ADU purchase. Perfect for early contractor discussions and site planning.</p>
+                            <div class="space-y-3 mb-6 text-left">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <span>Site Plan & Survey</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <span>Floor Plans (All Levels)</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <span>Exterior Elevations</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <span>Building Sections</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <span>Compliance Documentation</span>
+                                </div>
+                            </div>
+                            <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Your Plan Set</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+        
+        <!-- Contact Tab Content -->
+        <div id="contact-tab" class="tab-content">
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 corporate-section border-t-4" style="border-color: #004B87;">
+    <section class="py-20 corporate-section border-t-4" style="border-color: #004B87;">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -640,6 +804,8 @@
             </div>
         </div>
     </section>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-16">
@@ -648,23 +814,9 @@
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center">
                         <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background -->
-                            <rect width="64" height="64" rx="6" fill="#004B87"/>
-                            
-                            <!-- Sequoia Tree (right side) -->
-                            <path d="M48 12L48 52" stroke="#155D27" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M45 18L48 12L51 18" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M44 24L48 18L52 24" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M43 30L48 24L53 30" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M42 36L48 30L54 36" stroke="#155D27" stroke-width="2" fill="none"/>
-                            <path d="M41 42L48 36L55 42" stroke="#155D27" stroke-width="2" fill="none"/>
-                            
-                            <!-- Lodge/ADU Structure (left side) -->
-                            <rect x="8" y="32" width="24" height="24" rx="2" fill="#D4A574" stroke="#B8860B" stroke-width="1.5"/>
-                            <path d="M8 32L20 18L32 32" fill="#B8860B"/>
-                            <rect x="14" y="38" width="3" height="5" fill="#004B87"/>
-                            <rect x="23" y="38" width="3" height="5" fill="#004B87"/>
-                            <rect x="16" y="46" width="8" height="10" fill="#B8860B"/>
+                            <rect width="64" height="64" rx="4" fill="#004B87"/>
+                            <path d="M32 16L40 28L36 28L36 48L28 48L28 28L24 28L32 16Z" fill="white"/>
+                            <rect x="20" y="40" width="24" height="16" rx="2" fill="white"/>
                         </svg>
                         <div class="ml-3">
                             <div class="text-xl font-bold text-white leading-tight">SEQUOIA</div>
@@ -673,7 +825,7 @@
                     </div>
                     <p class="text-gray-400 mt-4">Pre-Designed ADU Architectural Plans & Design Services for Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities</p>
                     <div class="mt-6">
-                        <a href="#contact" class="corporate-button-secondary inline-block">Get Free Consultation</a>
+                        <a href="#" onclick="showTab('contact'); return false;" class="corporate-button-secondary inline-block">Get Free Consultation</a>
                     </div>
                     <p class="text-gray-500 mt-6 text-sm">© 2025 Sequoia Lodges LLC. All rights reserved.</p>
                 </div>
@@ -681,17 +833,15 @@
                     <div>
                         <h4 class="text-lg font-bold mb-4 text-white">Company</h4>
                         <ul class="space-y-2">
-                            <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
-                <li><a href="#why-adu" class="text-gray-400 hover:text-white">Why ADU?</a></li>
-                <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-                            <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                            <li><a href="#" onclick="showTab('about'); return false;" class="text-gray-400 hover:text-white">About</a></li>
+                <li><a href="#" onclick="showTab('services'); return false;" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li><a href="#" onclick="showTab('contact'); return false;" class="text-gray-400 hover:text-white">Contact</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 class="text-lg font-bold mb-4 text-white">Resources</h4>
                         <ul class="space-y-2">
-                    <li><a href="#why-adu" class="text-gray-400 hover:text-white">Why Build an ADU</a></li>
-                    <li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    <li><a href="#" onclick="showTab('home'); return false;" class="text-gray-400 hover:text-white">Why Build an ADU</a></li>
                             <li><a href="https://www.bostonplans.org/getattachment/2018d7d9-0ecc-45b1-acbb-9ad744563b24" target="_blank" class="text-gray-400 hover:text-white">Boston ADU Guidelines</a></li>
                         </ul>
                     </div>
@@ -739,65 +889,36 @@
             mobileMenu.classList.toggle('space-y-4');
         });
         
-        // Scroll behavior for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Update active nav link
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                        link.style.color = '';
-                        link.style.borderBottom = '';
-                    });
-                    this.classList.add('active');
-                    this.style.color = '#004B87';
-                    this.style.borderBottom = '2px solid #004B87';
-                    
-                    // Smooth scroll to target
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - navHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+        // Tab navigation function
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
             });
-        });
-        
-        // Update active nav link on scroll
-        window.addEventListener('scroll', function() {
-            const sections = ['home', 'services', 'pricing', 'designs', 'about', 'contact'];
-            const navHeight = document.querySelector('nav').offsetHeight;
-            const scrollPosition = window.scrollY + navHeight + 100;
             
-            sections.forEach(sectionId => {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                            link.style.color = '';
-                            link.style.borderBottom = '';
-                        });
-                        
-                        const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-                        if (activeLink) {
-                            activeLink.classList.add('active');
-                            activeLink.style.color = '#004B87';
-                            activeLink.style.borderBottom = '2px solid #004B87';
-                        }
-                    }
-                }
+            // Show selected tab
+            const selectedTab = document.getElementById(tabName + '-tab');
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            // Update active nav buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+                button.style.color = '';
+                button.style.borderBottom = '';
             });
-        });
+            
+            // Activate clicked button
+            const activeButton = event.target.closest('.tab-button');
+            if (activeButton) {
+                activeButton.classList.add('active');
+                activeButton.style.color = '#004B87';
+                activeButton.style.borderBottom = '2px solid #004B87';
+            }
+        }
         
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
