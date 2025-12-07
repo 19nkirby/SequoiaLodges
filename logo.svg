@@ -1,19 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" role="img" aria-labelledby="title desc">
   <title id="title">Sequoia Lodges</title>
-  <desc id="desc">Stylized cabin and sequoia trees with Sequoia Lodges wordmark</desc>
-  <rect width="320" height="140" fill="none"/>
-  <g fill="#0f3b24">
-    <path d="M155 36c-2 12-4 24-6 36h-10l-4-18-16 10 8-24-10-2 12-14 10-4 16 16z"/>
-    <path d="M184 24c5 10 10 20 14 30l-8 2-4-10-6 12h-10l-6-14-6 12-8-2c4-10 9-20 14-30l8-8 8 8z"/>
-    <path d="M212 36c6 13 11 26 15 40h-12l-4-12-6 12h-10l-6-14-6 14h-12c4-14 9-27 15-40l12-10 12 10z"/>
-    <path d="M142 84h48v28h-48z"/>
-    <path d="M130 112h72v8h-72z"/>
-    <path d="M170 84h12v28h-12z" fill="#fff" opacity="0.4"/>
-    <path d="M158 92h8v8h-8z" fill="#fff" opacity="0.7"/>
-    <path d="M178 92h8v8h-8z" fill="#fff" opacity="0.7"/>
-    <path d="M143 84 171 64 199 84z"/>
-  </g>
-  <text x="160" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#0f3b24" letter-spacing="1">SEQUOIA</text>
-  <text x="160" y="146" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f3b24" letter-spacing="4">LODGES</text>
+  <desc id="desc">Centered wordmark for Sequoia Lodges</desc>
+  <rect width="320" height="160" fill="none"/>
+  <text x="160" y="90" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#0f3b24" letter-spacing="2">SEQUOIA</text>
+  <text x="160" y="120" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f3b24" letter-spacing="6">LODGES</text>
 </svg>
 
