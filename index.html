@@ -682,6 +682,25 @@
     </style>
 </head>
 <body class="font-sans antialiased bg-white text-gray-900">
+    <!-- Utility Bar -->
+    <div class="w-full bg-primary text-white text-sm">
+        <div class="container mx-auto px-6 py-2 flex flex-wrap items-center gap-4">
+            <span class="font-semibold uppercase tracking-wide">Sequoia Lodges Private</span>
+            <span class="hidden md:inline text-white/80">BPDA Compliant • Massachusetts Licensed Architects</span>
+            <span class="flex items-center gap-2 ml-auto">
+                <i data-feather="phone" class="w-4 h-4"></i>
+                <a href="tel:+16178725553" class="hover:underline">1.617.872.5553</a>
+            </span>
+            <span class="flex items-center gap-2">
+                <i data-feather="mail" class="w-4 h-4"></i>
+                <a href="mailto:NicholasKirby@sequoialodges.com" class="hover:underline">Email</a>
+            </span>
+            <span class="flex items-center gap-2">
+                <i data-feather="lock" class="w-4 h-4"></i>
+                <a href="#" onclick="showTab(event, 'contact'); return false;" class="hover:underline">Client Login</a>
+            </span>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-sm border-b border-gray-200 z-50">
         <div class="container mx-auto px-6 py-4">
@@ -710,7 +729,8 @@
         <!-- Home Tab Content -->
         <div id="home-tab" class="tab-content active">
     <!-- Homepage Hero Section -->
-    <section class="hero-gradient pt-8 pb-16" itemscope itemtype="https://schema.org/WebPage">
+    <section class="relative overflow-hidden pt-12 pb-20 bg-white" itemscope itemtype="https://schema.org/WebPage">
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(120% 120% at 10% 20%, rgba(1,33,105,0.08), transparent 50%), radial-gradient(80% 80% at 90% 10%, rgba(212,0,26,0.06), transparent 50%);"></div>
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -718,8 +738,22 @@
                         <div class="mb-6">
                             <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase tracking-wide" style="background-color: var(--primary);">BPDA Compliant Designs</span>
                         </div>
-                        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-gray-900" itemprop="headline">Pre-Designed ADU Plans for Massachusetts</h1>
-                        <p class="text-xl md:text-2xl mb-8 text-gray-700">BPDA-compliant architectural plans ready to submit for permits. Serving Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight text-gray-900" itemprop="headline">Pre-Designed ADU Plans for Massachusetts</h1>
+                        <p class="text-xl md:text-2xl mb-6 text-gray-700">A private-bank caliber experience for your ADU investment. BPDA-compliant, permit-ready designs with white-glove guidance end to end.</p>
+                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Time Saved</p>
+                                <p class="text-2xl font-bold text-gray-900">6+ months</p>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Compliance</p>
+                                <p class="text-2xl font-bold text-gray-900">100% BPDA</p>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Costs Avoided</p>
+                                <p class="text-2xl font-bold text-gray-900">$15k+</p>
+                            </div>
+                        </div>
                 <div class="flex flex-wrap gap-4 mb-8 text-gray-600">
                             <span class="font-semibold">✓ Free Consultation</span>
                             <span>•</span>
@@ -727,11 +761,49 @@
                             <span>•</span>
                             <span class="font-semibold">✓ Licensed Architects</span>
                         </div>
-                        <a href="#" onclick="showTab(event, 'contact'); return false;" class="corporate-button inline-block">Get Free Consultation</a>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" onclick="showTab(event, 'contact'); return false;" class="corporate-button inline-block">Get Free Consultation</a>
+                            <a href="/Preliminary-ADU-Plan.pdf" target="_blank" rel="noopener" class="corporate-button-secondary inline-block">Download Preliminary Plans</a>
+                        </div>
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional architectural blueprints and ADU plans for Boston Massachusetts" class="rounded-lg shadow-2xl w-full">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section (Bank-style cards) -->
+    <section class="py-16 corporate-section">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-wide text-gray-500">Insights</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest guidance for ADU investors</h2>
+                    </div>
+                    <a href="#" onclick="showTab(event, 'about'); return false;" class="corporate-button-secondary">View more</a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="professional-card p-6 h-full flex flex-col">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Markets & Economy</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Why ADUs outpace Boston rents</h3>
+                        <p class="text-sm text-gray-600 mb-4">How Article 53-compliant units capture premium yields with lower vacancy.</p>
+                        <a href="#" onclick="showTab(event, 'services'); return false;" class="text-primary font-semibold mt-auto inline-flex items-center gap-2">Read more <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+                    </article>
+                    <article class="professional-card p-6 h-full flex flex-col">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Planning</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Financing an ADU like a portfolio</h3>
+                        <p class="text-sm text-gray-600 mb-4">Leverage construction draws, rental pro formas, and risk buffers similar to private banking.</p>
+                        <a href="#" onclick="showTab(event, 'pricing'); return false;" class="text-primary font-semibold mt-auto inline-flex items-center gap-2">Explore pricing <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+                    </article>
+                    <article class="professional-card p-6 h-full flex flex-col">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Compliance</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">BPDA review checklist</h3>
+                        <p class="text-sm text-gray-600 mb-4">Our submission playbook to avoid rounds of comments and keep permits moving.</p>
+                        <a href="/Preliminary-ADU-Plan.pdf" target="_blank" rel="noopener" class="text-primary font-semibold mt-auto inline-flex items-center gap-2">Download checklist <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+                    </article>
                 </div>
             </div>
         </div>
@@ -791,6 +863,20 @@
                     <a href="/Preliminary-ADU-Plan.pdf" target="_blank" rel="noopener" class="corporate-button-secondary">View Plans PDF</a>
                     <a href="#" onclick="showTab(event, 'contact'); return false;" class="corporate-button">Book a Call</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory CTA Strip -->
+    <section class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-6 flex flex-wrap items-center gap-4">
+            <div>
+                <p class="text-sm uppercase tracking-wide text-white/80">Talk with a Sequoia Advisor</p>
+                <p class="text-lg font-semibold">Schedule a 15-minute fit call to review your property and timeline.</p>
+            </div>
+            <div class="ml-auto flex flex-wrap gap-3">
+                <a href="#" onclick="showTab(event, 'contact'); return false;" class="bg-white text-primary font-bold px-5 py-3 rounded-md shadow-sm hover:bg-gray-100">Book a Call</a>
+                <a href="/Preliminary-ADU-Plan.pdf" target="_blank" rel="noopener" class="border border-white text-white px-5 py-3 rounded-md hover:bg-white hover:text-primary">Preview Plans PDF</a>
             </div>
         </div>
     </section>
@@ -1297,6 +1383,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Disclosures -->
+    <section class="bg-gray-100 text-gray-600 text-xs leading-relaxed border-t border-gray-200">
+        <div class="container mx-auto px-6 py-8 space-y-3">
+            <p><strong>Investing involves risk.</strong> Project timelines, construction costs, rental performance, and permitting outcomes may vary. Compliance references are based on current BPDA guidance and are subject to change.</p>
+            <p><strong>Not legal or tax advice.</strong> Consult your legal and tax advisors before making financing or entity-structure decisions related to your ADU project.</p>
+            <p><strong>Financing and approvals.</strong> Credit and collateral are subject to underwriting. Permit approvals depend on site conditions, surveys, and municipal review feedback.</p>
+        </div>
+    </section>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="fixed bottom-8 right-8 text-white p-3 rounded-full shadow-lg opacity-0 invisible z-50" style="background-color: var(--primary);" onmouseover="this.style.backgroundColor='#00123d'" onmouseout="this.style.backgroundColor='var(--primary)'" aria-label="Back to top">
