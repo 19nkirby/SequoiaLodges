@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" role="img" aria-labelledby="title desc">
+  <title id="title">Sequoia Lodges</title>
+  <desc id="desc">A red and blue ribbon mark with Sequoia Lodges wordmark</desc>
+  <rect width="260" height="60" fill="white"/>
+  <polygon fill="#d4001a" points="15,38 60,18 105,18 60,38"/>
+  <polygon fill="#012169" points="15,25 60,7 105,7 60,25"/>
+  <polygon fill="#d4001a" points="15,51 60,31 105,31 60,51"/>
+  <text x="120" y="38" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#012169">Sequoia Lodges</text>
+</svg>
+

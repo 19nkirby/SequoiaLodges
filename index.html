@@ -12,7 +12,7 @@
     <meta name="geo.placename" content="Boston">
     <meta name="geo.position" content="42.3601;-71.0589">
     <meta name="ICBM" content="42.3601, -71.0589">
-    <meta name="theme-color" content="#004B87">
+    <meta name="theme-color" content="#012169">
     <meta name="msvalidate.01" content="965A89417D7DE926CED6BA1E67DE932C" />
     
     <!-- Open Graph / Facebook -->
@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://sequoialodges.com">
     <meta property="og:title" content="Sequoia Lodges | Pre-Designed ADU Plans Boston MA | BPDA Compliant">
     <meta property="og:description" content="Get BPDA compliant pre-designed ADU plans for Boston. Studio, 1BR, 2BR designs. Fast permits, guaranteed compliance. Start earning rental income today.">
-    <meta property="og:image" content="https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png">
+    <meta property="og:image" content="https://sequoialodges.com/logo.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Sequoia Lodges - Pre-Designed ADU Plans for Boston Massachusetts">
@@ -32,7 +32,7 @@
     <meta name="twitter:url" content="https://sequoialodges.com">
     <meta name="twitter:title" content="Sequoia Lodges | Pre-Designed ADU Plans Boston MA">
     <meta name="twitter:description" content="BPDA compliant pre-designed ADU plans for Boston. Fast permits, guaranteed compliance.">
-    <meta name="twitter:image" content="https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png">
+    <meta name="twitter:image" content="https://sequoialodges.com/logo.svg">
     <meta name="twitter:image:alt" content="Sequoia Lodges ADU Plans">
     <meta name="twitter:site" content="@sequoialodges">
     <meta name="twitter:creator" content="@sequoialodges">
@@ -56,9 +56,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Favicon & App Icons: prefer brand PNG, fall back to inline SVG -->
-    <link rel="icon" type="image/png" href="SequoiaLodges Logo Design.png">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K">
-    <link rel="apple-touch-icon" sizes="180x180" href="SequoiaLodges Logo Design.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.svg">
     <!-- Organization Schema -->
     <script type="application/ld+json">
     {
@@ -67,7 +66,7 @@
       "name": "Sequoia Lodges",
       "legalName": "Sequoia Lodges LLC",
       "url": "https://sequoialodges.com",
-      "logo": "https://sequoialodges.com/SequoiaLodges%20Logo%20Design.png",
+      "logo": "https://sequoialodges.com/logo.svg",
       "foundingDate": "2024",
       "founder": [
         {
@@ -512,21 +511,21 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-gradient {
-            background: #f8fafc;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 40%, #f8fafc 100%);
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             letter-spacing: -0.02em;
         }
         :root {
-            --primary: #002f6c;
-            --primary-dark: #001f47;
+            --primary: #012169;
+            --primary-dark: #00123d;
             --accent: #d4001a;
-            --bg: #f5f6fa;
-            --text: #0b1f33;
+            --bg: #f4f6f9;
+            --text: #0f1f2f;
         }
         body {
             color: var(--text);
@@ -548,31 +547,31 @@
         }
         .nav-hover:hover::after { width: 100%; }
         .btn-primary {
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
-            border: 1px solid var(--primary);
+            border: 1px solid var(--accent);
             font-weight: 700;
             letter-spacing: 0.015em;
             font-size: 1rem;
             border-radius: 6px;
         }
         .btn-primary:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background-color: #b00016;
+            border-color: #b00016;
         }
         .corporate-button {
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
             font-weight: 700;
             padding: 0.85rem 2rem;
             border-radius: 6px;
             font-size: 1rem;
-            border: 1px solid var(--primary);
-            box-shadow: 0 8px 20px rgba(0,47,108,0.12);
+            border: 1px solid var(--accent);
+            box-shadow: 0 8px 20px rgba(212, 0, 26, 0.18);
         }
         .corporate-button:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background-color: #b00016;
+            border-color: #b00016;
         }
         .corporate-button-secondary {
             background-color: white;
@@ -607,7 +606,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #004B87 0%, #0066CC 100%);
+            background: linear-gradient(90deg, #012169 0%, #0b2f6f 100%);
             border-radius: 2px;
         }
         .professional-card {
@@ -621,13 +620,13 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
         .text-primary {
-            color: #004B87;
+            color: var(--primary);
         }
         .bg-primary {
-            background-color: #004B87;
+            background-color: var(--primary);
         }
         .border-primary {
-            border-color: #004B87;
+            border-color: var(--primary);
         }
         .professional-heading {
             font-weight: 700;
@@ -643,7 +642,7 @@
             font-weight: 800;
             font-size: 2.5rem;
             line-height: 1;
-            color: #004B87;
+            color: var(--primary);
         }
         .stat-label {
             font-weight: 600;
@@ -659,13 +658,13 @@
             position: relative;
         }
         .nav-link.active {
-            color: #004B87;
-            border-bottom: 2px solid #004B87;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
         }
         input:focus, textarea:focus {
             outline: none;
-            border-color: #004B87 !important;
-            box-shadow: 0 0 0 2px rgba(0, 75, 135, 0.2);
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 2px rgba(1, 33, 105, 0.2);
         }
         .tab-content {
             display: none;
@@ -677,8 +676,8 @@
             cursor: pointer;
         }
         .tab-button.active {
-            color: #004B87;
-            border-bottom: 2px solid #004B87;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
         }
     </style>
 </head>
@@ -689,16 +688,16 @@
             <div class="flex justify-between items-center">
                 <a href="#" onclick="showTab('home'); return false;" class="text-2xl font-bold">
                     <div class="flex items-center">
-                        <img src="SequoiaLodges Logo Design.png" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K';">
+                        <img src="logo.svg" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 260 60%22%3E%3Crect width=%22260%22 height=%2260%22 fill=%22white%22/%3E%3Cpolygon fill=%22%23d4001a%22 points=%2215,38 60,18 105,18 60,38%22/%3E%3Cpolygon fill=%22%23012169%22 points=%2215,25 60,7 105,7 60,25%22/%3E%3Cpolygon fill=%22%23d4001a%22 points=%2215,51 60,31 105,31 60,51%22/%3E%3Ctext x=%22120%22 y=%2238%22 font-family=%22Helvetica Neue, Arial, sans-serif%22 font-size=%2222%22 font-weight=%22700%22 fill=%22%23012169%22%3ESequoia Lodges%3C/text%3E%3C/svg%3E';">
                     </div>
                 </a>
-                <div class="hidden md:flex space-x-1 items-center border-l border-gray-300 pl-6">
-                    <a href="#" onclick="showTab('home'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold active" style="color: #004B87; border-bottom: 2px solid #004B87;">Home</a>
-                    <a href="#" onclick="showTab('services'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Services</a>
-                    <a href="#" onclick="showTab('pricing'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Pricing</a>
-                    <a href="#" onclick="showTab('designs'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Designs</a>
-                    <a href="#" onclick="showTab('about'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">About</a>
-                    <a href="#" onclick="showTab('contact'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Contact</a>
+                <div class="hidden md:flex space-x-1 items-center border-l border-gray-300 pl-6 uppercase tracking-wide text-sm">
+                    <a href="#" data-tab="home" onclick="showTab(event, 'home'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold active" style="color: var(--primary); border-bottom: 2px solid var(--primary);">Home</a>
+                    <a href="#" data-tab="services" onclick="showTab(event, 'services'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Services</a>
+                    <a href="#" data-tab="pricing" onclick="showTab(event, 'pricing'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Pricing</a>
+                    <a href="#" data-tab="designs" onclick="showTab(event, 'designs'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Designs</a>
+                    <a href="#" data-tab="about" onclick="showTab(event, 'about'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">About</a>
+                    <a href="#" data-tab="contact" onclick="showTab(event, 'contact'); return false;" class="tab-button px-4 py-2 text-gray-700 hover:text-gray-900 font-semibold">Contact</a>
                 </div>
                 <button class="md:hidden focus:outline-none">
                     <i data-feather="menu" class="text-gray-700"></i>
@@ -717,7 +716,7 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <div class="mb-6">
-                            <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase tracking-wide" style="background-color: #004B87;">BPDA Compliant Designs</span>
+                            <span class="inline-block text-white px-6 py-2 text-sm font-semibold uppercase tracking-wide" style="background-color: var(--primary);">BPDA Compliant Designs</span>
                         </div>
                         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-gray-900" itemprop="headline">Pre-Designed ADU Plans for Massachusetts</h1>
                         <p class="text-xl md:text-2xl mb-8 text-gray-700">BPDA-compliant architectural plans ready to submit for permits. Serving Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities.</p>
@@ -749,7 +748,7 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 text-center">
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #E6F2FF;">
-                            <i data-feather="clock" class="w-8 h-8" style="color: #004B87;"></i>
+                            <i data-feather="clock" class="w-8 h-8" style="color: var(--primary);"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Save 6 Months</h3>
                         <p class="text-gray-600">Our plans are pre-approved by BPDA, so you skip the typical 3-6 month permit review process</p>
@@ -763,7 +762,7 @@
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 text-center">
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #E6F2FF;">
-                            <i data-feather="dollar-sign" class="w-8 h-8" style="color: #004B87;"></i>
+                            <i data-feather="dollar-sign" class="w-8 h-8" style="color: var(--primary);"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Save $15,000+</h3>
                         <p class="text-gray-600">Avoid costly redesigns, permit delays, and architect revisions that plague custom plans</p>
@@ -793,38 +792,38 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="professional-card p-8">
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: #E6F2FF;">
-                            <i data-feather="file-text" class="w-8 h-8" style="color: #004B87;"></i>
+                            <i data-feather="file-text" class="w-8 h-8" style="color: var(--primary);"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Pre-Designed Plans</h3>
                         <p class="text-gray-600 mb-4">Choose from our library of BPDA-compliant ADU plans. Studio, 1BR, and 2BR options available.</p>
                         <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> BPDA compliant</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Ready for permits</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Multiple sizes</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> BPDA compliant</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Ready for permits</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Multiple sizes</li>
                         </ul>
                     </div>
                     <div class="professional-card p-8">
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: #E6F2FF;">
-                            <i data-feather="edit" class="w-8 h-8" style="color: #004B87;"></i>
+                            <i data-feather="edit" class="w-8 h-8" style="color: var(--primary);"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Custom Modifications</h3>
                         <p class="text-gray-600 mb-4">Need adjustments to fit your property? We'll modify our plans to meet your specific requirements.</p>
                         <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Site-specific changes</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Layout customization</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Material options</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Site-specific changes</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Layout customization</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Material options</li>
                         </ul>
                     </div>
                     <div class="professional-card p-8">
                         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: #E6F2FF;">
-                            <i data-feather="clipboard" class="w-8 h-8" style="color: #004B87;"></i>
+                            <i data-feather="clipboard" class="w-8 h-8" style="color: var(--primary);"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Permit Support</h3>
                         <p class="text-gray-600 mb-4">Full permit application support to ensure your project moves forward smoothly.</p>
                         <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Application preparation</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> BPDA submission</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Revision support</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Application preparation</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> BPDA submission</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Revision support</li>
                         </ul>
                     </div>
                 </div>
@@ -848,44 +847,44 @@
                     <div class="professional-card p-8 text-center">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Studio ADU</h3>
                         <div class="mb-6">
-                            <span class="text-5xl font-bold" style="color: #004B87;">$3,000</span>
+                            <span class="text-5xl font-bold" style="color: var(--primary);">$3,000</span>
                         </div>
                         <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Complete architectural plans</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> BPDA compliant design</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Permit-ready drawings</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Complete architectural plans</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> BPDA compliant design</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Permit-ready drawings</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Structural engineering</li>
                         </ul>
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
-                    <div class="professional-card p-8 text-center border-2" style="border-color: #004B87;">
+                    <div class="professional-card p-8 text-center border-2" style="border-color: var(--primary);">
                         <div class="mb-4">
                             <span class="inline-block text-white px-4 py-1 text-xs font-semibold uppercase" style="background-color: #E31837;">Most Popular</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">1-Bedroom ADU</h3>
                         <div class="mb-6">
-                            <span class="text-5xl font-bold" style="color: #004B87;">$4,500</span>
+                            <span class="text-5xl font-bold" style="color: var(--primary);">$4,500</span>
                         </div>
                         <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Complete architectural plans</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> BPDA compliant design</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Permit-ready drawings</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> MEP coordination</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Complete architectural plans</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> BPDA compliant design</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Permit-ready drawings</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Structural engineering</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> MEP coordination</li>
                         </ul>
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
                     <div class="professional-card p-8 text-center">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">2-Bedroom ADU</h3>
                         <div class="mb-6">
-                            <span class="text-5xl font-bold" style="color: #004B87;">$6,000</span>
+                            <span class="text-5xl font-bold" style="color: var(--primary);">$6,000</span>
                         </div>
                         <ul class="space-y-3 text-left mb-8">
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Complete architectural plans</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> BPDA compliant design</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Permit-ready drawings</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Structural engineering</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: #004B87;"></i> Full MEP design</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Complete architectural plans</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> BPDA compliant design</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Permit-ready drawings</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Structural engineering</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-5 h-5 mr-3" style="color: var(--primary);"></i> Full MEP design</li>
                         </ul>
                         <a href="#" onclick="showTab('contact'); return false;" class="corporate-button w-full inline-block text-center">Get Started</a>
                     </div>
@@ -907,7 +906,7 @@
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">Modern, efficient designs that maximize space and comply with all Boston regulations.</p>
                 </div>
                 <div class="max-w-3xl mx-auto">
-                    <div class="professional-card p-8 border-2" style="border-color: #004B87;">
+                    <div class="professional-card p-8 border-2" style="border-color: var(--primary);">
                         <div class="mb-4">
                             <span class="inline-block text-white px-3 py-1 text-xs font-semibold uppercase rounded" style="background-color: var(--accent);">Includes Preliminary Plans</span>
                         </div>
@@ -968,18 +967,18 @@
                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <div class="professional-card p-8 text-center">
                             <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
-                                <i data-feather="user" class="w-12 h-12" style="color: #004B87;"></i>
+                                <i data-feather="user" class="w-12 h-12" style="color: var(--primary);"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Nicholas Kirby</h4>
-                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Co-Founder & Strategy Lead</p>
+                            <p class="text-sm font-semibold mb-3" style="color: var(--primary);">Co-Founder & Strategy Lead</p>
                             <p class="text-gray-600 text-sm">Licensed Massachusetts architect with extensive experience in residential design and ADU planning. Specializes in BPDA compliance, permit expediting, and strategic business development.</p>
                         </div>
                         <div class="professional-card p-8 text-center">
                             <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" style="background-color: #E6F2FF;">
-                                <i data-feather="tool" class="w-12 h-12" style="color: #004B87;"></i>
+                                <i data-feather="tool" class="w-12 h-12" style="color: var(--primary);"></i>
                             </div>
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Christopher Kirby</h4>
-                            <p class="text-sm font-semibold mb-3" style="color: #004B87;">Co-Founder & Principal Engineer</p>
+                            <p class="text-sm font-semibold mb-3" style="color: var(--primary);">Co-Founder & Principal Engineer</p>
                             <p class="text-gray-600 text-sm">Principal engineer with deep expertise in structural engineering, building systems, and technical design. Ensures all ADU plans meet structural requirements and building codes.</p>
                         </div>
                     </div>
@@ -989,7 +988,7 @@
     </section>
     
     <!-- 2BR Preliminary Plan Set Section -->
-    <section class="py-20 corporate-section border-t-4" style="border-color: #004B87;">
+    <section class="py-20 corporate-section border-t-4" style="border-color: var(--primary);">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -1004,7 +1003,7 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
                                     <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
@@ -1013,7 +1012,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
                                     <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
@@ -1022,7 +1021,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
                                     <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
@@ -1031,7 +1030,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
                                     <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
@@ -1040,7 +1039,7 @@
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #eef2f7;">
                                     <i data-feather="check" class="w-5 h-5" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
@@ -1064,23 +1063,23 @@
                             <p class="text-gray-600 mb-6">Comprehensive preliminary drawings included with your 2-bedroom ADU purchase. Perfect for early contractor discussions and site planning.</p>
                             <div class="space-y-3 mb-6 text-left">
                                 <div class="flex items-center text-sm text-gray-600">
-                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: var(--primary);"></i>
                                     <span>Site Plan & Survey</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600">
-                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: var(--primary);"></i>
                                     <span>Floor Plans (All Levels)</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600">
-                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: var(--primary);"></i>
                                     <span>Exterior Elevations</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600">
-                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: var(--primary);"></i>
                                     <span>Building Sections</span>
                                 </div>
                                 <div class="flex items-center text-sm text-gray-600">
-                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: #004B87;"></i>
+                                    <i data-feather="file" class="w-4 h-4 mr-2" style="color: var(--primary);"></i>
                                     <span>Compliance Documentation</span>
                                 </div>
                             </div>
@@ -1097,7 +1096,7 @@
         <div id="contact-tab" class="tab-content">
 
     <!-- Contact Section -->
-    <section class="py-20 corporate-section border-t-4" style="border-color: #004B87;">
+    <section class="py-20 corporate-section border-t-4" style="border-color: var(--primary);">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12">
@@ -1109,27 +1108,27 @@
                         <h3 class="text-2xl font-bold mb-6 text-gray-900">Contact Information</h3>
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #004B87;">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--primary);">
                                     <i data-feather="phone" class="w-6 h-6 text-white"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Phone</h4>
-                                    <p class="text-gray-700 text-lg"><a href="tel:+16178725553" class="hover:underline" style="color: #004B87;">(617) 872-5553</a></p>
+                                    <p class="text-gray-700 text-lg"><a href="tel:+16178725553" class="hover:underline" style="color: var(--primary);">(617) 872-5553</a></p>
                                     <p class="text-sm text-gray-500 mt-1">Mon-Fri: 9:00 AM - 6:00 PM EST</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #004B87;">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--primary);">
                                     <i data-feather="mail" class="w-6 h-6 text-white"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-900 mb-1">Email</h4>
-                                    <p class="text-gray-700 text-lg"><a href="mailto:NicholasKirby@sequoialodges.com" class="hover:underline" style="color: #004B87;">NicholasKirby@sequoialodges.com</a></p>
+                                    <p class="text-gray-700 text-lg"><a href="mailto:NicholasKirby@sequoialodges.com" class="hover:underline" style="color: var(--primary);">NicholasKirby@sequoialodges.com</a></p>
                                     <p class="text-sm text-gray-500 mt-1">Response within 24 hours</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
-                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: #004B87;">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--primary);">
                                     <i data-feather="map-pin" class="w-6 h-6 text-white"></i>
                                 </div>
                                 <div>
@@ -1140,12 +1139,12 @@
                             </div>
                         </div>
                         <div class="mt-8 p-6 rounded-lg border" style="background-color: #E6F2FF; border-color: #B3D9FF;">
-                            <h4 class="font-bold mb-2" style="color: #004B87;">Why Contact Us Now?</h4>
+                            <h4 class="font-bold mb-2" style="color: var(--primary);">Why Contact Us Now?</h4>
                             <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Free initial consultation</li>
-                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Quick permit turnaround</li>
-                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> BPDA compliance guarantee</li>
-                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: #004B87;"></i> Licensed Massachusetts architects</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Free initial consultation</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Quick permit turnaround</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> BPDA compliance guarantee</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2" style="color: var(--primary);"></i> Licensed Massachusetts architects</li>
                             </ul>
                         </div>
                     </div>
@@ -1178,7 +1177,7 @@
                                 <label for="message-contact" class="block text-gray-700 font-semibold mb-2">Tell Us About Your Project *</label>
                                 <textarea id="message-contact" name="message" rows="4" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg"></textarea>
                             </div>
-                            <button type="submit" class="w-full text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg" style="background-color: #004B87;" onmouseover="this.style.backgroundColor='#003366'" onmouseout="this.style.backgroundColor='#004B87'">Get Free Consultation</button>
+                            <button type="submit" class="w-full text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg" style="background-color: var(--primary);" onmouseover="this.style.backgroundColor='#00123d'" onmouseout="this.style.backgroundColor='var(--primary)'">Get Free Consultation</button>
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
                             <p class="text-xs text-gray-500 text-center">By submitting this form, you agree to be contacted by Sequoia Lodges regarding your ADU project.</p>
@@ -1197,7 +1196,7 @@
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center">
-                        <img src="SequoiaLodges Logo Design.png" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTIiIGZpbGw9IiMwMDRCOEI3Ii8+Cjx0ZXh0IHg9IjI2IiB5PSIzNCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNMPC90ZXh0Pgo8L3N2Zz4K';">
+                        <img src="logo.svg" alt="Sequoia Lodges Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 260 60%22%3E%3Crect width=%22260%22 height=%2260%22 fill=%22white%22/%3E%3Cpolygon fill=%22%23d4001a%22 points=%2215,38 60,18 105,18 60,38%22/%3E%3Cpolygon fill=%22%23012169%22 points=%2215,25 60,7 105,7 60,25%22/%3E%3Cpolygon fill=%22%23d4001a%22 points=%2215,51 60,31 105,31 60,51%22/%3E%3Ctext x=%22120%22 y=%2238%22 font-family=%22Helvetica Neue, Arial, sans-serif%22 font-size=%2222%22 font-weight=%22700%22 fill=%22%23012169%22%3ESequoia Lodges%3C/text%3E%3C/svg%3E';">
                     </div>
                     <p class="text-gray-400 mt-4">Pre-Designed ADU Architectural Plans & Design Services for Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities</p>
                     <div class="mt-6">
@@ -1242,7 +1241,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 text-white p-3 rounded-full shadow-lg opacity-0 invisible z-50" style="background-color: #004B87;" onmouseover="this.style.backgroundColor='#003366'" onmouseout="this.style.backgroundColor='#004B87'" aria-label="Back to top">
+    <button id="backToTop" class="fixed bottom-8 right-8 text-white p-3 rounded-full shadow-lg opacity-0 invisible z-50" style="background-color: var(--primary);" onmouseover="this.style.backgroundColor='#00123d'" onmouseout="this.style.backgroundColor='var(--primary)'" aria-label="Back to top">
         <i data-feather="arrow-up" class="w-6 h-6"></i>
     </button>
 
@@ -1266,34 +1265,29 @@
         });
         
         // Tab navigation function
-        function showTab(tabName) {
-            // Hide all tab contents
+        function showTab(evtOrName, maybeTab) {
+            const tabName = typeof evtOrName === 'string' ? evtOrName : maybeTab;
+            const evt = evtOrName instanceof Event ? evtOrName : null;
+            
+            if (!tabName) return;
+            if (evt) evt.preventDefault();
+            
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
             
-            // Show selected tab
             const selectedTab = document.getElementById(tabName + '-tab');
             if (selectedTab) {
                 selectedTab.classList.add('active');
-                // Scroll to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             
-            // Update active nav buttons
             document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-                button.style.color = '';
-                button.style.borderBottom = '';
+                const isActive = button.dataset.tab === tabName;
+                button.classList.toggle('active', isActive);
+                button.style.color = isActive ? 'var(--primary)' : '';
+                button.style.borderBottom = isActive ? '2px solid var(--primary)' : '';
             });
-            
-            // Activate clicked button
-            const activeButton = event.target.closest('.tab-button');
-            if (activeButton) {
-                activeButton.classList.add('active');
-                activeButton.style.color = '#004B87';
-                activeButton.style.borderBottom = '2px solid #004B87';
-            }
         }
         
         // Navbar scroll effect
