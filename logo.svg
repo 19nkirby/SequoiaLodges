@@ -2,7 +2,7 @@
   <title id="title">Sequoia Lodges</title>
   <desc id="desc">Centered wordmark for Sequoia Lodges</desc>
   <rect width="320" height="160" fill="none"/>
-  <text x="160" y="90" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#0f3b24" letter-spacing="2.5">SEQUOIA</text>
-  <text x="160" y="122" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f3b24" letter-spacing="7">LODGES</text>
+  <text x="160" y="94" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#0f3b24" letter-spacing="3">SEQUOIA</text>
+  <text x="160" y="132" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#0f3b24" letter-spacing="8">LODGES</text>
 </svg>
 
