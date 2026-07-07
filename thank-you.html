@@ -3,159 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Sequoia Lodges - ADU Plans</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>Thank You | Sequoia Lodges</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SN14KG7Y2M');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #f5f8fa 0%, #e1e8ed 100%);
+        :root {
+            --ink: #16241b;
+            --primary: #0f3b24;
+            --primary-dark: #082014;
+            --paper: #faf6ec;
+            --line: rgba(15,59,36,0.18);
+            --rust: #b85c2c;
         }
-        .transition-slow {
-            transition: all 0.5s ease;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+        }
+        h1, h2, h3 {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+        }
+        .eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.95rem 1.75rem;
+            border-radius: 3px;
+            border: 1px solid var(--primary);
+            transition: background-color .15s, color .15s;
+        }
+        .btn-solid { background-color: var(--primary); color: var(--paper); }
+        .btn-solid:hover { background-color: var(--primary-dark); }
+        .btn-outline { background-color: transparent; color: var(--primary); }
+        .btn-outline:hover { background-color: rgba(15,59,36,0.06); }
+        .num {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 500;
+            color: var(--rust);
         }
     </style>
 </head>
-<body class="font-sans antialiased bg-white text-gray-900">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50 transition-slow">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold">
-                    <div class="flex items-center">
-                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="52" height="52" rx="12" fill="#1a3e72"/>
-                            <path d="M26 8L14 20H26V32L38 20H26V8Z" fill="#4A90E2"/>
-                            <path d="M26 8L14 20L26 32L38 20L26 8Z" stroke="#1a3e72" stroke-width="2"/>
-                            <circle cx="26" cy="26" r="3" fill="#E8F4FD"/>
-                            <path d="M20 14L26 8L32 14" stroke="#4A90E2" stroke-width="1.5" fill="none"/>
-                            <path d="M20 38L26 32L32 38" stroke="#4A90E2" stroke-width="1.5" fill="none"/>
-                        </svg>
-                        <div class="ml-3">
-                            <div class="text-xl font-bold text-gray-800 leading-tight">SEQUOIA</div>
-                            <div class="text-sm font-medium text-blue-600 leading-tight">LODGES</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="w-full border-b" style="border-color: var(--line);">
+        <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
+            </a>
+            <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="btn btn-outline">sequoialodges@gmail.com</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Thank You Section -->
-    <section class="hero-gradient min-h-screen flex items-center pt-20 pb-20">
-        <div class="container mx-auto px-6 py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <!-- Success Icon -->
-                <div class="mb-8">
-                    <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#10B981" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                        </svg>
-                    </div>
+    <!-- Thank You -->
+    <section class="py-20 md:py-28">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <div class="w-16 h-16 rounded-full border flex items-center justify-center mx-auto mb-8" style="border-color: var(--primary);">
+                <i data-feather="check" class="w-8 h-8" style="color: var(--primary);"></i>
+            </div>
+            <span class="eyebrow text-[var(--rust)]">Message Received</span>
+            <h1 class="text-4xl md:text-5xl mt-4 mb-6 text-[var(--primary)]">Thank you.</h1>
+            <p class="text-lg text-[#3c463d] mb-16 max-w-xl mx-auto">Your inquiry is in. We'll review your project details and get back to you &mdash; usually within one business day.</p>
+
+            <!-- Next Steps -->
+            <div class="grid md:grid-cols-3 gap-10 text-left mb-16">
+                <div>
+                    <span class="num text-3xl">01</span>
+                    <h3 class="text-lg mt-3 mb-1">We review your property</h3>
+                    <p class="text-sm text-[#3c463d]">Lot size, zoning context, and your project goals.</p>
                 </div>
-
-                <!-- Main Message -->
-                <h1 class="text-5xl font-bold text-gray-900 mb-6">Thank You for Your Interest!</h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Your inquiry has been received and our team will review your ADU project details within 24 hours.
-                </p>
-
-                <!-- Next Steps -->
-                <div class="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-3xl mx-auto">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">What Happens Next?</h2>
-                    <div class="grid md:grid-cols-3 gap-6 text-left">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <span class="text-blue-600 font-bold text-sm">1</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Review Your Project</h3>
-                                <p class="text-gray-600 text-sm">We'll analyze your lot size, zoning requirements, and project goals.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <span class="text-blue-600 font-bold text-sm">2</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Recommend Plans</h3>
-                                <p class="text-gray-600 text-sm">We'll suggest the best pre-approved plans for your specific property.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <span class="text-blue-600 font-bold text-sm">3</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-2">Provide Quote</h3>
-                                <p class="text-gray-600 text-sm">You'll receive detailed pricing and timeline for your ADU project.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <span class="num text-3xl">02</span>
+                    <h3 class="text-lg mt-3 mb-1">We recommend a plan</h3>
+                    <p class="text-sm text-[#3c463d]">The pre-designed set that best fits your lot and budget.</p>
                 </div>
-
-                <!-- Contact Information -->
-                <div class="bg-gray-50 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">Need Immediate Assistance?</h3>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:+16178512996" class="flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors">
-                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
-                            (617) 851-2996
-                        </a>
-                        <a href="mailto:sequoialodges@gmail.com" class="flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
-                            sequoialodges@gmail.com
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/" class="bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors shadow-lg hover:shadow-xl">
-                        Return to Home
-                    </a>
-                    <a href="/#pricing" class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-md font-medium hover:bg-blue-50 transition-colors">
-                        View Our Plans
-                    </a>
-                </div>
-
-                <!-- Additional Resources -->
-                <div class="mt-12 pt-8 border-t border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">While You Wait</h3>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                        <a href="https://www.bostonplans.org/getattachment/2018d7d9-0ecc-45b1-acbb-9ad744563b24" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
-                            <i data-feather="external-link" class="w-4 h-4 inline mr-1"></i>
-                            Download Boston's ADU Guidelines
-                        </a>
-                        <a href="/#designs" class="text-blue-600 hover:text-blue-800 transition-colors">
-                            <i data-feather="home" class="w-4 h-4 inline mr-1"></i>
-                            Browse Our Design Collections
-                        </a>
-                    </div>
+                <div>
+                    <span class="num text-3xl">03</span>
+                    <h3 class="text-lg mt-3 mb-1">You get a clear quote</h3>
+                    <p class="text-sm text-[#3c463d]">Pricing and a timeline &mdash; permit-ready within two weeks.</p>
                 </div>
             </div>
+
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="/" class="btn btn-solid">Return to Home</a>
+                <a href="/#plans" class="btn btn-outline">View Plans &amp; Pricing</a>
+            </div>
+
+            <p class="mt-12 text-sm text-[#56604f]">Need something right away? Email <a href="mailto:sequoialodges@gmail.com" class="font-semibold" style="color: var(--primary);">sequoialodges@gmail.com</a></p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-800 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex items-center justify-center mb-4">
-                <svg width="40" height="40" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="52" height="52" rx="12" fill="#1a3e72"/>
-                    <path d="M26 8L14 20H26V32L38 20H26V8Z" fill="#4A90E2"/>
-                    <path d="M26 8L14 20L26 32L38 20L26 8Z" stroke="#1a3e72" stroke-width="2"/>
-                    <circle cx="26" cy="26" r="3" fill="#E8F4FD"/>
-                    <path d="M20 14L26 8L32 14" stroke="#4A90E2" stroke-width="1.5" fill="none"/>
-                    <path d="M20 38L26 32L32 38" stroke="#4A90E2" stroke-width="1.5" fill="none"/>
-                </svg>
-                <div class="ml-3">
-                    <div class="text-lg font-bold text-gray-800 leading-tight">SEQUOIA</div>
-                    <div class="text-xs font-medium text-blue-600 leading-tight">LODGES</div>
-                </div>
+    <footer class="py-8 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <div class="flex items-center gap-3">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-7 w-auto">
+                <span class="text-[#56604f]">&copy; 2026 Sequoia Lodges LLC</span>
             </div>
-            <p class="text-gray-600 text-sm">Pre-Approved ADU Architectural Plans & Design Services</p>
-            <p class="text-gray-500 text-xs mt-2">© 2025 Sequoia Lodges LLC. All rights reserved.</p>
+            <div class="flex items-center gap-6 text-[#56604f]">
+                <a href="/privacy-policy.html" class="hover:text-[var(--primary)]">Privacy</a>
+                <a href="/terms-of-service.html" class="hover:text-[var(--primary)]">Terms</a>
+            </div>
         </div>
     </footer>
 
