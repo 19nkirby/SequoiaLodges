@@ -57,16 +57,27 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Are your ADU plans permit-ready?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every plan is designed to be BPDA-compliant and ready to submit for permit, so you can skip months of custom design work." } },
-        { "@type": "Question", "name": "How fast can I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Because our plans are pre-designed, you can move straight to permitting instead of waiting on a custom design from scratch." } },
-        { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Boston, Cambridge, Newton, Brookline, and surrounding Massachusetts communities." } }
+        { "@type": "Question", "name": "Are your ADU plans permit-ready?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every plan is designed to meet BPDA and Article 53 requirements and is ready to submit for permit, so you skip months of custom design work." } },
+        { "@type": "Question", "name": "What is included in a plan set?", "acceptedAnswer": { "@type": "Answer", "text": "Every set includes dimensioned floor plans, exterior elevations, building sections, and compliance notes. Structural engineering is included with 1-bedroom plans and up, and the 2-bedroom set adds full MEP (mechanical, electrical, plumbing) design." } },
+        { "@type": "Question", "name": "Can the plans be adjusted to fit my lot?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Site-specific adjustments are part of every engagement and are handled by our principal engineer. Larger custom modifications are available by inquiry." } },
+        { "@type": "Question", "name": "How fast can I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Because our plans are pre-designed, there is no blank-page design phase. Most clients are moving toward permitting within days of selecting a plan." } },
+        { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Boston, Cambridge, Newton, Brookline, and surrounding Greater Boston communities across Massachusetts." } }
       ]
     }
     </script>
 
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SN14KG7Y2M');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
@@ -85,10 +96,10 @@
             background-color: var(--paper);
         }
         h1, h2, h3, .display {
-            font-family: 'Fraunces', Georgia, serif;
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
             font-weight: 600;
-            letter-spacing: -0.01em;
-            line-height: 1.05;
+            letter-spacing: -0.005em;
+            line-height: 1.12;
         }
         .eyebrow {
             font-family: 'Inter', sans-serif;
@@ -117,8 +128,6 @@
         .btn-outline:hover { background-color: rgba(15,59,36,0.06); }
         .btn-cream { background-color: var(--paper); color: var(--primary); border-color: var(--paper); }
         .btn-cream:hover { background-color: #efe8d8; }
-        .btn-ghost { background-color: transparent; color: var(--paper); border-color: rgba(250,246,236,0.5); }
-        .btn-ghost:hover { border-color: var(--paper); }
         .blueprint-grid {
             background-image:
                 linear-gradient(var(--line-soft) 1px, transparent 1px),
@@ -160,9 +169,44 @@
         }
         table.schedule tr.featured { background-color: rgba(15,59,36,0.05); }
         .num {
-            font-family: 'Fraunces', Georgia, serif;
+            font-family: 'Source Serif 4', Georgia, serif;
             font-weight: 500;
             color: var(--rust);
+        }
+        details.faq {
+            border-bottom: 1px solid var(--line);
+        }
+        details.faq summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        details.faq summary::-webkit-details-marker { display: none; }
+        details.faq summary::after {
+            content: '+';
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--rust);
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        details.faq[open] summary::after { content: '\2212'; }
+        details.faq p {
+            padding-bottom: 1.25rem;
+            color: #3c463d;
+            max-width: 46rem;
+        }
+        .deliverable {
+            border-top: 1px solid var(--line);
+            padding: 1.4rem 0;
         }
     </style>
 </head>
@@ -175,8 +219,10 @@
                 <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
             </a>
             <nav class="hidden md:flex items-center gap-10 eyebrow text-[var(--ink)]">
+                <a href="#offer" class="hover:text-[var(--rust)]">What You Get</a>
                 <a href="#plans" class="hover:text-[var(--rust)]">Plans</a>
                 <a href="#how-it-works" class="hover:text-[var(--rust)]">Process</a>
+                <a href="#faq" class="hover:text-[var(--rust)]">FAQ</a>
                 <a href="#contact" class="hover:text-[var(--rust)]">Contact</a>
             </nav>
             <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="btn btn-outline">sequoialodges@gmail.com</a>
@@ -317,8 +363,104 @@
         </div>
     </section>
 
+    <!-- Why Build an ADU -->
+    <section id="why" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-6">
+                    <span class="eyebrow text-[var(--rust)]">Why Build an ADU</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-10 text-[var(--primary)]">One backyard. Three good reasons.</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-baseline">
+                            <span class="num text-xl w-8 flex-shrink-0">01</span>
+                            <div>
+                                <h3 class="text-lg mb-1">Rental income</h3>
+                                <p class="text-sm text-[#3c463d]">Boston-area rents are among the strongest in the country. A permitted ADU turns unused yard space into a long-term income stream.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-baseline">
+                            <span class="num text-xl w-8 flex-shrink-0">02</span>
+                            <div>
+                                <h3 class="text-lg mb-1">Room for family</h3>
+                                <p class="text-sm text-[#3c463d]">An in-law suite for aging parents, a landing spot for adult kids, or a home office &mdash; independent space without leaving the property.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-baseline">
+                            <span class="num text-xl w-8 flex-shrink-0">03</span>
+                            <div>
+                                <h3 class="text-lg mb-1">Property value</h3>
+                                <p class="text-sm text-[#3c463d]">A second permitted dwelling on the lot is a durable improvement &mdash; one buyers and appraisers both recognize.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-6">
+                    <figure>
+                        <img src="/adu-rendering.jpg" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
+                        <figcaption class="mt-3 text-xs text-[#56604f]">Concept rendering, for illustration &mdash; your plan set is tailored to your lot.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section id="offer" class="py-20 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <span class="eyebrow text-[var(--rust)]">What You Get</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-6 text-[var(--primary)]">A complete plan set, ready to file.</h2>
+                    <p class="text-[#3c463d] max-w-sm">Every Sequoia Lodges package is a full drawing set &mdash; the same documents a custom architect would produce over months, ready on day one.</p>
+                    <div class="mt-8">
+                        <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <i data-feather="download" class="w-4 h-4"></i> Download a Sample Plan (PDF)
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">01</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Dimensioned floor plans</h3>
+                            <p class="text-sm text-[#3c463d]">Fully dimensioned layouts for every level, drawn to scale and ready for your contractor.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">02</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Exterior elevations &amp; building sections</h3>
+                            <p class="text-sm text-[#3c463d]">All four elevations plus cross-sections showing heights, materials, and structural details.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">03</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Structural engineering</h3>
+                            <p class="text-sm text-[#3c463d]">Included with 1-bedroom plans and up &mdash; stamped-ready framing and foundation design.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">04</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Full MEP design</h3>
+                            <p class="text-sm text-[#3c463d]">Mechanical, electrical, and plumbing layouts, included with the 2-bedroom package.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline" style="border-bottom: 1px solid var(--line);">
+                        <span class="num text-xl w-8 flex-shrink-0">05</span>
+                        <div>
+                            <h3 class="text-lg mb-1">BPDA &amp; Article 53 compliance notes</h3>
+                            <p class="text-sm text-[#3c463d]">Documentation mapping the design to Boston's ADU requirements, so review goes smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Process -->
-    <section id="how-it-works" class="py-20">
+    <section id="how-it-works" class="py-20 border-t" style="border-color: var(--line);">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mb-14">
                 <span class="eyebrow text-[var(--rust)]">The Process</span>
@@ -328,20 +470,24 @@
                 <div class="absolute left-[15px] top-2 bottom-2 w-px" style="background-color: var(--line);"></div>
                 <div class="relative mb-12">
                     <div class="absolute -left-12 top-0 w-8 h-8 rounded-full border flex items-center justify-center text-sm font-semibold" style="border-color: var(--primary); color: var(--primary); background: var(--paper);">1</div>
-                    <h3 class="text-xl mb-1">Pick a plan</h3>
+                    <span class="eyebrow text-[var(--rust)]">Day 1</span>
+                    <h3 class="text-xl mb-1 mt-1">Pick a plan</h3>
                     <p class="text-[#3c463d]">Studio, one-bedroom, or two-bedroom &mdash; browse the set that fits your lot.</p>
                 </div>
                 <div class="relative mb-12">
                     <div class="absolute -left-12 top-0 w-8 h-8 rounded-full border flex items-center justify-center text-sm font-semibold" style="border-color: var(--primary); color: var(--primary); background: var(--paper);">2</div>
-                    <h3 class="text-xl mb-1">We tailor it to your lot</h3>
+                    <span class="eyebrow text-[var(--rust)]">Week 1</span>
+                    <h3 class="text-xl mb-1 mt-1">We tailor it to your lot</h3>
                     <p class="text-[#3c463d]">Site-specific adjustments, handled by our principal engineer.</p>
                 </div>
                 <div class="relative">
                     <div class="absolute -left-12 top-0 w-8 h-8 rounded-full border flex items-center justify-center text-sm font-semibold" style="border-color: var(--primary); color: var(--primary); background: var(--paper);">3</div>
-                    <h3 class="text-xl mb-1">File for permit</h3>
+                    <span class="eyebrow text-[var(--rust)]">Within 2 Weeks</span>
+                    <h3 class="text-xl mb-1 mt-1">File for permit</h3>
                     <p class="text-[#3c463d]">You receive a complete, permit-ready set &mdash; no further redesign needed.</p>
                 </div>
             </div>
+            <p class="mt-10 text-xs text-[#56604f] max-w-md">Typical timeline from plan selection to a filing-ready set. Site conditions and survey availability can affect schedule.</p>
         </div>
     </section>
 
@@ -384,11 +530,61 @@
                     </tbody>
                 </table>
             </div>
-            <div class="mt-10 flex flex-wrap items-center gap-6">
+            <p class="mt-6 text-sm text-[#3c463d] max-w-xl">Site-specific tailoring is included with every plan. Larger custom modifications &mdash; different footprints, added levels, accessibility features &mdash; are available by inquiry.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-6">
                 <a href="#contact" class="btn btn-solid">Start Your Plan</a>
                 <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
                     <i data-feather="download" class="w-4 h-4"></i> Download a Sample Plan (PDF)
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="py-20 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <span class="eyebrow text-[var(--rust)]">Who We Are</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">An engineering design firm, built for ADUs.</h2>
+                </div>
+                <div class="md:col-span-7 space-y-5 text-[#3c463d] md:pt-2">
+                    <p>Sequoia Lodges is a Massachusetts engineering design firm focused on one thing: getting Boston-area homeowners from idea to permit-ready ADU plans without the cost and delay of custom design.</p>
+                    <p>Design and site-specific engineering are led by our principal engineer, and every plan set is coordinated with licensed Massachusetts architects and engineers who know Boston's Article 53 and BPDA requirements first-hand.</p>
+                    <p>We serve Boston, Cambridge, Newton, Brookline, and surrounding Greater Boston communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mb-12">
+                <span class="eyebrow text-[var(--rust)]">FAQ</span>
+                <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">Common questions.</h2>
+            </div>
+            <div class="max-w-3xl" style="border-top: 1px solid var(--line);">
+                <details class="faq">
+                    <summary>Are your ADU plans permit-ready?</summary>
+                    <p>Yes. Every plan is designed to meet BPDA and Article 53 requirements and is ready to submit for permit, so you skip months of custom design work.</p>
+                </details>
+                <details class="faq">
+                    <summary>What is included in a plan set?</summary>
+                    <p>Every set includes dimensioned floor plans, exterior elevations, building sections, and compliance notes. Structural engineering is included with 1-bedroom plans and up, and the 2-bedroom set adds full MEP (mechanical, electrical, plumbing) design.</p>
+                </details>
+                <details class="faq">
+                    <summary>Can the plans be adjusted to fit my lot?</summary>
+                    <p>Yes. Site-specific adjustments are part of every engagement and are handled by our principal engineer. Larger custom modifications are available by inquiry.</p>
+                </details>
+                <details class="faq">
+                    <summary>How fast can I get started?</summary>
+                    <p>Because our plans are pre-designed, there is no blank-page design phase. Most clients are moving toward permitting within days of selecting a plan.</p>
+                </details>
+                <details class="faq">
+                    <summary>What areas do you serve?</summary>
+                    <p>We serve Boston, Cambridge, Newton, Brookline, and surrounding Greater Boston communities across Massachusetts.</p>
+                </details>
             </div>
         </div>
     </section>
