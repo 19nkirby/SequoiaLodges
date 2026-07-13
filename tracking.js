@@ -15,7 +15,7 @@
  * works without it.
  */
 window.SL_TRACKING = window.SL_TRACKING || {
-    adsId: '',        // e.g. 'AW-123456789'
+    adsId: 'AW-18320974361',
     inquiryLabel: '', // conversion label for "Accepted ADU inquiry" (primary)
     magnetLabel: ''   // conversion label for "Planning kit download" (secondary)
 };
