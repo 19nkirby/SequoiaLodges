@@ -204,6 +204,18 @@ window.SL_TRACKING = window.SL_TRACKING || {
 
     function init() {
         Array.prototype.forEach.call(document.querySelectorAll('form[data-lead-form]'), handleForm);
+
+        /* Secondary diagnostic events: email clicks and direct sample-plan downloads. */
+        document.addEventListener('click', function (e) {
+            var link = e.target && e.target.closest ? e.target.closest('a') : null;
+            if (!link) { return; }
+            var href = link.getAttribute('href') || '';
+            if (href.indexOf('mailto:') === 0) {
+                gtagSafe('event', 'email_click', { page: clean(window.location.pathname) });
+            } else if (/Sequoia_Lodges_ADU_Sample_Plan\.pdf/i.test(href)) {
+                gtagSafe('event', 'sample_plan_download', { page: clean(window.location.pathname) });
+            }
+        });
     }
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
