@@ -66,14 +66,24 @@
     }
     </script>
 
-    <!-- Google Analytics (GA4) -->
+    <!-- Google Analytics (GA4) + Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      /* Consent Mode v2: denied by default in EEA/UK/CH, granted elsewhere (US-targeted business). */
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+        region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LI','LV','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+      });
+      gtag('consent', 'default', {
+        ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+      gtag('set', 'url_passthrough', true);
       gtag('config', 'G-SN14KG7Y2M');
     </script>
+    <script defer src="/tracking.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -412,9 +422,12 @@
                     <span class="eyebrow text-[var(--rust)]">What You Get</span>
                     <h2 class="text-3xl md:text-4xl mt-3 mb-6 text-[var(--primary)]">A complete plan set, ready to file.</h2>
                     <p class="text-[#3c463d] max-w-sm">Every Sequoia Lodges package is a full drawing set &mdash; the same documents a custom architect would produce over months, ready on day one.</p>
-                    <div class="mt-8">
+                    <div class="mt-8 space-y-3">
                         <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
                             <i data-feather="download" class="w-4 h-4"></i> Download a Sample Plan (PDF)
+                        </a>
+                        <a href="/adu-planning-kit.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <i data-feather="folder" class="w-4 h-4"></i> Get the Free ADU Planning Kit
                         </a>
                     </div>
                 </div>
@@ -533,8 +546,8 @@
             <p class="mt-6 text-sm text-[#3c463d] max-w-xl">Site-specific tailoring is included with every plan. Larger custom modifications &mdash; different footprints, added levels, accessibility features &mdash; are available by inquiry.</p>
             <div class="mt-8 flex flex-wrap items-center gap-6">
                 <a href="#contact" class="btn btn-solid">Start Your Plan</a>
-                <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                    <i data-feather="download" class="w-4 h-4"></i> Download a Sample Plan (PDF)
+                <a href="/adu-planning-kit.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                    <i data-feather="folder" class="w-4 h-4"></i> Get the Free ADU Planning Kit
                 </a>
             </div>
         </div>
@@ -606,13 +619,15 @@
                         </div>
                     </div>
                 </div>
-                <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST">
+                <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="home">
                     <input type="text" name="name" required placeholder="Name" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
                     <input type="email" name="email" required placeholder="Email" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
                     <input type="tel" name="phone" placeholder="Phone (optional)" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
                     <textarea name="message" rows="3" required placeholder="Tell us about your property" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);"></textarea>
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
                     <button type="submit" class="btn btn-cream w-full justify-center mt-2">Send Message</button>
-                    <input type="hidden" name="_captcha" value="false">
+                    <p data-form-error class="hidden text-sm" style="color:#f3c9a8;">Something went wrong sending your message. Please try again, or email us directly at sequoialodges@gmail.com.</p>
+                    <input type="hidden" name="_subject" value="New ADU inquiry — sequoialodges.com">
                     <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
                 </form>
             </div>

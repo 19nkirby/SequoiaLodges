@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Sequoia Lodges</title>
-    <meta name="robots" content="noindex">
+    <title>Your ADU Planning Kit | Sequoia Lodges</title>
+    <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
 
     <!-- Google Analytics (GA4) + Consent Mode v2 -->
@@ -22,6 +22,7 @@
       });
       gtag('set', 'url_passthrough', true);
       gtag('config', 'G-SN14KG7Y2M');
+      gtag('event', 'kit_hub_view');
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,6 +80,13 @@
             font-weight: 500;
             color: var(--rust);
         }
+        .kit-card {
+            border: 1px solid var(--line);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -93,43 +101,46 @@
         </div>
     </header>
 
-    <!-- Thank You -->
-    <section class="py-20 md:py-28">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
-            <div class="w-16 h-16 rounded-full border flex items-center justify-center mx-auto mb-8" style="border-color: var(--primary);">
-                <i data-feather="check" class="w-8 h-8" style="color: var(--primary);"></i>
-            </div>
-            <span class="eyebrow text-[var(--rust)]">Message Received</span>
-            <h1 class="text-4xl md:text-5xl mt-4 mb-6 text-[var(--primary)]">Thank you.</h1>
-            <p class="text-lg text-[#3c463d] mb-16 max-w-xl mx-auto">Your inquiry is in. We'll review your project details and get back to you &mdash; usually within one business day.</p>
-
-            <!-- Next Steps -->
-            <div class="grid md:grid-cols-3 gap-10 text-left mb-16">
-                <div>
-                    <span class="num text-3xl">01</span>
-                    <h3 class="text-lg mt-3 mb-1">We review your property</h3>
-                    <p class="text-sm text-[#3c463d]">Lot size, zoning context, and your project goals.</p>
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-14">
+                <div class="w-16 h-16 rounded-full border flex items-center justify-center mx-auto mb-8" style="border-color: var(--primary);">
+                    <i data-feather="folder" class="w-8 h-8" style="color: var(--primary);"></i>
                 </div>
-                <div>
-                    <span class="num text-3xl">02</span>
-                    <h3 class="text-lg mt-3 mb-1">We recommend a plan</h3>
-                    <p class="text-sm text-[#3c463d]">The pre-designed set that best fits your lot and budget.</p>
-                </div>
-                <div>
-                    <span class="num text-3xl">03</span>
-                    <h3 class="text-lg mt-3 mb-1">You get a clear quote</h3>
-                    <p class="text-sm text-[#3c463d]">Pricing and a timeline &mdash; permit-ready within two weeks.</p>
-                </div>
+                <span class="eyebrow text-[var(--rust)]">Your Kit Is Ready</span>
+                <h1 class="text-4xl md:text-5xl mt-4 mb-6 text-[var(--primary)]">The ADU Planning Kit.</h1>
+                <p class="text-lg text-[#3c463d] max-w-xl mx-auto">All three resources, yours to keep. Bookmark this page &mdash; you can come back to it anytime.</p>
             </div>
 
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="/" class="btn btn-solid">Return to Home</a>
-                <a href="/#plans" class="btn btn-outline">View Plans &amp; Pricing</a>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="kit-card">
+                    <span class="num text-3xl mb-4">01</span>
+                    <h3 class="text-xl mb-2">Permit-Readiness Checklist</h3>
+                    <p class="text-sm text-[#3c463d] mb-6 flex-grow">Work through the lot, survey, utility, and documentation questions before you file — includes the lot-fit worksheet.</p>
+                    <a href="/guides/adu-permit-readiness-checklist.html" class="btn btn-solid justify-center">Open the Checklist</a>
+                </div>
+                <div class="kit-card">
+                    <span class="num text-3xl mb-4">02</span>
+                    <h3 class="text-xl mb-2">Plan &amp; Pricing Guide</h3>
+                    <p class="text-sm text-[#3c463d] mb-6 flex-grow">Studio vs. 1-bedroom vs. 2-bedroom — sizes, included engineering, and package pricing side by side.</p>
+                    <a href="/guides/adu-plan-pricing-guide.html" class="btn btn-solid justify-center">Open the Guide</a>
+                </div>
+                <div class="kit-card">
+                    <span class="num text-3xl mb-4">03</span>
+                    <h3 class="text-xl mb-2">Sample ADU Plan Set</h3>
+                    <p class="text-sm text-[#3c463d] mb-6 flex-grow">A real excerpt from a Sequoia Lodges plan set — floor plan, elevation, and the full deliverable index.</p>
+                    <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="btn btn-solid justify-center">Download the PDF</a>
+                </div>
             </div>
 
-            <p class="mt-12 text-sm text-[#56604f]">Need something right away? Email <a href="mailto:sequoialodges@gmail.com" class="font-semibold" style="color: var(--primary);">sequoialodges@gmail.com</a></p>
-
-            <p class="mt-6 text-sm text-[#56604f]">While you wait: <a href="/adu-planning-kit.html" class="font-semibold" style="color: var(--primary);">grab the free ADU Planning Kit</a> &mdash; permit checklist, pricing guide, and a sample plan.</p>
+            <div class="text-center border-t pt-12" style="border-color: var(--line);">
+                <h2 class="text-2xl md:text-3xl mb-4 text-[var(--primary)]">Ready for the next step?</h2>
+                <p class="text-[#3c463d] mb-8 max-w-lg mx-auto">Tell us about your property and we'll recommend the right plan, with pricing and timeline — usually within one business day.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="/adu-plans#get-started" class="btn btn-solid">Get a Plan Recommendation</a>
+                    <a href="/#plans" class="btn btn-outline">View Plans &amp; Pricing</a>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADU Design &amp; Engineering | Structural + MEP, Site-Specific | Sequoia Lodges Boston</title>
+    <meta name="description" content="ADU architecture and engineering for Boston-area lots — structural and MEP design coordinated with licensed Massachusetts professionals, tailored to your property by our principal engineer.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f3b24">
+    <link rel="canonical" href="https://sequoialodges.com/adu-design-engineering">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sequoialodges.com/adu-design-engineering">
+    <meta property="og:title" content="ADU Design &amp; Engineering | Sequoia Lodges">
+    <meta property="og:description" content="Structural and MEP engineering built into every ADU plan set, coordinated with licensed Massachusetts architects and engineers.">
+    <meta property="og:image" content="https://sequoialodges.com/logo.svg">
+    <meta property="og:site_name" content="Sequoia Lodges">
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="apple-touch-icon" href="/logo.svg">
+
+    <!-- Google Analytics (GA4) + Consent Mode v2 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+        region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LI','LV','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+      });
+      gtag('consent', 'default', {
+        ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+      gtag('set', 'url_passthrough', true);
+      gtag('config', 'G-SN14KG7Y2M');
+    </script>
+    <script defer src="/tracking.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --ink: #16241b;
+            --primary: #0f3b24;
+            --primary-dark: #082014;
+            --paper: #faf6ec;
+            --line: rgba(15,59,36,0.18);
+            --line-soft: rgba(15,59,36,0.10);
+            --rust: #b85c2c;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+        }
+        h1, h2, h3, .display {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+        }
+        .eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.95rem 1.75rem;
+            border-radius: 3px;
+            border: 1px solid var(--primary);
+            transition: background-color .15s, color .15s;
+        }
+        .btn-solid { background-color: var(--primary); color: var(--paper); }
+        .btn-solid:hover { background-color: var(--primary-dark); }
+        .btn-outline { background-color: transparent; color: var(--primary); }
+        .btn-outline:hover { background-color: rgba(15,59,36,0.06); }
+        .btn-cream { background-color: var(--paper); color: var(--primary); border-color: var(--paper); }
+        .btn-cream:hover { background-color: #efe8d8; }
+        .blueprint-grid {
+            background-image:
+                linear-gradient(var(--line-soft) 1px, transparent 1px),
+                linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+        .tag {
+            display: inline-block;
+            border-top: 1px solid var(--primary);
+            border-bottom: 1px solid var(--primary);
+            padding: 0.4rem 0;
+        }
+        .field {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(250,246,236,0.35);
+            padding: 0.6rem 0.1rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--paper);
+        }
+        .field:focus { outline: none; border-bottom-color: var(--paper); }
+        .field::placeholder { color: #aab8aa; }
+        select.field { appearance: none; -webkit-appearance: none; background-image: none; }
+        select.field option { color: var(--ink); background: var(--paper); }
+        select.field:invalid, select.field option[value=""] { color: #aab8aa; }
+        .field-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #aab8aa;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+        .num {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 500;
+            color: var(--rust);
+        }
+        details.faq { border-bottom: 1px solid var(--line); }
+        details.faq summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        details.faq summary::-webkit-details-marker { display: none; }
+        details.faq summary::after {
+            content: '+';
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: var(--rust);
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        details.faq[open] summary::after { content: '\2212'; }
+        details.faq p {
+            padding-bottom: 1.25rem;
+            color: #3c463d;
+            max-width: 46rem;
+        }
+        .deliverable { border-top: 1px solid var(--line); padding: 1.4rem 0; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="w-full">
+        <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
+            </a>
+            <a href="#get-started" class="btn btn-solid">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="blueprint-grid border-t border-b" style="border-color: var(--line);">
+        <div class="container mx-auto px-6 py-20 md:py-24">
+            <div class="max-w-3xl">
+                <span class="tag eyebrow mb-8">Architecture &middot; Structural &middot; MEP</span>
+                <h1 class="text-5xl md:text-6xl mb-6 mt-6 text-[var(--primary)]">ADU design with the engineering built in.</h1>
+                <p class="text-lg text-[#3c463d] mb-10 max-w-xl">Sequoia Lodges is an engineering design firm focused on ADUs. Every plan set is coordinated with licensed Massachusetts architects and engineers, and our principal engineer tailors it to your lot &mdash; so the design you see is the design that gets built.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#get-started" class="btn btn-solid">Talk to Our Design Team</a>
+                    <a href="#scope" class="btn btn-outline">See the Engineering Scope</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="bg-[var(--primary)] text-[var(--paper)]">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[rgba(250,246,236,0.2)]">
+                <div class="md:pr-10 py-6 md:py-0">
+                    <div class="num text-4xl mb-3">01</div>
+                    <h3 class="text-xl mb-2">One coordinated team</h3>
+                    <p class="text-[#cfd8cf] text-sm leading-relaxed">Architecture, structural, and MEP under one roof &mdash; no chasing three separate consultants for one small building.</p>
+                </div>
+                <div class="md:px-10 py-6 md:py-0">
+                    <div class="num text-4xl mb-3">02</div>
+                    <h3 class="text-xl mb-2">Site-specific, always</h3>
+                    <p class="text-[#cfd8cf] text-sm leading-relaxed">Our principal engineer adapts every set to your lot &mdash; setbacks, grades, access, and local requirements.</p>
+                </div>
+                <div class="md:pl-10 py-6 md:py-0">
+                    <div class="num text-4xl mb-3">03</div>
+                    <h3 class="text-xl mb-2">Licensed in Massachusetts</h3>
+                    <p class="text-[#cfd8cf] text-sm leading-relaxed">Every set is coordinated with licensed MA architects and engineers who know BPDA and Article 53 first-hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering scope -->
+    <section id="scope" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <span class="eyebrow text-[var(--rust)]">The Scope</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-6 text-[var(--primary)]">What the engineering actually covers.</h2>
+                    <p class="text-[#3c463d] max-w-sm">A buildable ADU needs more than a pretty floor plan. This is the design and engineering scope behind every Sequoia Lodges set.</p>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">01</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Architectural design</h3>
+                            <p class="text-sm text-[#3c463d]">Dimensioned floor plans, all four elevations, and building sections &mdash; a complete, scaled drawing set.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">02</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Structural engineering</h3>
+                            <p class="text-sm text-[#3c463d]">Framing and foundation design, included with 1-bedroom plans and up &mdash; ready for stamping and review.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">03</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Full MEP design</h3>
+                            <p class="text-sm text-[#3c463d]">Mechanical, electrical, and plumbing layouts, included with the 2-bedroom package &mdash; the difference between a drawing and a buildable set.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline">
+                        <span class="num text-xl w-8 flex-shrink-0">04</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Site-specific adaptation</h3>
+                            <p class="text-sm text-[#3c463d]">Setbacks, lot geometry, access, and utility routing adapted to your property by our principal engineer.</p>
+                        </div>
+                    </div>
+                    <div class="deliverable flex gap-6 items-baseline" style="border-bottom: 1px solid var(--line);">
+                        <span class="num text-xl w-8 flex-shrink-0">05</span>
+                        <div>
+                            <h3 class="text-lg mb-1">Custom modifications by inquiry</h3>
+                            <p class="text-sm text-[#3c463d]">Different footprints, added levels, accessibility features &mdash; scoped and quoted before any work begins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing summary -->
+    <section class="py-20 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-6">
+                    <span class="eyebrow text-[var(--rust)]">Pricing</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-6 text-[var(--primary)]">Custom-firm engineering. Fixed-package pricing.</h2>
+                    <p class="text-[#3c463d] mb-8 max-w-md">Because the base designs are pre-engineered, you get a coordinated architecture-and-engineering set for a fraction of a custom engagement: $3,500 for a studio, $4,000 for a 1-bedroom with structural, and $4,500 for the 2-bedroom set with full structural and MEP.</p>
+                    <div class="flex flex-wrap items-center gap-6">
+                        <a href="#get-started" class="btn btn-solid">Talk to Our Design Team</a>
+                        <a href="/adu-planning-kit.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <i data-feather="folder" class="w-4 h-4"></i> Get the Free ADU Planning Kit
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-6">
+                    <figure>
+                        <img src="/adu-rendering.jpg" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
+                        <figcaption class="mt-3 text-xs text-[#56604f]">Concept rendering, for illustration &mdash; your plan set is tailored to your lot.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mb-12">
+                <span class="eyebrow text-[var(--rust)]">FAQ</span>
+                <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">Common questions.</h2>
+            </div>
+            <div class="max-w-3xl" style="border-top: 1px solid var(--line);">
+                <details class="faq">
+                    <summary>Can you modify a plan beyond the standard tailoring?</summary>
+                    <p>Yes. Site-specific adjustments are included with every package. Larger custom modifications &mdash; different footprints, added levels, accessibility features &mdash; are scoped and quoted by inquiry before any work begins.</p>
+                </details>
+                <details class="faq">
+                    <summary>Who stamps the drawings?</summary>
+                    <p>Every set is coordinated with licensed Massachusetts architects and engineers, and stamping is arranged as part of preparing your filing-ready set where the city requires it.</p>
+                </details>
+                <details class="faq">
+                    <summary>My lot is tight or sloped — can you still make it work?</summary>
+                    <p>That's exactly what the site-specific engineering pass is for. Tell us about the lot in the form below and we'll give you an honest read on fit before you commit to anything.</p>
+                </details>
+                <details class="faq">
+                    <summary>Do I need my own architect or engineer too?</summary>
+                    <p>No. Architecture, structural, and (with the 2-bedroom set) MEP design are part of the package. Your contractor builds from our coordinated set.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead form -->
+    <section id="get-started" class="bg-[var(--primary)] text-[var(--paper)] py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <span class="eyebrow" style="color:#cfd8cf;">Get Started</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-6">Tell us about your lot. We'll tell you what works.</h2>
+                    <p class="text-[#cfd8cf] mb-10 max-w-sm">Describe your property and goals and our design team will respond with an honest read on fit, the right package, and timeline &mdash; usually within one business day.</p>
+                    <div class="space-y-5">
+                        <a href="mailto:sequoialodges@gmail.com" class="flex items-center gap-3 font-semibold hover:text-white">
+                            <i data-feather="mail" class="w-4 h-4"></i> sequoialodges@gmail.com
+                        </a>
+                        <div class="flex items-center gap-3 font-semibold">
+                            <i data-feather="map-pin" class="w-4 h-4"></i> Serving Boston &amp; Greater Boston, MA
+                        </div>
+                    </div>
+                </div>
+                <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="design-engineering">
+                    <div class="grid grid-cols-2 gap-5">
+                        <input type="text" name="name" required placeholder="Name" class="field">
+                        <input type="email" name="email" required placeholder="Email" class="field">
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <input type="text" name="property_city" required placeholder="Property city" class="field">
+                        <input type="text" name="property_zip" required placeholder="Property ZIP" inputmode="numeric" pattern="[0-9]{5}" title="5-digit ZIP code" class="field">
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <label class="block">
+                            <span class="field-label">Do you own the property?</span>
+                            <select name="own_property" required class="field">
+                                <option value="" disabled selected>Select&hellip;</option>
+                                <option value="yes">Yes</option>
+                                <option value="under_contract">Under contract / buying</option>
+                                <option value="no">Not yet</option>
+                            </select>
+                        </label>
+                        <label class="block">
+                            <span class="field-label">ADU type</span>
+                            <select name="adu_type" required class="field">
+                                <option value="" disabled selected>Select&hellip;</option>
+                                <option value="studio">Studio</option>
+                                <option value="one_bedroom">1-Bedroom</option>
+                                <option value="two_bedroom">2-Bedroom</option>
+                                <option value="not_sure">Not sure yet</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <label class="block">
+                            <span class="field-label">Primary goal</span>
+                            <select name="primary_goal" required class="field">
+                                <option value="" disabled selected>Select&hellip;</option>
+                                <option value="rental_income">Rental income</option>
+                                <option value="family">Room for family</option>
+                                <option value="office">Home office / studio</option>
+                                <option value="property_value">Property value</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+                        <label class="block">
+                            <span class="field-label">Timeline</span>
+                            <select name="timeline" required class="field">
+                                <option value="" disabled selected>Select&hellip;</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="0_6_months">Within 6 months</option>
+                                <option value="6_12_months">6&ndash;12 months</option>
+                                <option value="exploring">Just exploring</option>
+                            </select>
+                        </label>
+                    </div>
+                    <textarea name="message" rows="2" placeholder="Tell us about the lot — slope, access, anything unusual (optional)" class="field"></textarea>
+                    <label class="flex items-start gap-3 text-sm text-[#cfd8cf]">
+                        <input type="checkbox" name="marketing_consent" value="yes" class="mt-1">
+                        <span>Email me ADU planning guides and occasional updates. Unsubscribe anytime.</span>
+                    </label>
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
+                    <button type="submit" class="btn btn-cream w-full justify-center mt-2">Get an Honest Read on My Lot</button>
+                    <p data-form-error class="hidden text-sm" style="color:#f3c9a8;">Something went wrong sending your request. Please try again, or email us directly at sequoialodges@gmail.com.</p>
+                    <input type="hidden" name="_subject" value="New ADU plan inquiry — /adu-design-engineering">
+                    <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <div class="flex items-center gap-3">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-7 w-auto">
+                <span class="text-[#56604f]">&copy; 2026 Sequoia Lodges LLC</span>
+            </div>
+            <div class="flex items-center gap-6 text-[#56604f]">
+                <a href="/privacy-policy.html" class="hover:text-[var(--primary)]">Privacy</a>
+                <a href="/terms-of-service.html" class="hover:text-[var(--primary)]">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
