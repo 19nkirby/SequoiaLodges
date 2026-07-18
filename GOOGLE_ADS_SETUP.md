@@ -149,7 +149,9 @@ Pin nothing; give Google 6–10 headlines and 2–3 descriptions per ad. All cop
 - H: Backyard Cottage Plans · Backyard ADU Plan Sets · Plans From $3,500 · Permit-Ready Designs · Studio to 2-Bedroom Plans · Tailored to Your Lot · Boston Backyard ADUs · Complete Drawing Sets
 - D: Pre-designed backyard cottage and ADU plans for Massachusetts lots, ready for permitting. · Compare studio, one-bedroom, and two-bedroom packages with clear fixed pricing.
 
-Sitelinks (campaign level): Plans & Pricing (`/adu-plans#pricing`) · Free Planning Kit (`/adu-planning-kit.html`) · What Permit-Ready Means (`/permit-ready-adu-plans`) · Design & Engineering (`/adu-design-engineering`)
+**Law/education intent (from the July 2026 marketing plan):** the gated lead magnet `/massachusetts-adu-guide` and the `/adu-cost-calculator` are live for education-intent queries (`massachusetts adu law`, `can i build an adu in massachusetts`, `adu by right massachusetts`, `affordable homes act adu`). These convert lower but feed the nurture list — if added, make it a separate `SKAG | ADU Law` ad group at exact/phrase, landing on `/massachusetts-adu-guide`, and judge it on magnet leads (Secondary conversion), not inquiries. Both pages fire the same `magnet` conversion flow via tracking.js (`data-variant`: `law-guide`, `cost-calculator`).
+
+Sitelinks (campaign level): Plans & Pricing (`/adu-plans#pricing`) · Free Planning Kit (`/adu-planning-kit.html`) · MA ADU Law Guide (`/massachusetts-adu-guide.html`) · Cost Calculator (`/adu-cost-calculator.html`)
 
 Callouts: Fixed Pricing · Engineering Included · 2-Week Turnaround · BPDA Compliant · No Sales Calls · Plans, Not Construction
 

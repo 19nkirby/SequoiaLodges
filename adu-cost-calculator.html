@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massachusetts ADU Cost Calculator (2026) | Cost, Rental Income &amp; Payback | Sequoia Lodges</title>
+    <meta name="description" content="Free 2026 Massachusetts ADU cost calculator. Estimate construction cost by ADU type and region, plus rental income and payback period if you plan to rent it out.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f3b24">
+    <link rel="canonical" href="https://sequoialodges.com/adu-cost-calculator">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sequoialodges.com/adu-cost-calculator">
+    <meta property="og:title" content="Massachusetts ADU Cost Calculator (2026) | Sequoia Lodges">
+    <meta property="og:description" content="What would an ADU cost on your lot — and what would it earn? Estimate cost, rental income, and payback for Massachusetts, free.">
+    <meta property="og:image" content="https://sequoialodges.com/logo.svg">
+    <meta property="og:site_name" content="Sequoia Lodges">
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="apple-touch-icon" href="/logo.svg">
+
+    <!-- Google Analytics (GA4) + Consent Mode v2 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+        region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IS','IT','LI','LV','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+      });
+      gtag('consent', 'default', {
+        ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+      gtag('set', 'url_passthrough', true);
+      gtag('config', 'G-SN14KG7Y2M');
+    </script>
+    <script defer src="/tracking.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --ink: #16241b;
+            --primary: #0f3b24;
+            --primary-dark: #082014;
+            --paper: #faf6ec;
+            --line: rgba(15,59,36,0.18);
+            --line-soft: rgba(15,59,36,0.10);
+            --rust: #b85c2c;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background-color: var(--paper);
+        }
+        h1, h2, h3, .display {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            line-height: 1.12;
+        }
+        .eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.95rem 1.75rem;
+            border-radius: 3px;
+            border: 1px solid var(--primary);
+            transition: background-color .15s, color .15s;
+        }
+        .btn-solid { background-color: var(--primary); color: var(--paper); }
+        .btn-solid:hover { background-color: var(--primary-dark); }
+        .btn-outline { background-color: transparent; color: var(--primary); }
+        .btn-outline:hover { background-color: rgba(15,59,36,0.06); }
+        .blueprint-grid {
+            background-image:
+                linear-gradient(var(--line-soft) 1px, transparent 1px),
+                linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+        .tag {
+            display: inline-block;
+            border-top: 1px solid var(--primary);
+            border-bottom: 1px solid var(--primary);
+            padding: 0.4rem 0;
+        }
+        .field {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--line);
+            padding: 0.6rem 0.1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .field:focus { outline: none; border-bottom-color: var(--primary); }
+        .field::placeholder { color: #8a9089; }
+        select.field { color: var(--ink); appearance: none; -webkit-appearance: none; border-radius: 0; cursor: pointer; }
+        .num {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 500;
+            color: var(--rust);
+        }
+        .calc-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #56604f;
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .result-row .label { font-size: 0.9rem; color: #3c463d; }
+        .result-row .value {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            color: var(--primary);
+            text-align: right;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="w-full">
+        <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
+            </a>
+            <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="btn btn-outline">sequoialodges@gmail.com</a>
+        </div>
+    </header>
+
+    <!-- Calculator -->
+    <section class="blueprint-grid border-t border-b" style="border-color: var(--line);">
+        <div class="container mx-auto px-6 py-16 md:py-20">
+            <div class="max-w-2xl mb-12">
+                <span class="tag eyebrow mb-6">Free Tool &middot; 2026 Massachusetts Numbers</span>
+                <h1 class="text-4xl md:text-5xl mt-6 mb-5 text-[var(--primary)]">What would an ADU cost on your lot &mdash; and what would it earn?</h1>
+                <p class="text-lg text-[#3c463d]">Pick your region and ADU type and get an instant planning range. If you're building for rental income, the full estimate adds projected rent and a simple payback period.</p>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-12">
+                <!-- Inputs -->
+                <div class="md:col-span-5">
+                    <div class="border p-8" style="border-color: var(--primary); background: var(--paper);">
+                        <span class="eyebrow text-[var(--rust)]">Your Project</span>
+                        <div class="space-y-6 mt-5">
+                            <div>
+                                <label class="calc-label" for="calc-region">Region</label>
+                                <select id="calc-region" class="field">
+                                    <option value="boston_core">Boston / Cambridge / Brookline / Somerville</option>
+                                    <option value="metro">Greater Boston (inside I-495)</option>
+                                    <option value="worcester">Worcester area</option>
+                                    <option value="other">Rest of Massachusetts</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="calc-label" for="calc-type">ADU type</label>
+                                <select id="calc-type" class="field">
+                                    <option value="detached">Detached new build</option>
+                                    <option value="garage">Garage conversion</option>
+                                    <option value="attached">Attached / basement</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="calc-label" for="calc-size">Size</label>
+                                <select id="calc-size" class="field">
+                                    <option value="studio">Studio (~450 sq ft)</option>
+                                    <option value="1br" selected>1 bedroom (~650 sq ft)</option>
+                                    <option value="2br">2 bedroom (~875 sq ft)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="calc-label" for="calc-use">Intended use</label>
+                                <select id="calc-use" class="field">
+                                    <option value="rental">Rental income</option>
+                                    <option value="family">Family / in-law</option>
+                                    <option value="personal">I'd live in it</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="calc-label" for="calc-town">Property town <span style="text-transform:none;letter-spacing:0;">(optional, sharpens the estimate we send)</span></label>
+                                <input type="text" id="calc-town" class="field" placeholder="e.g. Newton">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="md:col-span-7">
+                    <!-- Rough range (always visible) -->
+                    <div class="mb-10">
+                        <span class="eyebrow text-[var(--rust)]">Planning Estimate</span>
+                        <div class="flex items-baseline gap-4 mt-3">
+                            <span id="rough-range" class="display text-4xl md:text-5xl text-[var(--primary)]">$215,000 &ndash; $310,000</span>
+                        </div>
+                        <p id="rough-caption" class="mt-3 text-sm text-[#3c463d] max-w-md">All-in construction range for a 1-bedroom detached ADU in your region &mdash; before design &amp; engineering.</p>
+                    </div>
+
+                    <!-- Gate -->
+                    <div id="calc-gate" class="border p-8" style="border-color: var(--line); background: #fff;">
+                        <h2 class="text-2xl mb-2 text-[var(--primary)]">Get the full estimate &mdash; free.</h2>
+                        <p class="text-sm text-[#3c463d] mb-6 max-w-md">Unlock the line-item breakdown, <span id="gate-rental-hook">projected rental income and payback period,</span> and a realistic permit-to-move-in timeline for your project.</p>
+                        <form class="space-y-5 max-w-md" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="magnet" data-variant="cost-calculator" data-thanks="/adu-cost-calculator.html#full-estimate">
+                            <input type="email" name="email" required placeholder="Email" class="field">
+                            <label class="flex items-start gap-3 text-sm text-[#3c463d]">
+                                <input type="checkbox" name="marketing_consent" value="yes" class="mt-1">
+                                <span>Email me ADU planning guides and occasional updates. Unsubscribe anytime.</span>
+                            </label>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
+                            <input type="hidden" name="lead_magnet" value="cost_calculator">
+                            <input type="hidden" name="_subject" value="Calculator estimate request — /adu-cost-calculator">
+                            <input type="hidden" name="calc_region" value="">
+                            <input type="hidden" name="calc_adu_type" value="">
+                            <input type="hidden" name="calc_size" value="">
+                            <input type="hidden" name="calc_intended_use" value="">
+                            <input type="hidden" name="calc_town" value="">
+                            <input type="hidden" name="calc_cost_range" value="">
+                            <input type="hidden" name="calc_rent_range" value="">
+                            <button type="submit" class="btn btn-solid w-full justify-center mt-2">Unlock My Full Estimate</button>
+                            <p data-form-error class="hidden text-sm" style="color:var(--rust);">Something went wrong. Please try again, or email us at sequoialodges@gmail.com.</p>
+                        </form>
+                        <p class="mt-5 text-xs text-[#56604f]">No spam, no sales calls. We'll also send the Massachusetts ADU Law Guide so you have the zoning side covered.</p>
+                    </div>
+
+                    <!-- Full estimate (unlocked) -->
+                    <div id="calc-full" class="hidden">
+                        <div class="border p-8" style="border-color: var(--primary); background: #fff;">
+                            <span class="eyebrow text-[var(--rust)]">Full Estimate</span>
+                            <h2 class="text-2xl mt-2 mb-4 text-[var(--primary)]" id="full-title">Your ADU estimate</h2>
+
+                            <div class="result-row" style="border-top: 1px solid var(--line);">
+                                <span class="label">Construction (all-in)</span>
+                                <span class="value" id="r-construction">&mdash;</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="label">Design &amp; engineering (permit-ready plan set)</span>
+                                <span class="value" id="r-design">&mdash;</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="label">Contingency to budget (~10%)</span>
+                                <span class="value" id="r-contingency">&mdash;</span>
+                            </div>
+                            <div class="result-row" style="border-bottom: 1px solid var(--primary);">
+                                <span class="label font-semibold">Total planning budget</span>
+                                <span class="value" id="r-total">&mdash;</span>
+                            </div>
+
+                            <div id="rental-block">
+                                <h3 class="text-lg mt-8 mb-1 text-[var(--primary)]">Rental outlook</h3>
+                                <div class="result-row" style="border-top: 1px solid var(--line);">
+                                    <span class="label">Estimated monthly rent in your region</span>
+                                    <span class="value" id="r-rent">&mdash;</span>
+                                </div>
+                                <div class="result-row">
+                                    <span class="label">Simple payback period</span>
+                                    <span class="value" id="r-payback">&mdash;</span>
+                                </div>
+                                <p class="text-xs text-[#56604f] mt-2">Gross rent &divide; total budget; excludes taxes, insurance, maintenance, and vacancy. A rough compass, not a pro forma.</p>
+                            </div>
+
+                            <h3 class="text-lg mt-8 mb-1 text-[var(--primary)]">Timeline (by-right)</h3>
+                            <div class="result-row" style="border-top: 1px solid var(--line);">
+                                <span class="label">Design &amp; engineering</span>
+                                <span class="value">2 wks &ndash; 3 mos<span class="block text-xs font-normal" style="color:#56604f; font-family:Inter,sans-serif;">~2 wks from a pre-designed set</span></span>
+                            </div>
+                            <div class="result-row">
+                                <span class="label">Building permit review</span>
+                                <span class="value">1 &ndash; 3 mos</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="label">Construction</span>
+                                <span class="value" id="r-build-time">&mdash;</span>
+                            </div>
+                            <p class="text-xs text-[#56604f] mt-4">Estimates are 2026 Massachusetts planning ranges, not quotes &mdash; your site conditions and contractor bids set the real numbers. No variance or zoning-board hearing assumed, per the state by-right ADU law (qualifying ADUs &le;900 sq ft).</p>
+
+                            <div class="mt-8 flex flex-wrap gap-4">
+                                <a href="/adu-plans#get-started" class="btn btn-solid">Get an Exact Plan Quote</a>
+                                <a href="/massachusetts-adu-guide.html" class="btn btn-outline">Get the MA ADU Law Guide</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How estimates are built -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <span class="eyebrow text-[var(--rust)]">How these numbers are built</span>
+            <p class="mt-4 text-[#3c463d]">Ranges reflect typical 2026 Massachusetts costs per square foot by ADU type (detached new build, garage conversion, attached/basement), adjusted by region, plus typical design and engineering fees. Rental estimates reflect asking rents for comparable small units by region. Every lot is different &mdash; utility runs, foundation conditions, and septic capacity move real numbers materially, which is why the next step after an estimate is a plan-fit read on your actual property.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t" style="border-color: var(--line);">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            <div class="flex items-center gap-3">
+                <img src="/logo.svg" alt="Sequoia Lodges" class="h-7 w-auto">
+                <span class="text-[#56604f]">&copy; 2026 Sequoia Lodges LLC</span>
+            </div>
+            <div class="flex items-center gap-6 text-[#56604f]">
+                <a href="/privacy-policy.html" class="hover:text-[var(--primary)]">Privacy</a>
+                <a href="/terms-of-service.html" class="hover:text-[var(--primary)]">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        (function () {
+            'use strict';
+
+            /* 2026 MA planning ranges. Construction $/sf by ADU type. */
+            var COST_SF = {
+                detached: [330, 480],
+                garage:   [200, 330],
+                attached: [150, 280]
+            };
+            var SIZE_SF = { studio: 450, '1br': 650, '2br': 875 };
+            var REGION_MULT = { boston_core: 1.05, metro: 1.0, worcester: 0.88, other: 0.82 };
+            /* Monthly asking rent for a 1BR-sized unit by region; scaled by size. */
+            var RENT_1BR = {
+                boston_core: [2400, 3000],
+                metro:       [2000, 2600],
+                worcester:   [1500, 1950],
+                other:       [1300, 1700]
+            };
+            var RENT_SIZE_MULT = { studio: 0.85, '1br': 1.0, '2br': 1.3 };
+            var BUILD_TIME = { detached: '6 – 10 mos', garage: '4 – 7 mos', attached: '4 – 6 mos' };
+            var DESIGN_FEE = [3500, 15000];
+
+            var LABELS = {
+                region: { boston_core: 'Boston / Cambridge / Brookline / Somerville', metro: 'Greater Boston', worcester: 'Worcester area', other: 'Massachusetts' },
+                type:   { detached: 'detached new-build', garage: 'garage-conversion', attached: 'attached/basement' },
+                size:   { studio: 'studio', '1br': '1-bedroom', '2br': '2-bedroom' }
+            };
+
+            var els = {
+                region: document.getElementById('calc-region'),
+                type: document.getElementById('calc-type'),
+                size: document.getElementById('calc-size'),
+                use: document.getElementById('calc-use'),
+                town: document.getElementById('calc-town')
+            };
+            var STORE_KEY = 'sl_calc_inputs';
+            var UNLOCK_KEY = 'sl_calc_unlocked';
+
+            function roundK(n) { return Math.round(n / 5000) * 5000; }
+            function money(n) { return '$' + n.toLocaleString('en-US'); }
+            function range(lo, hi) { return money(lo) + ' – ' + money(hi); }
+
+            function inputs() {
+                return {
+                    region: els.region.value,
+                    type: els.type.value,
+                    size: els.size.value,
+                    use: els.use.value,
+                    town: els.town.value.trim().slice(0, 60)
+                };
+            }
+
+            function estimate(inp) {
+                var sf = SIZE_SF[inp.size];
+                var mult = REGION_MULT[inp.region];
+                var costLo = roundK(COST_SF[inp.type][0] * sf * mult);
+                var costHi = roundK(COST_SF[inp.type][1] * sf * mult);
+                var rentLo = Math.round(RENT_1BR[inp.region][0] * RENT_SIZE_MULT[inp.size] / 50) * 50;
+                var rentHi = Math.round(RENT_1BR[inp.region][1] * RENT_SIZE_MULT[inp.size] / 50) * 50;
+                var totalLo = roundK(costLo * 1.1 + DESIGN_FEE[0]);
+                var totalHi = roundK(costHi * 1.1 + DESIGN_FEE[1]);
+                return {
+                    costLo: costLo, costHi: costHi,
+                    rentLo: rentLo, rentHi: rentHi,
+                    contLo: roundK(costLo * 0.1), contHi: roundK(costHi * 0.1),
+                    totalLo: totalLo, totalHi: totalHi,
+                    paybackLo: Math.round(totalLo / (rentHi * 12) * 10) / 10,
+                    paybackHi: Math.round(totalHi / (rentLo * 12) * 10) / 10
+                };
+            }
+
+            function setHiddenCalcFields(inp, est) {
+                var form = document.querySelector('#calc-gate form');
+                if (!form) { return; }
+                var map = {
+                    calc_region: LABELS.region[inp.region],
+                    calc_adu_type: inp.type,
+                    calc_size: inp.size,
+                    calc_intended_use: inp.use,
+                    calc_town: inp.town,
+                    calc_cost_range: range(est.costLo, est.costHi),
+                    calc_rent_range: inp.use === 'rental' ? range(est.rentLo, est.rentHi) + '/mo' : 'n/a'
+                };
+                Object.keys(map).forEach(function (name) {
+                    var f = form.querySelector('[name="' + name + '"]');
+                    if (f) { f.value = map[name]; }
+                });
+            }
+
+            function render() {
+                var inp = inputs();
+                var est = estimate(inp);
+
+                document.getElementById('rough-range').innerHTML = range(est.costLo, est.costHi);
+                document.getElementById('rough-caption').textContent =
+                    'All-in construction range for a ' + LABELS.size[inp.size] + ' ' + LABELS.type[inp.type] +
+                    ' ADU in ' + LABELS.region[inp.region] + ' — before design & engineering.';
+
+                document.getElementById('gate-rental-hook').style.display = inp.use === 'rental' ? '' : 'none';
+
+                document.getElementById('full-title').textContent =
+                    'Your ' + LABELS.size[inp.size] + ' ' + LABELS.type[inp.type] + ' ADU' + (inp.town ? ' in ' + inp.town : '');
+                document.getElementById('r-construction').textContent = range(est.costLo, est.costHi);
+                document.getElementById('r-design').textContent = range(DESIGN_FEE[0], DESIGN_FEE[1]);
+                document.getElementById('r-contingency').textContent = range(est.contLo, est.contHi);
+                document.getElementById('r-total').textContent = range(est.totalLo, est.totalHi);
+                document.getElementById('r-build-time').textContent = BUILD_TIME[inp.type];
+
+                document.getElementById('rental-block').style.display = inp.use === 'rental' ? '' : 'none';
+                if (inp.use === 'rental') {
+                    document.getElementById('r-rent').textContent = range(est.rentLo, est.rentHi) + ' /mo';
+                    document.getElementById('r-payback').textContent = '~' + est.paybackLo + ' – ' + est.paybackHi + ' years';
+                }
+
+                setHiddenCalcFields(inp, est);
+                try { localStorage.setItem(STORE_KEY, JSON.stringify(inp)); } catch (e) { /* private mode */ }
+            }
+
+            function restore() {
+                var saved = null;
+                try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null'); } catch (e) { /* ignore */ }
+                if (!saved) { return; }
+                ['region', 'type', 'size', 'use'].forEach(function (k) {
+                    if (saved[k] && els[k].querySelector('option[value="' + saved[k] + '"]')) { els[k].value = saved[k]; }
+                });
+                if (saved.town) { els.town.value = saved.town; }
+            }
+
+            function unlock() {
+                document.getElementById('calc-gate').classList.add('hidden');
+                document.getElementById('calc-full').classList.remove('hidden');
+            }
+
+            restore();
+
+            var unlocked = false;
+            try { unlocked = localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { /* ignore */ }
+            if (window.location.hash === '#full-estimate') {
+                try { localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) { /* ignore */ }
+                unlocked = true;
+                if (typeof gtag === 'function') { gtag('event', 'calculator_unlocked'); }
+            }
+            if (unlocked) { unlock(); }
+
+            Object.keys(els).forEach(function (k) {
+                els[k].addEventListener(k === 'town' ? 'input' : 'change', render);
+            });
+            render();
+
+            if (window.location.hash === '#full-estimate') {
+                document.getElementById('calc-full').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        })();
+    </script>
+</body>
+</html>
