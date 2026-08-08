@@ -176,12 +176,13 @@ PROJECT_BLOCK = """
             <h2 class="text-3xl md:text-4xl mt-3 mb-6 text-[var(--primary)]">We designed an ADU here.</h2>
             <div class="grid md:grid-cols-12 gap-10">
                 <div class="md:col-span-7 space-y-5 text-[#3c463d] leading-relaxed">
-                    <p>17R Harding Rd in Norwood is a two-bedroom ADU we designed. It is built, occupied, and
-                    rented &mdash; 756 square feet, two bedrooms, one bath. It was listed for rent at
+                    <p>17R Harding Rd in Norwood is a two-bedroom ADU we designed &mdash; 756 square feet, two
+                    bedrooms, one bath. We drew it and stamped it. Someone else built it, which is how
+                    every one of our projects works. It is finished, occupied, and was listed for rent at
                     $2,246 a month in January 2026.</p>
-                    <p>We mention it because &ldquo;permit-ready&rdquo; is easy to claim and harder to show. This one
-                    went through a real building department and came out the other side as a finished
-                    dwelling somebody lives in.</p>
+                    <p>We show it because &ldquo;permit-ready&rdquo; is easy to claim and harder to demonstrate.
+                    This set went through a real building department and a real contractor, and came out
+                    the other side as a dwelling somebody lives in.</p>
                     <p class="text-sm text-[#56604f]">That rent figure is what this specific unit was listed
                     at on that date, not a projection for your property. Rents vary by town, size, and
                     condition, and we don't forecast them.</p>
@@ -197,8 +198,12 @@ PROJECT_BLOCK = """
                             <p class="mt-1 font-semibold">2 bed &middot; 1 bath</p>
                         </div>
                         <div class="deliverable">
+                            <span class="eyebrow text-[#56604f]">Our role</span>
+                            <p class="mt-1 font-semibold">Design &amp; engineering only</p>
+                        </div>
+                        <div class="deliverable">
                             <span class="eyebrow text-[#56604f]">Status</span>
-                            <p class="mt-1 font-semibold">Built &amp; rented</p>
+                            <p class="mt-1 font-semibold">Built from our plans</p>
                         </div>
                         <div class="deliverable">
                             <span class="eyebrow text-[#56604f]">Town</span>
@@ -315,7 +320,7 @@ def render(town: dict) -> str:
         gallery = gallery_html(project_images(town))
         wrapped = (
             f'<div class="mt-12">{gallery}\n                <figcaption class="text-sm text-[#56604f] mt-3">'
-            f"17R Harding Rd, Norwood &mdash; designed by Sequoia Lodges."
+            f"17R Harding Rd, Norwood &mdash; designed and stamped by Sequoia Lodges, built by others."
             f"</figcaption>\n            </div>"
             if gallery
             else ""
