@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Gated-download hubs — reachable only after a form submit, no SEO value.
+Disallow: /kit-download-x7q4m.html
+Disallow: /guide-download-t9m2c.html
+Disallow: /thank-you.html
+
+Sitemap: https://sequoialodges.com/sitemap.xml

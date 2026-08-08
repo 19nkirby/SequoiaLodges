@@ -1,0 +1,77 @@
+{
+  "_comment": "Per-town data for build_town_pages.py. RULE: only verified facts go in here. 'official_url' must return HTTP 200 and must be the town's own domain — never a deep link that is likely to rot. Leave a field null rather than guessing; the template omits null fields entirely. 'energy_code' is only filled where the town's own building department publishes it.",
+  "_verified": "2026-08-08 — official_url values checked with curl (200 unless noted); Norwood facts read from the town's own Building Department document list.",
+  "towns": [
+    {
+      "slug": "norwood",
+      "name": "Norwood",
+      "official_url": "https://www.norwoodma.gov/departments/building/postings_documents.php",
+      "official_label": "Norwood Building Department — posted documents",
+      "energy_code": "Norwood has opted into the Specialized (opt-in) Stretch Energy Code. The Building Department publishes both a residential opt-in stretch code document and an opt-in stretch code permitting checklist, and an ADU has to be designed to that standard.",
+      "local_notes": [
+        "The Building Department's own ADU reference is the state regulation itself — 760 CMR 71.00, Protected Use Accessory Dwelling Units — so Norwood is applying the state framework directly rather than a separate local ADU bylaw.",
+        "Norwood publishes a \"Plot Plan Required\" document. Expect to supply a plot plan with the permit application, which is also the first thing we ask for."
+      ],
+      "featured_project": true
+    },
+    {
+      "slug": "newton",
+      "name": "Newton",
+      "official_url": "https://www.newtonma.gov",
+      "official_label": "City of Newton — official site",
+      "energy_code": null,
+      "local_notes": [
+        "Newton has a number of local historic districts. The state ADU law lets municipalities apply stricter design standards inside a historic district, so confirm whether your parcel sits in one before committing to an exterior direction."
+      ],
+      "featured_project": false
+    },
+    {
+      "slug": "brookline",
+      "name": "Brookline",
+      "official_url": "https://www.brooklinema.gov",
+      "official_label": "Town of Brookline — official site",
+      "energy_code": null,
+      "local_notes": [
+        "Brookline lots are frequently tight, and the state ADU law does not waive local setback or height limits. Buildable-area review matters more here than the 900 sf cap does."
+      ],
+      "featured_project": false
+    },
+    {
+      "slug": "cambridge",
+      "name": "Cambridge",
+      "official_url": "https://www.cambridgema.gov/inspection",
+      "official_label": "Cambridge Inspectional Services",
+      "energy_code": null,
+      "local_notes": [
+        "Much of Cambridge is zoned for two- and three-family use rather than single-family. The state by-right ADU provision is keyed to single-family zoning, so which district your parcel sits in determines whether the by-right path applies at all."
+      ],
+      "featured_project": false
+    },
+    {
+      "slug": "somerville",
+      "name": "Somerville",
+      "official_url": "https://www.somervillema.gov",
+      "official_label": "City of Somerville — official site",
+      "energy_code": null,
+      "local_notes": [
+        "Somerville is dense and largely multi-family zoned, and it is well served by transit — which matters, because no parking space can be required for an ADU within a half mile of a transit stop."
+      ],
+      "featured_project": false
+    },
+    {
+      "slug": "boston",
+      "name": "Boston",
+      "official_url": "https://www.boston.gov/adu",
+      "official_label": "Accessory Dwelling Units in Boston — City of Boston",
+      "energy_code": null,
+      "own_path": true,
+      "local_notes": [
+        "Boston runs its own ADU process rather than the statewide by-right provision, and the city's program is aimed at owners of 1-, 2-, and 3-family homes who live at the property.",
+        "The city distinguishes internal ADUs (basement or attic conversions) from external ones (an attached addition or a detached backyard structure). Which one you're doing changes the drawing set substantially.",
+        "Some Boston projects still require Zoning Board of Appeal review before a building permit is issued, so the timeline here is less predictable than in a by-right town.",
+        "Boston offers things most towns don't: a published ADU guidebook, free monthly design and budget workshops, and a financial assistance program for income-eligible homeowners. Worth using before you pay anyone, including us."
+      ],
+      "featured_project": false
+    }
+  ]
+}
