@@ -12,7 +12,19 @@
         "The Building Department's own ADU reference is the state regulation itself — 760 CMR 71.00, Protected Use Accessory Dwelling Units — so Norwood is applying the state framework directly rather than a separate local ADU bylaw.",
         "Norwood publishes a \"Plot Plan Required\" document. Expect to supply a plot plan with the permit application, which is also the first thing we ask for."
       ],
-      "featured_project": true
+      "featured_project": true,
+      "_project_images_note": "Files must exist at images/norwood/<file> or the gallery is omitted entirely — the generator checks, so a missing file can never ship as a broken image. 'lead' is the single photo used on the homepage built-work block.",
+      "project_images": [
+        { "file": "exterior-front.jpg", "alt": "Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry", "lead": true },
+        { "file": "exterior-angle.jpg", "alt": "Three-quarter view of the Norwood ADU showing the bay window and the side elevation" },
+        { "file": "exterior-side.jpg", "alt": "Side elevation of the Norwood ADU with arborvitae screening along the driveway" },
+        { "file": "entry.jpg", "alt": "Covered entry porch of the Norwood ADU with granite step" },
+        { "file": "kitchen-living.jpg", "alt": "Open kitchen and living area with vaulted ceiling and three skylights" },
+        { "file": "kitchen.jpg", "alt": "Kitchen with island, quartz counters, and stainless appliances under a vaulted ceiling" },
+        { "file": "hall.jpg", "alt": "Interior hall connecting the living area to the bedrooms, with stacked laundry" },
+        { "file": "bedroom.jpg", "alt": "Bedroom with vaulted ceiling, ceiling fan, and two windows" },
+        { "file": "bath.jpg", "alt": "Full bath with patterned tile floor, quartz vanity, and tiled shower" }
+      ]
     },
     {
       "slug": "newton",

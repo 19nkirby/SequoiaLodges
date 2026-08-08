@@ -207,6 +207,7 @@ PROJECT_BLOCK = """
                     </div>
                 </div>
             </div>
+            <!--GALLERY-->
         </div>
     </section>
 """
@@ -214,6 +215,47 @@ PROJECT_BLOCK = """
 
 def esc(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def project_images(town: dict) -> list:
+    """Return the declared project images that actually exist on disk.
+
+    Gating on existence means a missing or not-yet-added photo silently drops out
+    instead of shipping a broken <img> to production.
+    """
+    found = []
+    for img in town.get("project_images", []):
+        path = ROOT / "images" / town["slug"] / img["file"]
+        if path.is_file():
+            found.append({**img, "src": f"/images/{town['slug']}/{img['file']}"})
+    return found
+
+
+def gallery_html(images: list) -> str:
+    """Responsive gallery. First image spans full width; the rest form a grid."""
+    if not images:
+        return ""
+    lead, rest = images[0], images[1:]
+    tiles = "".join(
+        f"""
+                <figure class="m-0">
+                    <img src="{i["src"]}" alt="{esc(i["alt"])}" loading="lazy" decoding="async"
+                         class="w-full h-64 object-cover" style="border: 1px solid var(--line);">
+                </figure>"""
+        for i in rest
+    )
+    grid = (
+        f"""
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">{tiles}
+            </div>"""
+        if rest
+        else ""
+    )
+    return f"""
+            <figure class="m-0">
+                <img src="{lead["src"]}" alt="{esc(lead["alt"])}" loading="lazy" decoding="async"
+                     class="w-full object-cover" style="max-height: 30rem; border: 1px solid var(--line);">
+            </figure>{grid}"""
 
 
 def render(town: dict) -> str:
@@ -269,7 +311,18 @@ def render(town: dict) -> str:
                         <p class="mt-2 text-[#3c463d] leading-relaxed">{esc(town["energy_code"])}</p>
                     </div>"""
 
-    project = PROJECT_BLOCK if town.get("featured_project") else ""
+    if town.get("featured_project"):
+        gallery = gallery_html(project_images(town))
+        wrapped = (
+            f'<div class="mt-12">{gallery}\n                <figcaption class="text-sm text-[#56604f] mt-3">'
+            f"17R Harding Rd, Norwood &mdash; designed by Sequoia Lodges."
+            f"</figcaption>\n            </div>"
+            if gallery
+            else ""
+        )
+        project = PROJECT_BLOCK.replace("<!--GALLERY-->", wrapped)
+    else:
+        project = ""
 
     faq_entries = [
         (
