@@ -16,10 +16,7 @@
       "_project_images_note": "Files must exist at images/norwood/<file> or the gallery is omitted entirely — the generator checks, so a missing file can never ship as a broken image. 'lead' is the single photo used on the homepage built-work block. Kept deliberately short: five photos that each do distinct work, rather than the full listing set, most of which was near-duplicate empty rooms.",
       "project_images": [
         { "file": "exterior-front.jpg", "alt": "Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry", "lead": true },
-        { "file": "exterior-context.jpg", "alt": "The Norwood ADU seen from the yard, with the primary house behind it and the parking pad alongside — showing how the unit sits on the lot" },
-        { "file": "kitchen-living.jpg", "alt": "Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" },
-        { "file": "bedroom.jpg", "alt": "Bedroom in the Norwood ADU with vaulted ceiling, ceiling fan, and two windows" },
-        { "file": "bath.jpg", "alt": "Full bath in the Norwood ADU with patterned tile floor, quartz vanity, and tiled shower" }
+        { "file": "kitchen-living.jpg", "alt": "Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" }
       ]
     },
     {

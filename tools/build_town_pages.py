@@ -237,9 +237,27 @@ def project_images(town: dict) -> list:
 
 
 def gallery_html(images: list) -> str:
-    """Responsive gallery. First image spans full width; the rest form a grid."""
+    """Responsive gallery.
+
+    One image: full width. Two: an equal side-by-side pair, which reads better
+    than a big lead plus one orphaned thumbnail. Three or more: lead plus grid.
+    """
     if not images:
         return ""
+
+    if len(images) == 2:
+        tiles = "".join(
+            f"""
+                <figure class="m-0">
+                    <img src="{i["src"]}" alt="{esc(i["alt"])}" loading="lazy" decoding="async"
+                         class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
+                </figure>"""
+            for i in images
+        )
+        return f"""
+            <div class="grid md:grid-cols-2 gap-4">{tiles}
+            </div>"""
+
     lead, rest = images[0], images[1:]
     tiles = "".join(
         f"""
