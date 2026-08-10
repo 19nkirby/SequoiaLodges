@@ -438,6 +438,33 @@
         </div>
     </section>
 
+    <!-- Inline contact (short form, high on page) -->
+    <section id="contact-top" class="bg-[var(--primary)] text-[var(--paper)] py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <span class="eyebrow" style="color:#cfd8cf;">Free Eligibility Read</span>
+                    <h2 class="text-3xl md:text-4xl mt-3 mb-5">Send us the address.</h2>
+                    <p class="text-[#cfd8cf] max-w-md">Tell us the property and what you have in mind. You'll get an honest
+                    read on whether an ADU fits &mdash; usually within one business day. If it doesn't work, we'll tell you that too.</p>
+                    <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="inline-flex items-center gap-3 mt-8 font-semibold hover:text-white">
+                        <i data-feather="mail" class="w-4 h-4"></i> sequoialodges@gmail.com
+                    </a>
+                </div>
+                <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="home-inline">
+                    <input type="text" name="name" required placeholder="Name" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
+                    <input type="email" name="email" required placeholder="Email" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
+                    <textarea name="message" rows="3" required placeholder="Property address and what you have in mind" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);"></textarea>
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
+                    <button type="submit" class="btn btn-cream w-full justify-center mt-2">Get My Eligibility Read</button>
+                    <p data-form-error class="hidden text-sm" style="color:#f3c9a8;">Something went wrong sending your message. Please try again, or email us directly at sequoialodges@gmail.com.</p>
+                    <input type="hidden" name="_subject" value="ADU inquiry &mdash; homepage (top form)">
+                    <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Plans / Pricing -->
     <section id="plans" class="py-20 border-t" style="border-color: var(--line);">
         <div class="container mx-auto px-6">
