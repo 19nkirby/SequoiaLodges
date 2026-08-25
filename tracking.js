@@ -16,8 +16,8 @@
  */
 window.SL_TRACKING = window.SL_TRACKING || {
     adsId: 'AW-18320974361',
-    inquiryLabel: '', // conversion label for "Accepted ADU inquiry" (primary)
-    magnetLabel: ''   // conversion label for "Planning kit download" (secondary)
+    inquiryLabel: 'F4C0CNzW6eccEJnEj6BE', // conversion label for "Accepted ADU inquiry" (primary)
+    magnetLabel: 'UwbUCN_W6eccEJnEj6BE'   // conversion label for "Planning kit download" (secondary)
 };
 
 (function () {
