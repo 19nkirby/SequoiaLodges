@@ -169,6 +169,19 @@ window.SL_TRACKING = window.SL_TRACKING || {
             }).then(function (res) {
                 if (!res.ok) { throw new Error('formspree_' + res.status); }
 
+                /* Enhanced conversions: give Google a hashed-on-their-end match
+                 * key so a lead still counts even if the browser blocks the
+                 * conversion pixel itself. Raw values only — never run through
+                 * clean(), which would mangle an email address. */
+                var emailField = form.querySelector('[name="email"]');
+                var phoneField = form.querySelector('[name="phone"]');
+                var userData = {};
+                if (emailField && emailField.value) { userData.email = emailField.value.trim().toLowerCase(); }
+                if (phoneField && phoneField.value) { userData.phone_number = phoneField.value.trim(); }
+                if (userData.email || userData.phone_number) {
+                    gtagSafe('set', 'user_data', userData);
+                }
+
                 var aduField = form.querySelector('[name="adu_type"]');
                 var timelineField = form.querySelector('[name="timeline"]');
                 window.dataLayer = window.dataLayer || [];
