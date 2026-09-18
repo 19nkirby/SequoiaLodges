@@ -224,7 +224,7 @@
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="w-full">
+    <header class="w-full sticky top-0 z-50 border-b" style="background: var(--paper); border-color: var(--line);">
         <div class="container mx-auto px-6 py-5 flex items-center justify-between">
             <a href="#top">
                 <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
@@ -236,7 +236,7 @@
                 <a href="#faq" class="hover:text-[var(--rust)]">FAQ</a>
                 <a href="#contact" class="hover:text-[var(--rust)]">Contact</a>
             </nav>
-            <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="btn btn-outline">sequoialodges@gmail.com</a>
+            <a href="#contact-top" class="btn btn-outline">Get My Eligibility Read</a>
         </div>
     </header>
 
@@ -251,6 +251,19 @@
                     <div class="flex flex-wrap gap-4">
                         <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="btn btn-solid">Email Us</a>
                         <a href="#plans" class="btn btn-outline">See Plans &amp; Pricing</a>
+                    </div>
+                    <div class="mt-8 border p-6 max-w-lg" style="border-color: var(--line); background: rgba(15,59,36,0.03);">
+                        <p class="font-semibold text-[var(--primary)] mb-3">Get a free eligibility read &mdash; just send the address.</p>
+                        <form class="flex flex-col sm:flex-row gap-3" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="hero">
+                            <input type="text" name="message" required placeholder="Property address" class="field flex-1">
+                            <input type="email" name="email" required placeholder="Email" class="field sm:max-w-[180px]">
+                            <button type="submit" class="btn btn-solid whitespace-nowrap justify-center">Get Started</button>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
+                            <input type="hidden" name="_subject" value="ADU inquiry &mdash; homepage (hero form)">
+                            <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
+                        </form>
+                        <p data-form-error class="hidden text-xs mt-3" style="color: var(--rust);">Something went wrong sending your message. Please try again, or email us directly at sequoialodges@gmail.com.</p>
+                        <p class="text-xs text-[#56604f] mt-3">No payment, no obligation. We reply within one business day.</p>
                     </div>
                 </div>
                 <div class="md:col-span-5">
@@ -787,7 +800,7 @@
                     <input type="tel" name="phone" placeholder="Phone (optional)" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
                     <textarea name="message" rows="3" required placeholder="Tell us about your property" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);"></textarea>
                     <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
-                    <button type="submit" class="btn btn-cream w-full justify-center mt-2">Send Message</button>
+                    <button type="submit" class="btn btn-cream w-full justify-center mt-2">Get My Eligibility Read</button>
                     <p data-form-error class="hidden text-sm" style="color:#f3c9a8;">Something went wrong sending your message. Please try again, or email us directly at sequoialodges@gmail.com.</p>
                     <input type="hidden" name="_subject" value="New ADU inquiry — sequoialodges.com">
                     <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
