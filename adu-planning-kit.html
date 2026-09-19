@@ -37,11 +37,10 @@
     </script>
     <script defer src="/tracking.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <script defer src="/feather-icons.min.js"></script>
+    <link rel="stylesheet" href="/styles.css?v=2">
+    <link rel="preload" href="/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <script defer src="/feather-icons.min.js?v=1"></script>
     <style>
         :root {
             --ink: #16241b;
@@ -50,7 +49,7 @@
             --paper: #faf6ec;
             --line: rgba(15,59,36,0.18);
             --line-soft: rgba(15,59,36,0.10);
-            --rust: #b85c2c;
+            --rust: #a75021;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -109,7 +108,7 @@
             font-family: 'Inter', sans-serif;
         }
         .field:focus { outline: none; border-bottom-color: var(--primary); }
-        .field::placeholder { color: #8a9089; }
+        .field::placeholder { color: #666e63; }
         .num {
             font-family: 'Source Serif 4', Georgia, serif;
             font-weight: 500;
@@ -130,6 +129,8 @@
         </div>
     </header>
 
+    <main>
+
     <!-- Kit -->
     <section class="blueprint-grid border-t border-b" style="border-color: var(--line);">
         <div class="container mx-auto px-6 py-20 md:py-24">
@@ -143,21 +144,21 @@
                         <div class="kit-item flex gap-6 items-baseline">
                             <span class="num text-xl w-8 flex-shrink-0">01</span>
                             <div>
-                                <h3 class="text-lg mb-1">Permit-Readiness Checklist</h3>
+                                <h2 class="text-lg mb-1">Permit-Readiness Checklist</h2>
                                 <p class="text-sm text-[#3c463d]">The lot, survey, utility, and documentation questions to answer before you file &mdash; with a lot-fit worksheet built in.</p>
                             </div>
                         </div>
                         <div class="kit-item flex gap-6 items-baseline">
                             <span class="num text-xl w-8 flex-shrink-0">02</span>
                             <div>
-                                <h3 class="text-lg mb-1">Plan &amp; Pricing Guide</h3>
+                                <h2 class="text-lg mb-1">Plan &amp; Pricing Guide</h2>
                                 <p class="text-sm text-[#3c463d]">Studio vs. 1-bedroom vs. 2-bedroom, what's included in each package, and exactly what each costs.</p>
                             </div>
                         </div>
                         <div class="kit-item flex gap-6 items-baseline">
                             <span class="num text-xl w-8 flex-shrink-0">03</span>
                             <div>
-                                <h3 class="text-lg mb-1">Sample ADU Plan Set (PDF)</h3>
+                                <h2 class="text-lg mb-1">Sample ADU Plan Set (PDF)</h2>
                                 <p class="text-sm text-[#3c463d]">A real excerpt from one of our plan sets &mdash; floor plan, elevation, and the full deliverable index.</p>
                             </div>
                         </div>
@@ -169,7 +170,7 @@
                         <h2 class="text-2xl mt-2 mb-6 text-[var(--primary)]">Sent to your inbox, available instantly.</h2>
                         <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="magnet" data-variant="planning-kit" data-thanks="/kit-download-x7q4m.html">
                             <input type="email" name="email" required placeholder="Email" class="field">
-                            <input type="text" name="property_zip" required placeholder="Property ZIP code" inputmode="numeric" pattern="[0-9]{5}" title="5-digit ZIP code" class="field">
+                            <input type="text" name="property_zip" aria-label="Property ZIP code" required placeholder="Property ZIP code" inputmode="numeric" pattern="[0-9]{5}" title="5-digit ZIP code" class="field">
                             <label class="flex items-start gap-3 text-sm text-[#3c463d]">
                                 <input type="checkbox" name="marketing_consent" value="yes" class="mt-1">
                                 <span>Email me ADU planning guides and occasional updates. Unsubscribe anytime.</span>
@@ -186,6 +187,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="py-8">
