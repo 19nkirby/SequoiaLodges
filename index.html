@@ -86,10 +86,9 @@
     </script>
     <script defer src="/tracking.js?v=1"></script>
 
-    <link rel="stylesheet" href="/styles.css?v=2">
-    <link rel="preload" href="/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <script defer src="/feather-icons.min.js?v=1"></script>
+    <link rel="stylesheet" href="/styles.css?v=4">
+    <link rel="preload" href="/fonts/source-serif-4-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-subset.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root {
             --ink: #16241b;
@@ -226,7 +225,7 @@
     <header class="w-full sticky top-0 z-50 border-b" style="background: var(--paper); border-color: var(--line);">
         <div class="container mx-auto px-6 py-5 flex items-center justify-between">
             <a href="#top">
-                <img src="/logo.svg" alt="Sequoia Lodges" class="h-11 w-auto">
+                <img src="/logo.svg" width="88" height="44" alt="Sequoia Lodges" class="h-11 w-auto">
             </a>
             <nav class="hidden md:flex items-center gap-10 eyebrow text-[var(--ink)]">
                 <a href="#offer" class="hover:text-[var(--rust)]">What You Get</a>
@@ -256,11 +255,11 @@
                         <img src="/images/plans/thumbs/floor-plan-892sf-attached-thumb.webp" width="64" height="64" loading="lazy" decoding="async" alt="892 sf attached ADU floor plan thumbnail" class="w-16 h-16 object-cover border" style="border-color: var(--line);">
                     </div>
                     <div>
-                        <p class="font-semibold text-[var(--primary)] mb-1">Not a concept sketch &mdash; real drawings.</p>
+                        <p class="display font-semibold text-[var(--primary)] mb-1">Not a concept sketch &mdash; real drawings.</p>
                         <p class="text-sm text-[#3c463d]">Browse all five 2-bedroom floor plans in the collection, watermarked and dimensioned.</p>
                     </div>
                     <span class="btn btn-outline self-start">
-                        <i data-feather="grid" class="w-4 h-4"></i> View All Floor Plans
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid w-4 h-4" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> View All Floor Plans
                     </span>
                 </a>
             </div>
@@ -361,12 +360,12 @@
             <div class="mt-12">
                 <div class="grid md:grid-cols-2 gap-4">
                     <figure class="m-0">
-                        <img src="/images/norwood/exterior-front.webp" width="900" height="600" loading="lazy" decoding="async"
+                        <img src="/images/norwood/exterior-front.webp" srcset="/images/norwood/exterior-front-640.webp 640w, /images/norwood/exterior-front.webp 900w" sizes="(min-width: 768px) 50vw, 100vw" width="900" height="600" loading="lazy" decoding="async"
                              alt="Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood &mdash; white clapboard with a gable roof, round attic window, and covered entry"
                              class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                     </figure>
                     <figure class="m-0">
-                        <img src="/images/norwood/kitchen-living.webp" width="900" height="600" loading="lazy" decoding="async"
+                        <img src="/images/norwood/kitchen-living.webp" srcset="/images/norwood/kitchen-living-640.webp 640w, /images/norwood/kitchen-living.webp 900w" sizes="(min-width: 768px) 50vw, 100vw" width="900" height="600" loading="lazy" decoding="async"
                              alt="Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights"
                              class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                     </figure>
@@ -386,7 +385,7 @@
                     <p class="text-[#cfd8cf] max-w-md">Tell us the property and what you have in mind. You'll get an honest
                     read on whether an ADU fits &mdash; usually within one business day. If it doesn't work, we'll tell you that too.</p>
                     <a href="mailto:sequoialodges@gmail.com?subject=ADU%20plan%20inquiry" class="inline-flex items-center gap-3 mt-8 font-semibold hover:text-white">
-                        <i data-feather="mail" class="w-4 h-4"></i> sequoialodges@gmail.com
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail w-4 h-4" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> sequoialodges@gmail.com
                     </a>
                 </div>
                 <form class="space-y-5" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="home-inline">
@@ -446,7 +445,7 @@
             <div class="mt-8 flex flex-wrap items-center gap-6">
                 <a href="#contact" class="btn btn-solid">Start Your Plan</a>
                 <a href="/adu-planning-kit.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                    <i data-feather="folder" class="w-4 h-4"></i> Get the Free ADU Planning Kit
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder w-4 h-4" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Get the Free ADU Planning Kit
                 </a>
             </div>
             <a href="/adu-plans.html#collection" class="mt-10 flex flex-col md:flex-row md:items-center gap-6 border p-6 hover:bg-[rgba(184,92,44,0.05)] transition-colors" style="border-color: var(--rust);">
@@ -460,7 +459,7 @@
                     <p class="text-sm text-[#3c463d]">Browse all five 2-bedroom floor plans in the collection, watermarked and dimensioned.</p>
                 </div>
                 <span class="btn btn-outline flex-shrink-0">
-                    <i data-feather="grid" class="w-4 h-4"></i> View All Floor Plans
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid w-4 h-4" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> View All Floor Plans
                 </span>
             </a>
         </div>
@@ -516,7 +515,7 @@
                 </div>
                 <div class="md:col-span-6">
                     <figure>
-                        <img src="/adu-rendering.webp" width="1200" height="807" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
+                        <img src="/adu-rendering.webp" srcset="/adu-rendering-640.webp 640w, /adu-rendering.webp 1200w" sizes="(min-width: 768px) 50vw, 100vw" width="1200" height="807" loading="lazy" decoding="async" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
                         <figcaption class="mt-3 text-xs text-[#56604f]">Concept rendering, for illustration &mdash; your plan set is tailored to your lot.</figcaption>
                     </figure>
                 </div>
@@ -535,22 +534,22 @@
                         <p class="text-[#3c463d] max-w-sm">Every Sequoia Lodges package is a full drawing set &mdash; the same documents a custom architect would produce over months, ready on day one.</p>
                         <div class="mt-8 space-y-3">
                             <a href="/Sequoia_Lodges_ADU_Sample_Plan.pdf" download="Sequoia_Lodges_ADU_Sample_Plan.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                                <i data-feather="download" class="w-4 h-4"></i> Download a Sample Plan (PDF)
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download w-4 h-4" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download a Sample Plan (PDF)
                             </a>
                             <a href="/adu-planning-kit.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                                <i data-feather="folder" class="w-4 h-4"></i> Get the Free ADU Planning Kit
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder w-4 h-4" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Get the Free ADU Planning Kit
                             </a>
                             <a href="/massachusetts-adu-guide.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                                <i data-feather="book-open" class="w-4 h-4"></i> Free MA ADU Law Guide (2026)
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open w-4 h-4" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Free MA ADU Law Guide (2026)
                             </a>
                             <a href="/adu-cost-calculator.html" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                                <i data-feather="sliders" class="w-4 h-4"></i> ADU Cost &amp; Payback Calculator
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders w-4 h-4" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg> ADU Cost &amp; Payback Calculator
                             </a>
                         </div>
                         <div class="mt-6 pt-6 border-t" style="border-color: var(--line);">
                             <span class="eyebrow text-[#56604f]">Partner Resource</span>
                             <a href="/The-ADU-Exchange-Ecosystem-Overview.pdf" target="_blank" rel="noopener" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)] mt-2">
-                                <i data-feather="external-link" class="w-4 h-4"></i> The ADU Exchange &mdash; Ecosystem Overview
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link w-4 h-4" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> The ADU Exchange &mdash; Ecosystem Overview
                             </a>
                             <p class="text-xs text-[#56604f] mt-1">Published by The ADU Exchange, a New England ADU network. Sequoia Lodges is a design partner.</p>
                         </div>
@@ -691,12 +690,12 @@
             <p class="text-[#3c463d] max-w-2xl mb-8">The state framework is the same everywhere. What your town still
             reviews &mdash; setbacks, site plan review, energy code, historic districts &mdash; is not.</p>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-x-10">
-                <a href="/adu-plans-boston.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Boston <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="/adu-plans-cambridge.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Cambridge <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="/adu-plans-newton.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Newton <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="/adu-plans-brookline.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Brookline <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="/adu-plans-somerville.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Somerville <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="/adu-plans-norwood.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Norwood <i data-feather="arrow-right" class="w-4 h-4"></i></a>
+                <a href="/adu-plans-boston.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Boston <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                <a href="/adu-plans-cambridge.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Cambridge <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                <a href="/adu-plans-newton.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Newton <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                <a href="/adu-plans-brookline.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Brookline <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                <a href="/adu-plans-somerville.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Somerville <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                <a href="/adu-plans-norwood.html" class="deliverable flex items-center justify-between font-semibold text-[var(--primary)] hover:text-[var(--rust)]">Norwood <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right w-4 h-4" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             </div>
             <p class="text-sm text-[#56604f] mt-6">Plans are deliverable anywhere in Massachusetts.</p>
         </div>
@@ -712,10 +711,10 @@
                     <p class="text-[#cfd8cf] mb-10 max-w-sm">Tell us about your property and we'll help you pick the right plan &mdash; usually within one business day.</p>
                     <div class="space-y-5">
                         <a href="mailto:sequoialodges@gmail.com" class="flex items-center gap-3 font-semibold hover:text-white">
-                            <i data-feather="mail" class="w-4 h-4"></i> sequoialodges@gmail.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail w-4 h-4" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> sequoialodges@gmail.com
                         </a>
                         <div class="flex items-center gap-3 font-semibold">
-                            <i data-feather="map-pin" class="w-4 h-4"></i> Serving Boston &amp; Greater Boston, MA
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin w-4 h-4" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Serving Boston &amp; Greater Boston, MA
                         </div>
                     </div>
                 </div>
@@ -740,7 +739,7 @@
     <footer class="py-8">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
             <div class="flex items-center gap-3">
-                <img src="/logo.svg" alt="Sequoia Lodges" class="h-7 w-auto">
+                <img src="/logo.svg" width="56" height="28" alt="Sequoia Lodges" class="h-7 w-auto">
                 <span class="text-[#56604f]">&copy; 2026 Sequoia Lodges LLC</span>
             </div>
             <div class="flex items-center gap-6 text-[#56604f]">
@@ -750,8 +749,5 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () { feather.replace(); });
-    </script>
 </body>
 </html>
