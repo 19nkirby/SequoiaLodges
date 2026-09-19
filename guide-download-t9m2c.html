@@ -9,10 +9,12 @@
 
     <!-- Google Analytics (GA4) + Consent Mode v2 -->
     <script>
-      /* Load Google's gtag.js once the page has finished loading (or on the first
-         tap/scroll/key, whichever comes first) so its ~10 Analytics/Ads requests
-         don't compete with first paint. dataLayer/gtag() below queue any events
-         until it arrives, so nothing is lost. */
+      /* Google gtag.js loader. Desktop loads it immediately (fast CPU/network, and
+         the work finishes before first paint). Phones defer it until the page has
+         finished loading (or the first tap/scroll/key), so its ~10 Analytics/Ads
+         requests don't compete with first paint on slow mobile connections.
+         dataLayer/gtag() below queue any events until it arrives, so nothing is
+         lost either way. */
       (function () {
         var started = false;
         function load() {
@@ -23,6 +25,8 @@
           s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M';
           document.head.appendChild(s);
         }
+        var phone = (navigator.userAgentData && navigator.userAgentData.mobile) || /Mobi|Android|iPhone|iPod/i.test(navigator.userAgent);
+        if (!phone) { load(); return; }
         window.addEventListener('load', function () {
           if (window.requestIdleCallback) { window.requestIdleCallback(load, { timeout: 2000 }); } else { setTimeout(load, 1); }
         });
