@@ -1,0 +1,13 @@
+/* Source file for styles.css. Regenerate after adding/changing Tailwind
+   utility classes anywhere in the site:
+
+   Download the standalone CLI (no Node required):
+     curl -sL -o tailwindcss "https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64"
+     chmod +x tailwindcss
+
+   Then rebuild:
+     ./tailwindcss -i tailwind-input.css -o styles.css --minify
+*/
+@import "tailwindcss";
+@source "./*.html";
+@source "./guides/*.html";
