@@ -41,7 +41,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script defer src="/feather-icons.min.js"></script>
     <style>
         :root {
             --ink: #16241b;
@@ -387,7 +387,7 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="border" style="border-color: var(--line);">
-                    <img src="/images/plans/floor-plan-756sf.png" width="1100" height="850" loading="lazy" decoding="async" alt="756 square foot two-bedroom ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-756sf.webp" width="1100" height="850" loading="lazy" decoding="async" alt="756 square foot two-bedroom ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
                     <div class="p-5">
                         <div class="flex items-baseline justify-between mb-1">
                             <h3 class="font-semibold text-[var(--primary)]">756 SF</h3>
@@ -400,7 +400,7 @@
                     </div>
                 </div>
                 <div class="border" style="border-color: var(--line);">
-                    <img src="/images/plans/floor-plan-896sf.png" width="1100" height="1002" loading="lazy" decoding="async" alt="896 square foot two-bedroom ADU floor plan with attic and crawl space, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-896sf.webp" width="1100" height="1002" loading="lazy" decoding="async" alt="896 square foot two-bedroom ADU floor plan with attic and crawl space, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
                     <div class="p-5">
                         <div class="flex items-baseline justify-between mb-1">
                             <h3 class="font-semibold text-[var(--primary)]">896 SF</h3>
@@ -413,7 +413,7 @@
                     </div>
                 </div>
                 <div class="border" style="border-color: var(--rust);">
-                    <img src="/images/plans/floor-plan-897sf.png" width="1100" height="850" loading="lazy" decoding="async" alt="897 square foot two-bedroom ADU floor plan, most requested layout, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-897sf.webp" width="1100" height="850" loading="lazy" decoding="async" alt="897 square foot two-bedroom ADU floor plan, most requested layout, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
                     <div class="p-5">
                         <div class="flex items-baseline justify-between mb-1">
                             <h3 class="font-semibold text-[var(--primary)]">897 SF <span class="eyebrow text-[var(--rust)]">Most Requested</span></h3>
@@ -426,7 +426,7 @@
                     </div>
                 </div>
                 <div class="border" style="border-color: var(--line);">
-                    <img src="/images/plans/floor-plan-892sf-attached.png" width="576" height="1100" loading="lazy" decoding="async" alt="892 square foot attached ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-892sf-attached.webp" width="576" height="1100" loading="lazy" decoding="async" alt="892 square foot attached ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
                     <div class="p-5">
                         <div class="flex items-baseline justify-between mb-1">
                             <h3 class="font-semibold text-[var(--primary)]">892 SF &middot; Attached</h3>
@@ -439,7 +439,7 @@
                     </div>
                 </div>
                 <div class="border" style="border-color: var(--line);">
-                    <img src="/images/plans/floor-plan-897sf-over-garage.png" width="1100" height="712" loading="lazy" decoding="async" alt="897 square foot two-bedroom ADU floor plan over a two-car garage, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-897sf-over-garage.webp" width="1100" height="712" loading="lazy" decoding="async" alt="897 square foot two-bedroom ADU floor plan over a two-car garage, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
                     <div class="p-5">
                         <div class="flex items-baseline justify-between mb-1">
                             <h3 class="font-semibold text-[var(--primary)]">897 SF &middot; Over Garage</h3>
@@ -638,7 +638,7 @@
     </footer>
 
     <script>
-        feather.replace();
+        document.addEventListener('DOMContentLoaded', function () { feather.replace(); });
     </script>
 </body>
 </html>

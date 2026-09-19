@@ -86,7 +86,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script defer src="/feather-icons.min.js"></script>
     <style>
         :root {
             --ink: #16241b;
@@ -336,11 +336,11 @@
             <div class="mt-12">
             <div class="grid md:grid-cols-2 gap-4">
                 <figure class="m-0">
-                    <img src="/images/norwood/exterior-front.jpg" alt="Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry" loading="lazy" decoding="async"
+                    <img src="/images/norwood/exterior-front.webp" width="900" height="600" alt="Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry" loading="lazy" decoding="async"
                          class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                 </figure>
                 <figure class="m-0">
-                    <img src="/images/norwood/kitchen-living.jpg" alt="Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" loading="lazy" decoding="async"
+                    <img src="/images/norwood/kitchen-living.webp" width="900" height="600" alt="Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" loading="lazy" decoding="async"
                          class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                 </figure>
             </div>
@@ -477,7 +477,7 @@
     </footer>
 
     <script>
-        feather.replace();
+        document.addEventListener('DOMContentLoaded', function () { feather.replace(); });
     </script>
 </body>
 </html>
