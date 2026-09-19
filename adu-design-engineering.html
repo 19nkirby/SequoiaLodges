@@ -20,7 +20,29 @@
     <link rel="apple-touch-icon" href="/logo.svg">
 
     <!-- Google Analytics (GA4) + Consent Mode v2 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      /* Load Google's gtag.js once the page has finished loading (or on the first
+         tap/scroll/key, whichever comes first) so its ~10 Analytics/Ads requests
+         don't compete with first paint. dataLayer/gtag() below queue any events
+         until it arrives, so nothing is lost. */
+      (function () {
+        var started = false;
+        function load() {
+          if (started) { return; }
+          started = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M';
+          document.head.appendChild(s);
+        }
+        window.addEventListener('load', function () {
+          if (window.requestIdleCallback) { window.requestIdleCallback(load, { timeout: 2000 }); } else { setTimeout(load, 1); }
+        });
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (t) {
+          window.addEventListener(t, load, { once: true, passive: true });
+        });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -281,7 +303,7 @@
                 </div>
                 <div class="md:col-span-6">
                     <figure>
-                        <img src="/adu-rendering.webp" srcset="/adu-rendering-640.webp 640w, /adu-rendering.webp 1200w" sizes="(min-width: 768px) 50vw, 100vw" width="1200" height="807" loading="lazy" decoding="async" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
+                        <img src="/adu-rendering.webp" srcset="/adu-rendering-640.webp 640w, /adu-rendering.webp 1200w" sizes="(min-width: 1280px) 600px, (min-width: 768px) calc(50vw - 40px), calc(100vw - 3rem)" width="1200" height="807" loading="lazy" decoding="async" alt="Concept rendering of a modern single-story two-bedroom ADU with a covered porch, set on a landscaped lawn" class="w-full h-auto border" style="border-color: var(--line);">
                         <figcaption class="mt-3 text-xs text-[#56604f]">Concept rendering, for illustration &mdash; your plan set is tailored to your lot.</figcaption>
                     </figure>
                 </div>

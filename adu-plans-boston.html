@@ -65,7 +65,29 @@
     </script>
 
     <!-- Google Analytics (GA4) + Consent Mode v2 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      /* Load Google's gtag.js once the page has finished loading (or on the first
+         tap/scroll/key, whichever comes first) so its ~10 Analytics/Ads requests
+         don't compete with first paint. dataLayer/gtag() below queue any events
+         until it arrives, so nothing is lost. */
+      (function () {
+        var started = false;
+        function load() {
+          if (started) { return; }
+          started = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M';
+          document.head.appendChild(s);
+        }
+        window.addEventListener('load', function () {
+          if (window.requestIdleCallback) { window.requestIdleCallback(load, { timeout: 2000 }); } else { setTimeout(load, 1); }
+        });
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (t) {
+          window.addEventListener(t, load, { once: true, passive: true });
+        });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

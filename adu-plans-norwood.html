@@ -65,7 +65,29 @@
     </script>
 
     <!-- Google Analytics (GA4) + Consent Mode v2 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M"></script>
+    <script>
+      /* Load Google's gtag.js once the page has finished loading (or on the first
+         tap/scroll/key, whichever comes first) so its ~10 Analytics/Ads requests
+         don't compete with first paint. dataLayer/gtag() below queue any events
+         until it arrives, so nothing is lost. */
+      (function () {
+        var started = false;
+        function load() {
+          if (started) { return; }
+          started = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN14KG7Y2M';
+          document.head.appendChild(s);
+        }
+        window.addEventListener('load', function () {
+          if (window.requestIdleCallback) { window.requestIdleCallback(load, { timeout: 2000 }); } else { setTimeout(load, 1); }
+        });
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (t) {
+          window.addEventListener(t, load, { once: true, passive: true });
+        });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -336,11 +358,11 @@
             <div class="mt-12">
             <div class="grid md:grid-cols-2 gap-4">
                 <figure class="m-0">
-                    <img src="/images/norwood/exterior-front.webp" srcset="/images/norwood/exterior-front-640.webp 640w, /images/norwood/exterior-front.webp 900w" sizes="(min-width: 768px) 50vw, 100vw" width="900" height="600" alt="Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry" loading="lazy" decoding="async"
+                    <img src="/images/norwood/exterior-front.webp" srcset="/images/norwood/exterior-front-640.webp 640w, /images/norwood/exterior-front.webp 900w" sizes="(min-width: 1280px) 600px, (min-width: 768px) calc(50vw - 40px), calc(100vw - 3rem)" width="900" height="600" alt="Front elevation of the completed 756 sf ADU at 17R Harding Rd, Norwood — white clapboard with a gable roof, round attic window, and covered entry" loading="lazy" decoding="async"
                          class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                 </figure>
                 <figure class="m-0">
-                    <img src="/images/norwood/kitchen-living.webp" srcset="/images/norwood/kitchen-living-640.webp 640w, /images/norwood/kitchen-living.webp 900w" sizes="(min-width: 768px) 50vw, 100vw" width="900" height="600" alt="Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" loading="lazy" decoding="async"
+                    <img src="/images/norwood/kitchen-living.webp" srcset="/images/norwood/kitchen-living-640.webp 640w, /images/norwood/kitchen-living.webp 900w" sizes="(min-width: 1280px) 600px, (min-width: 768px) calc(50vw - 40px), calc(100vw - 3rem)" width="900" height="600" alt="Open kitchen and living area of the Norwood ADU, with a vaulted ceiling and three skylights" loading="lazy" decoding="async"
                          class="w-full object-cover" style="aspect-ratio: 3 / 2; border: 1px solid var(--line);">
                 </figure>
             </div>
