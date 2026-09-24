@@ -63,7 +63,7 @@
     </script>
     <script defer src="/tracking.js?v=1"></script>
 
-    <link rel="stylesheet" href="/styles.css?v=5">
+    <link rel="stylesheet" href="/styles.css?v=6">
     <link rel="preload" href="/fonts/source-serif-4-subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/inter-subset.woff2" as="font" type="font/woff2" crossorigin>
     <style>
@@ -204,15 +204,32 @@
     <!-- Hero -->
     <section class="blueprint-grid border-t border-b" style="border-color: var(--line);">
         <div class="container mx-auto px-6 py-20 md:py-24">
-            <div class="max-w-3xl">
-                <span class="tag eyebrow mb-8">BPDA &amp; Article 53 &middot; Boston MA</span>
-                <h1 class="text-5xl md:text-6xl mb-6 mt-6 text-[var(--primary)]">Filing-ready ADU plans in two weeks. Not two months.</h1>
-                <p class="text-lg text-[#3c463d] mb-10 max-w-xl">Custom ADU design in Boston typically takes months before you can file. Our plans are pre-designed for BPDA and Article 53 compliance &mdash; pick one, we tailor it to your lot, and you file.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#get-started" class="btn btn-solid">Start My Permit-Ready Plan</a>
-                    <a href="#permit-ready" class="btn btn-outline">What Permit-Ready Means</a>
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 order-2 md:order-1">
+                    <span class="tag eyebrow mb-8">BPDA &amp; Article 53 &middot; Boston MA</span>
+                    <h1 class="text-5xl md:text-6xl mb-6 mt-6 text-[var(--primary)]">Filing-ready ADU plans in two weeks. Not two months.</h1>
+                    <p class="text-lg text-[#3c463d] mb-8 max-w-xl">Custom ADU design in Boston typically takes months before you can file. Our plans are pre-designed for BPDA and Article 53 compliance &mdash; pick one, we tailor it to your lot, and you file.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#permit-ready" class="btn btn-outline">What Permit-Ready Means</a>
+                    </div>
+                    <p class="mt-6 text-sm text-[#56604f]">Plans and engineering only &mdash; we don't build. Your contractor works from our permit-ready set.</p>
                 </div>
-                <p class="mt-6 text-sm text-[#56604f]">Plans and engineering only &mdash; we don't build. Your contractor works from our permit-ready set.</p>
+                <div class="md:col-span-5 order-1 md:order-2 p-8" style="background: var(--primary);">
+                    <span class="eyebrow" style="color:#cfd8cf;">Free Eligibility Read</span>
+                    <h2 class="text-2xl md:text-3xl mt-3 mb-4" style="color: var(--paper);">Just send the address.</h2>
+                    <p class="mb-6 text-sm" style="color:#cfd8cf;">You'll get an honest read on whether an ADU fits your lot &mdash; usually within one business day. If it doesn't work, we'll tell you that too.</p>
+                    <form class="space-y-4" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="permit-ready-hero">
+                        <input type="text" name="name" required placeholder="Name" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
+                        <input type="text" name="message" required placeholder="Property address" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
+                        <input type="email" name="email" required placeholder="Email" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
+                        <button type="submit" class="btn btn-cream w-full justify-center mt-2">Get Started</button>
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
+                        <input type="hidden" name="_subject" value="ADU inquiry &mdash; permit-ready page (hero form)">
+                        <input type="hidden" name="_next" value="https://sequoialodges.com/thank-you.html">
+                    </form>
+                    <p data-form-error class="hidden text-sm mt-3" style="color:#f3c9a8;">Something went wrong sending your message. Please try again, or email us directly at sequoialodges@gmail.com.</p>
+                    <p class="text-xs mt-5" style="color:#cfd8cf;">No payment, no obligation. We reply within one business day.</p>
+                </div>
             </div>
         </div>
     </section>
