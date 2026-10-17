@@ -63,7 +63,7 @@
     </script>
     <script defer src="/tracking.js?v=1"></script>
 
-    <link rel="stylesheet" href="/styles.css?v=6">
+    <link rel="stylesheet" href="/styles.css?v=7">
     <link rel="preload" href="/fonts/source-serif-4-subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/inter-subset.woff2" as="font" type="font/woff2" crossorigin>
     <style>
@@ -331,7 +331,12 @@
             <div class="max-w-2xl mb-12">
                 <span class="eyebrow text-[var(--rust)]">The Collection</span>
                 <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">Real drawings, not concept sketches.</h2>
-                <p class="text-[#3c463d] mt-4">Five 2-bedroom layouts from the current set, shown here at reduced scale. Studio and 1-bedroom sizing varies by lot, so those drawings are shared once you're underway.</p>
+                <p class="text-[#3c463d] mt-4">Eight layouts from the current set, shown here at reduced scale &mdash; five 2-bedroom and three 1-bedroom. Studio sizing varies more by lot, so those drawings are shared once you're underway.</p>
+            </div>
+            <div class="max-w-2xl mb-12">
+                <span class="eyebrow text-[var(--rust)]">Two-Bedroom Layouts</span>
+                <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">Five 2-bedroom plans.</h2>
+                <p class="text-[#3c463d] mt-4">Our most requested package, including the layout we drew for the built Norwood ADU, an attached configuration, and one over a two-car garage.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="border" style="border-color: var(--line);">
@@ -399,12 +404,52 @@
                         </a>
                     </div>
                 </div>
-                <div class="border flex flex-col items-start justify-center p-5" style="border-color: var(--line); background: rgba(15,59,36,0.03);">
-                    <h3 class="font-semibold text-[var(--primary)] mb-2">Studio &amp; 1-Bedroom</h3>
-                    <p class="text-sm text-[#3c463d] mb-4">Sizing is tighter and varies more by lot. Drawings are shared once you've picked a package.</p>
-                    <a href="#pricing" class="flex items-center gap-2 font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up w-4 h-4" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> Back to Pricing
-                    </a>
+            </div>
+
+            <div class="max-w-2xl mt-20 mb-12">
+                <span class="eyebrow text-[var(--rust)]">One-Bedroom Layouts</span>
+                <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">Three 1-bedroom plans.</h2>
+                <p class="text-[#3c463d] mt-4">Each one is a single bedroom with a full bath, kitchen, and open family room &mdash; drawn at three different footprints so you can match the plan to what your lot allows.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="border" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-480sf-1br.webp" width="912" height="1100" loading="lazy" decoding="async" alt="480 square foot one-bedroom ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <div class="p-5">
+                        <div class="flex items-baseline justify-between mb-1">
+                            <h3 class="font-semibold text-[var(--primary)]">480 SF</h3>
+                            <span class="text-sm text-[#56604f]">1 bed &middot; 1 bath</span>
+                        </div>
+                        <p class="text-sm text-[#3c463d]">20' &times; 24'. Laundry closet off the hall, walk-in shower, separate coat and bedroom closets.</p>
+                        <a href="/images/plans/floor-plan-480sf-1br.png" download="Sequoia-Lodges-480sf-1BR-Floor-Plan.png" class="mt-3 flex items-center gap-2 text-sm font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download w-4 h-4" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download
+                        </a>
+                    </div>
+                </div>
+                <div class="border" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-504sf-1br.webp" width="1004" height="1100" loading="lazy" decoding="async" alt="504 square foot one-bedroom ADU floor plan, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <div class="p-5">
+                        <div class="flex items-baseline justify-between mb-1">
+                            <h3 class="font-semibold text-[var(--primary)]">504 SF</h3>
+                            <span class="text-sm text-[#56604f]">1 bed &middot; 1 bath</span>
+                        </div>
+                        <p class="text-sm text-[#3c463d]">24' &times; 21'. Egress window in the bedroom, shower or tub, 24&quot; pantry, two entries.</p>
+                        <a href="/images/plans/floor-plan-504sf-1br.png" download="Sequoia-Lodges-504sf-1BR-Floor-Plan.png" class="mt-3 flex items-center gap-2 text-sm font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download w-4 h-4" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download
+                        </a>
+                    </div>
+                </div>
+                <div class="border" style="border-color: var(--line);">
+                    <img src="/images/plans/floor-plan-648sf-1br.webp" width="1058" height="1100" loading="lazy" decoding="async" alt="648 square foot one-bedroom ADU floor plan with kitchen island, watermarked Sequoia Lodges LLC" class="w-full h-auto border-b" style="border-color: var(--line);">
+                    <div class="p-5">
+                        <div class="flex items-baseline justify-between mb-1">
+                            <h3 class="font-semibold text-[var(--primary)]">648 SF</h3>
+                            <span class="text-sm text-[#56604f]">1 bed &middot; 1 bath</span>
+                        </div>
+                        <p class="text-sm text-[#3c463d]">27' &times; 24'. The largest of the three &mdash; kitchen island, 30&quot; pantry, coat closet, two entries.</p>
+                        <a href="/images/plans/floor-plan-648sf-1br.png" download="Sequoia-Lodges-648sf-1BR-Floor-Plan.png" class="mt-3 flex items-center gap-2 text-sm font-semibold text-[var(--primary)] hover:text-[var(--rust)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download w-4 h-4" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download
+                        </a>
+                    </div>
                 </div>
             </div>
             <p class="mt-8 text-xs text-[#56604f] max-w-xl">Drawings shown at reduced scale for illustration and watermarked against reuse. Every set includes site-specific tailoring to your lot before filing.</p>
