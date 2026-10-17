@@ -112,7 +112,7 @@
     </script>
     <script defer src="/tracking.js?v=1"></script>
 
-    <link rel="stylesheet" href="/styles.css?v=7">
+    <link rel="stylesheet" href="/styles.css?v=8">
     <link rel="preload" href="/fonts/source-serif-4-subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/inter-subset.woff2" as="font" type="font/woff2" crossorigin>
     <style>
@@ -243,15 +243,34 @@
             border-top: 1px solid var(--line);
             padding: 1.4rem 0;
         }
+        /* Sticky phone CTA. Starts off-screen and inert so it costs no layout
+           shift and stays out of the tab order until it is actually shown. */
+        #sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 40;
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            padding-bottom: env(safe-area-inset-bottom);
+            transform: translateY(110%);
+            visibility: hidden;
+            transition: transform .25s ease, visibility .25s;
+        }
+        #sticky-cta.is-visible { transform: translateY(0); visibility: visible; }
+        @media (prefers-reduced-motion: reduce) {
+            #sticky-cta { transition: none; }
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Header -->
     <header class="w-full sticky top-0 z-50 border-b" style="background: var(--paper); border-color: var(--line);">
-        <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="container mx-auto px-6 py-4 md:py-5 flex items-center justify-between gap-4">
             <a href="#top">
-                <img src="/logo.svg" width="88" height="44" alt="Sequoia Lodges" class="h-11 w-auto">
+                <img src="/logo.svg" width="88" height="44" alt="Sequoia Lodges" class="h-9 md:h-11 w-auto">
             </a>
             <nav class="hidden md:flex items-center gap-10 eyebrow text-[var(--ink)]">
                 <a href="#offer" class="hover:text-[var(--rust)]">What You Get</a>
@@ -260,7 +279,7 @@
                 <a href="#faq" class="hover:text-[var(--rust)]">FAQ</a>
                 <a href="#contact" class="hover:text-[var(--rust)]">Contact</a>
             </nav>
-            <a href="#contact-top" class="btn btn-outline">Get My Eligibility Read</a>
+            <a href="#start" class="btn btn-outline whitespace-nowrap"><span class="md:hidden">Get Started</span><span class="hidden md:inline">Get My Eligibility Read</span></a>
         </div>
     </header>
 
@@ -268,17 +287,22 @@
 
     <!-- Hero -->
     <section id="top" class="blueprint-grid border-t border-b" style="border-color: var(--line);">
-        <div class="container mx-auto px-6 py-16 md:py-20">
-            <div class="grid lg:grid-cols-3 gap-10 items-stretch">
-                <div class="order-2 lg:order-1 flex flex-col justify-center">
+        <div class="container mx-auto px-6 py-10 md:py-20">
+            <div class="grid lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+                <div class="order-1 flex flex-col justify-center">
                     <span class="tag eyebrow self-start">Pre-Designed &middot; BPDA Compliant</span>
-                    <h1 class="text-4xl lg:text-5xl mb-5 mt-6 text-[var(--primary)]">Skip the redesign.<br>Go straight to permit.</h1>
-                    <p class="text-[#3c463d]">Sequoia Lodges designs accessory dwelling unit plans for Boston homeowners &mdash; drawn up with licensed Massachusetts architects and engineers, and ready to file the day you choose one.</p>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl mb-4 mt-5 text-[var(--primary)]">Skip the redesign.<br>Go straight to permit.</h1>
+                    <p class="text-[#3c463d] text-sm lg:text-base">Sequoia Lodges is a Massachusetts ADU design and engineering firm. We sell permit-ready, PE-stamped plan sets for Boston-area backyards &mdash; your own contractor builds from them.</p>
+                    <ul class="mt-5 flex flex-wrap gap-2 text-xs font-semibold text-[#56604f]">
+                        <li class="border px-2 py-1" style="border-color: var(--line);">PE-stamped</li>
+                        <li class="border px-2 py-1" style="border-color: var(--line);">Plans from $3,500</li>
+                        <li class="border px-2 py-1" style="border-color: var(--line);">Filing-ready in ~2 weeks</li>
+                    </ul>
                 </div>
-                <div class="order-1 lg:order-2 p-8" style="background: var(--primary);">
+                <div id="start" class="order-2 p-6 lg:p-8 scroll-mt-24" style="background: var(--primary);">
                     <span class="eyebrow" style="color:#cfd8cf;">Free Eligibility Read</span>
                     <h2 class="text-2xl md:text-3xl mt-3 mb-4" style="color: var(--paper);">Just send the address.</h2>
-                    <p class="mb-6 text-sm" style="color:#cfd8cf;">You'll get an honest read on whether an ADU fits &mdash; usually within one business day. If it doesn't work, we'll tell you that too.</p>
+                    <p class="mb-6 text-sm" style="color:#cfd8cf;">An honest read on whether an ADU fits your lot, usually within one business day. If it doesn't work, we'll say so.</p>
                     <form class="space-y-4" action="https://formspree.io/f/maqgzynr" method="POST" data-lead-form="inquiry" data-variant="hero">
                         <input type="text" name="name" required placeholder="Name" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
                         <input type="text" name="message" required placeholder="Property address" class="field text-[var(--paper)]" style="border-bottom-color: rgba(250,246,236,0.35);">
@@ -776,8 +800,16 @@
 
     </main>
 
+    <!-- Sticky phone CTA. Hidden until the hero form has scrolled out of view,
+         so it never competes with the form it points at. -->
+    <div id="sticky-cta" class="md:hidden" aria-hidden="true">
+        <div class="container mx-auto px-4 py-3">
+            <a href="#start" class="btn btn-solid w-full justify-center">Get My Free Eligibility Read</a>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="py-8">
+    <footer class="py-8 pb-28 md:pb-8">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
             <div class="flex items-center gap-3">
                 <img src="/logo.svg" width="56" height="28" alt="Sequoia Lodges" class="h-7 w-auto">
@@ -789,6 +821,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      /* Reveal the phone CTA once the hero form has scrolled past, and hide it
+         again whenever any lead form is on screen so it never overlaps one. */
+      (function () {
+        var bar = document.getElementById('sticky-cta');
+        var forms = document.querySelectorAll('form[data-lead-form]');
+        if (!bar || !forms.length) { return; }
+        var queued = false;
+
+        function formOnScreen() {
+          for (var i = 0; i < forms.length; i++) {
+            var r = forms[i].getBoundingClientRect();
+            if (r.bottom > 0 && r.top < window.innerHeight) { return true; }
+          }
+          return false;
+        }
+        function update() {
+          queued = false;
+          var show = window.scrollY > window.innerHeight * 0.6 && !formOnScreen();
+          bar.classList.toggle('is-visible', show);
+          bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+        }
+        function onScroll() {
+          if (queued) { return; }
+          queued = true;
+          window.requestAnimationFrame(update);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        update();
+      })();
+    </script>
 
 </body>
 </html>
