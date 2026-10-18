@@ -7,6 +7,18 @@ deployment. Run it after editing towns.json, then commit the output:
 
     python3 tools/build_town_pages.py
 
+!! STALE AS OF 2026-10-18 — DO NOT RUN WITHOUT READING THIS !!
+The committed town pages have been hand-edited since this template was last
+updated, and running the script as-is reverts all of it. The template still
+emits the Tailwind Play CDN, feather-icons, the Google Fonts CDN links, a
+plain async gtag tag, unversioned asset URLs, and the old rust #b85c2c.
+The live pages instead use the precompiled /styles.css (with a ?v= cache
+buster), self-hosted subset fonts, inline SVG icons, the adaptive gtag
+loader, and #a75021 for AA contrast. Bring the template in line with a
+current town page BEFORE regenerating, or the next run silently undoes the
+performance and accessibility work. Regenerating also rewrites every
+<lastmod> in sitemap.xml to today, including for pages that did not change.
+
 Every factual claim in the template below is either statewide (760 CMR 71.00 /
 Affordable Homes Act) or comes from a verified per-town field in towns.json.
 Do not add per-town assertions here; add them to towns.json where they can be
@@ -569,7 +581,7 @@ def render(town: dict) -> str:
                     <h2 class="text-3xl md:text-4xl mt-3 text-[var(--primary)]">A set your contractor can build from.</h2>
                     <p class="text-[#3c463d] leading-relaxed mt-6">We are a design and engineering firm. We don't build,
                     which means we have no incentive in who you hire &mdash; you take the drawings to your own contractor.
-                    Plans are stamped by our principal engineer, Chris Kirby, PE.</p>
+                    Every set is stamped by our principal engineer.</p>
                 </div>
                 <div class="md:col-span-7 grid sm:grid-cols-2 gap-x-10">
                     <div>
